@@ -5,6 +5,7 @@ import SignupFormPage from "./components/SignupFormPage";
 import LoginFormPage from "./components/LoginFormPage";
 import { authenticate } from "./store/session";
 import Navigation from "./components/Navigation";
+import "../src/index.css";
 
 function App() {
   const dispatch = useDispatch();
@@ -15,7 +16,6 @@ function App() {
 
   return (
     <>
-      <h1 className="text-3xl underline">Hello from app.js</h1>
       <Navigation isLoaded={isLoaded} />
       {isLoaded && (
         <Switch>
