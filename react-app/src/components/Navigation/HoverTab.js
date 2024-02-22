@@ -33,7 +33,7 @@ const Card = ({ title, subtitle, Icon, href }) => {
   return (
     <NavLink
       to={href}
-      className="group relative w-full overflow-hidden rounded border-[1px] border-slate-300 bg-white p-4"
+      className="group relative w-full overflow-hidden rounded border-[1px] border-slate-400 bg-gray-100 p-4"
     >
       <div className="absolute inset-0 translate-y-[100%] bg-gradient-to-r from-violet-600 to-indigo-600 transition-transform duration-300 group-hover:translate-y-[0%]" />
 
