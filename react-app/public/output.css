@@ -444,21 +444,9 @@ video {
 .gap-4 {
   gap: 1rem !important;
 }
-.bg-blue-300 {
+.bg-red-300 {
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(147 197 253 / var(--tw-bg-opacity)) !important;
-}
-.bg-blue-500 {
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity)) !important;
-}
-.text-3xl {
-  font-size: 1.875rem !important;
-  line-height: 2.25rem !important;
-}
-.text-red-800 {
-  --tw-text-opacity: 1 !important;
-  color: rgb(153 27 27 / var(--tw-text-opacity)) !important;
+  background-color: rgb(252 165 165 / var(--tw-bg-opacity)) !important;
 }
 
 

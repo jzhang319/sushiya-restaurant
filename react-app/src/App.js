@@ -5,6 +5,9 @@ import SignupFormPage from "./components/SignupFormPage";
 import LoginFormPage from "./components/LoginFormPage";
 import { authenticate } from "./store/session";
 import Navigation from "./components/Navigation";
+import MenuPage from "./components/MenuPage/MenuPage";
+import AboutUs from "./components/AboutUs/AboutUs";
+import HomePage from "./components/HomePage/HomePage";
 import "../src/index.css";
 
 function App() {
@@ -19,12 +22,27 @@ function App() {
       <Navigation isLoaded={isLoaded} />
       {isLoaded && (
         <Switch>
+
           <Route path="/login">
             <LoginFormPage />
           </Route>
+
           <Route path="/signup">
             <SignupFormPage />
           </Route>
+
+          <Route path="/menu">
+            <MenuPage />
+          </Route>
+
+          <Route path="/about-us">
+            <AboutUs />
+          </Route>
+
+          <Route path="/">
+            <HomePage />
+          </Route>
+
         </Switch>
       )}
     </>
