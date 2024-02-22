@@ -573,18 +573,18 @@ video {
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops)) !important;
 }
-.from-blue-800 {
-  --tw-gradient-from: #1e40af var(--tw-gradient-from-position) !important;
-  --tw-gradient-to: rgb(30 64 175 / 0) var(--tw-gradient-to-position) !important;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
-}
 .from-violet-600 {
   --tw-gradient-from: #7c3aed var(--tw-gradient-from-position) !important;
   --tw-gradient-to: rgb(124 58 237 / 0) var(--tw-gradient-to-position) !important;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
 }
-.to-blue-400 {
-  --tw-gradient-to: #60a5fa var(--tw-gradient-to-position) !important;
+.from-violet-900 {
+  --tw-gradient-from: #4c1d95 var(--tw-gradient-from-position) !important;
+  --tw-gradient-to: rgb(76 29 149 / 0) var(--tw-gradient-to-position) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+.to-blue-500 {
+  --tw-gradient-to: #3b82f6 var(--tw-gradient-to-position) !important;
 }
 .to-indigo-600 {
   --tw-gradient-to: #4f46e5 var(--tw-gradient-to-position) !important;
@@ -630,6 +630,9 @@ video {
 }
 .text-center {
   text-align: center !important;
+}
+.font-roboto {
+  font-family: Roboto, sans-serif !important;
 }
 .text-2xl {
   font-size: 1.5rem !important;
