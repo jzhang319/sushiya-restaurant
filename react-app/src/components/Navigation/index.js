@@ -1,13 +1,13 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import { useSelector } from "react-redux";
-import ProfileButton from "./ProfileButton";
+// import { NavLink } from "react-router-dom";
+// import { useSelector } from "react-redux";
+// import ProfileButton from "./ProfileButton";
 // import ChipTabs from "./ChipTab";
 import HoverTabs from "./HoverTab";
 import "./Navigation.css";
 
 function Navigation({ isLoaded }) {
-  const sessionUser = useSelector((state) => state.session.user);
+  // const sessionUser = useSelector((state) => state.session.user);
 
   return (
     <div className="sticky top-0 bg-gray-100">
@@ -24,9 +24,9 @@ function Navigation({ isLoaded }) {
         About-Us
       </NavLink> */}
 
-      {isLoaded && <ProfileButton user={sessionUser} />}
+      {/* {isLoaded && <ProfileButton user={sessionUser} />} */}
+
     </div>
   );
 }
-
 export default Navigation;
