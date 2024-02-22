@@ -38,6 +38,28 @@ const MenuPage = () => {
     );
   }
 
+  const categories = [
+    "ALL",
+    "GRASS",
+    "FIRE",
+    "WATER",
+    "BUG",
+    "NORMAL",
+    "ELECTRIC",
+    "FAIRY",
+    "FIGHTING",
+    "DRAGON",
+    "GHOST",
+    "POISON",
+    "GROUND",
+    "PSYCHIC",
+    "ROCK",
+    "STEEL",
+    "ICE",
+    "FLYING",
+    "DARK",
+  ];
+
   return (
     <div className="flex min-h-screen w-screen flex-col items-center justify-start bg-gradient-to-r from-violet-900 to-blue-500">
       <h1 className="font-roboto mt-8 text-center text-5xl text-orange-600">
@@ -51,85 +73,27 @@ const MenuPage = () => {
       </p>
 
       <span className="py-10">
-        <ul className="flex flex-row space-x-9 text-xl text-white">
-          <li
-            className={`cursor-pointer ${selectedCategory === "ALL" ? "text-orange-600 underline" : ""}`}
-            onClick={() => handleItemClick("ALL")}
-          >
-            ALL
-          </li>
-          <li
-            className={`cursor-pointer ${selectedCategory === "GRASS" ? "text-orange-600 underline" : ""}`}
-            onClick={() => handleItemClick("GRASS")}
-          >
-            GRASS
-          </li>
-          <li
-            className={`cursor-pointer ${selectedCategory === "FIRE" ? "text-orange-600 underline" : ""}`}
-            onClick={() => handleItemClick("FIRE")}
-          >
-            FIRE
-          </li>
-          <li
-            className={`cursor-pointer ${selectedCategory === "WATER" ? "text-orange-600 underline" : ""}`}
-            onClick={() => handleItemClick("WATER")}
-          >
-            WATER
-          </li>
-          <li
-            className={`cursor-pointer ${selectedCategory === "BUG" ? "text-orange-600 underline" : ""}`}
-            onClick={() => handleItemClick("BUG")}
-          >
-            BUG
-          </li>
-          <li
-            className={`cursor-pointer ${selectedCategory === "NORMAL" ? "text-orange-600 underline" : ""}`}
-            onClick={() => handleItemClick("NORMAL")}
-          >
-            NORMAL
-          </li>
-          <li
-            className={`cursor-pointer ${selectedCategory === "ELECTRIC" ? "text-orange-600 underline" : ""}`}
-            onClick={() => handleItemClick("ELECTRIC")}
-          >
-            ELECTRIC
-          </li>
-          <li
-            className={`cursor-pointer ${selectedCategory === "FAIRY" ? "text-orange-600 underline" : ""}`}
-            onClick={() => handleItemClick("FAIRY")}
-          >
-            FAIRY
-          </li>
-          <li
-            className={`cursor-pointer ${selectedCategory === "FIGHTING" ? "text-orange-600 underline" : ""}`}
-            onClick={() => handleItemClick("FIGHTING")}
-          >
-            FIGHTING
-          </li>
-          <li
-            className={`cursor-pointer ${selectedCategory === "DRAGON" ? "text-orange-600 underline" : ""}`}
-            onClick={() => handleItemClick("DRAGON")}
-          >
-            DRAGON
-          </li>
+        <ul className="flex flex-wrap items-center justify-center space-x-9 px-10 text-xl text-white">
+          {categories.map((category) => (
+            <li
+              key={category}
+              className={`cursor-pointer ${selectedCategory === category ? "text-orange-600 underline" : ""}`}
+              onClick={() => handleItemClick(category)}
+            >
+              {category}
+            </li>
+          ))}
         </ul>
       </span>
+
       <div className="grid grid-cols-3 gap-4 text-white">
-        {/* {Object.values(filteredMenu).map((item, index) => (
-          <div key={index}>
-            <h2>{item.category}</h2>
-            <h2>{item.name}</h2>
-            <p>{item.description}</p>
-            <p>{item.price}</p>
-          </div>
-        ))} */}
         {filteredMenu &&
           filteredMenu.map((item, index) => (
             <div key={index}>
               <h2>{item.category}</h2>
               <h3>{item.name}</h3>
               <p>{item.description}</p>
-              <p>{item.price}</p>
+              <p>${item.price}</p>
             </div>
           ))}
       </div>
