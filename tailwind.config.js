@@ -3,7 +3,11 @@ module.exports = {
   content: ["./react-app/src/**/*.{html,js}"],
   important: true,
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        roboto: ["Roboto", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
