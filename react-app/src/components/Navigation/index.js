@@ -9,24 +9,17 @@ function Navigation({ isLoaded }) {
 
   return (
     <>
+      <NavLink exact to="/">
+        Home
+      </NavLink>
       <NavLink exact to="/menu">
         Menu
       </NavLink>
       <NavLink exact to="/about-us">
         About-Us
       </NavLink>
-      <ul>
-        <li>
-          <NavLink exact to="/">
-            Home
-          </NavLink>
-        </li>
-        {isLoaded && (
-          <li>
-            <ProfileButton user={sessionUser} />
-          </li>
-        )}
-      </ul>
+
+      {isLoaded && <ProfileButton user={sessionUser} />}
     </>
   );
 }
