@@ -9,8 +9,12 @@ function Navigation({ isLoaded }) {
 
   return (
     <>
-      <a href="/menu">Menu</a>
-      <a href="/about-us">About-Us</a>
+      <NavLink exact to="/menu">
+        Menu
+      </NavLink>
+      <NavLink exact to="/about-us">
+        About-Us
+      </NavLink>
       <ul>
         <li>
           <NavLink exact to="/">
