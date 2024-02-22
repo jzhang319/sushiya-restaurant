@@ -15,7 +15,7 @@ def get_menu():
 
         menu = {}
         for name, group in grouped:
-            items = group.drop('category', axis=1).to_dict(orient='records')
+            items = group.to_dict(orient='records')
             menu[name] = items
 
         return jsonify(menu)
