@@ -1,5 +1,7 @@
 import React from "react";
-import { FiCreditCard, FiMail, FiUser, FiUsers } from "react-icons/fi";
+import { FiCreditCard, FiMail, FiUser, FiUsers} from "react-icons/fi";
+import {MdMenu} from "react-icons/md";
+import {AiFillHome} from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 
 const HoverTabs = () => {
@@ -7,8 +9,8 @@ const HoverTabs = () => {
     <div className="p-4">
       <p className="mb-2 text-xl font-semibold">Sushi Ya</p>
       <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-        <Card title="Home" subtitle="Home Page" href="/" Icon={FiCreditCard} />
-        <Card title="Menu" subtitle="Our Menu" href="/menu" Icon={FiMail} />
+        <Card title="Home" subtitle="Home Page" href="/" Icon={AiFillHome} />
+        <Card title="Menu" subtitle="Our Menu" href="/menu" Icon={MdMenu} />
         <Card
           title="About-Us"
           subtitle="Location and More"
@@ -31,7 +33,7 @@ const Card = ({ title, subtitle, Icon, href }) => {
   return (
     <NavLink
       to={href}
-      className="group relative w-full overflow-hidden rounded border-[1px] border-slate-300 bg-white p-4"
+      className="group relative w-full overflow-hidden rounded border-[1px] border-slate-400 bg-gray-100 p-4"
     >
       <div className="absolute inset-0 translate-y-[100%] bg-gradient-to-r from-violet-600 to-indigo-600 transition-transform duration-300 group-hover:translate-y-[0%]" />
 

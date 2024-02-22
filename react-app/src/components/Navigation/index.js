@@ -10,8 +10,9 @@ function Navigation({ isLoaded }) {
   const sessionUser = useSelector((state) => state.session.user);
 
   return (
-    <div className="bg-gray">
+    <div className="sticky top-0 bg-gray-100">
       <HoverTabs />
+
       {/* <ChipTabs /> */}
       {/* <NavLink exact to="/" className="hover:text-red-500">
         Home
