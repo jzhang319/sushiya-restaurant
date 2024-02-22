@@ -1,5 +1,7 @@
 import React from "react";
-import { FiCreditCard, FiMail, FiUser, FiUsers } from "react-icons/fi";
+import { FiCreditCard, FiMail, FiUser, FiUsers} from "react-icons/fi";
+import {MdMenu} from "react-icons/md";
+import {AiFillHome} from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 
 const HoverTabs = () => {
@@ -7,8 +9,8 @@ const HoverTabs = () => {
     <div className="p-4">
       <p className="mb-2 text-xl font-semibold">Sushi Ya</p>
       <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-        <Card title="Home" subtitle="Home Page" href="/" Icon={FiCreditCard} />
-        <Card title="Menu" subtitle="Our Menu" href="/menu" Icon={FiMail} />
+        <Card title="Home" subtitle="Home Page" href="/" Icon={AiFillHome} />
+        <Card title="Menu" subtitle="Our Menu" href="/menu" Icon={MdMenu} />
         <Card
           title="About-Us"
           subtitle="Location and More"
