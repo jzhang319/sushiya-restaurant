@@ -2,25 +2,29 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import ProfileButton from "./ProfileButton";
+// import ChipTabs from "./ChipTab";
+import HoverTabs from "./HoverTab";
 import "./Navigation.css";
 
 function Navigation({ isLoaded }) {
   const sessionUser = useSelector((state) => state.session.user);
 
   return (
-    <>
-      <NavLink exact to="/">
+    <div className="bg-gray">
+      <HoverTabs />
+      {/* <ChipTabs /> */}
+      {/* <NavLink exact to="/" className="hover:text-red-500">
         Home
       </NavLink>
-      <NavLink exact to="/menu">
+      <NavLink exact to="/menu" className="hover:text-red-500">
         Menu
       </NavLink>
-      <NavLink exact to="/about-us">
+      <NavLink exact to="/about-us" className="hover:text-red-500">
         About-Us
-      </NavLink>
+      </NavLink> */}
 
       {isLoaded && <ProfileButton user={sessionUser} />}
-    </>
+    </div>
   );
 }
 
