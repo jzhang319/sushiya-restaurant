@@ -65,7 +65,7 @@ const MenuPage = () => {
       <h1 className="font-pacifico mt-8 text-center text-5xl text-orange-600">
         Our Menu
       </h1>
-      <p className="mx-auto w-3/4 py-3 text-center font-thin leading-loose tracking-wider text-white">
+      <p className="text-roboto mx-auto w-3/4 py-3 text-center font-thin leading-loose tracking-wider text-white">
         * May contain raw or undercooked ingredients. Consuming raw or
         undercooked meats, poultry, seafood, shellfish, or eggs may increase
         your risk of food-borne illness, especially if you have certain medical
@@ -73,7 +73,7 @@ const MenuPage = () => {
       </p>
 
       <span className="py-10">
-        <ul className="flex flex-wrap items-center justify-center space-x-9 px-10 text-xl text-white">
+        <ul className="text-roboto flex flex-wrap items-center justify-center space-x-9 px-10 text-xl text-white">
           {categories.map((category) => (
             <li
               key={category}
