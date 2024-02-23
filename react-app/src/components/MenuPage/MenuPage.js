@@ -86,10 +86,10 @@ const MenuPage = () => {
         </ul>
       </span>
 
-      <div className="flex flex-wrap justify-center gap-8 text-white font-abel">
+      <div className="font-abel flex flex-wrap justify-center gap-8 px-40 text-white sm:px-4 md:px-20">
         {filteredMenu &&
           filteredMenu.map((item, index) => (
-            <div key={index}>
+            <div key={index} className="w-64">
               <h2>{item.category}</h2>
               <h3>{item.name}</h3>
               <p>{item.description}</p>
