@@ -7,6 +7,7 @@ module.exports = {
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
         pacifico: ["Pacifico", "cursive"],
+        abel: ["Abel", "sans-serif"],
       },
     },
   },

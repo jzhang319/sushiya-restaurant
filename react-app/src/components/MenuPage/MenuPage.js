@@ -73,7 +73,7 @@ const MenuPage = () => {
       </p>
 
       <span className="py-10">
-        <ul className="text-roboto flex flex-wrap items-center justify-center space-x-9 px-10 text-xl text-white">
+        <ul className="text-abel flex flex-wrap items-center justify-center space-x-9 px-10 text-xl text-white">
           {categories.map((category) => (
             <li
               key={category}
@@ -86,7 +86,7 @@ const MenuPage = () => {
         </ul>
       </span>
 
-      <div className="grid grid-cols-3 gap-4 text-white">
+      <div className="flex flex-wrap justify-center gap-8 text-white font-abel">
         {filteredMenu &&
           filteredMenu.map((item, index) => (
             <div key={index}>
