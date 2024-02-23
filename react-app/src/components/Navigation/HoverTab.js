@@ -40,15 +40,15 @@ const HoverTabs = () => {
           Icon={FiUsers}
         />
 
-        {/* <Card
-          title="Profile"
-          subtitle="Manage profile"
-          href="#"
+        <OrderCard
+          title="Online Ordering"
+          subtitle="Order Online"
+          href="https://direct.chownow.com/order/6593/locations/8738"
           Icon={FiUser}
-        /> */}
+        />
         <DropDownCard
-          title="Profile"
-          subtitle="Manage profile"
+          title="Staff"
+          subtitle="Management"
           Icon={FiUser}
           user={user}
         />
@@ -80,6 +80,28 @@ const Card = ({ title, subtitle, Icon, href }) => {
         {subtitle}
       </p>
     </NavLink>
+  );
+};
+
+const OrderCard = ({ title, subtitle, Icon, href }) => {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="font-roboto group relative w-full overflow-hidden rounded border-[1px] border-slate-200 bg-gray-100 p-4"
+    >
+      <div className="absolute inset-0 translate-y-[100%] bg-gradient-to-r from-violet-600 to-indigo-600 transition-transform duration-300 group-hover:translate-y-[0%]" />
+
+      <Icon className="absolute -right-12 -top-12 z-10 text-9xl text-slate-100 transition-transform duration-300 group-hover:rotate-12 group-hover:text-violet-400" />
+      <Icon className="relative z-10 mb-2 text-2xl text-violet-600 transition-colors duration-300 group-hover:text-white" />
+      <h3 className="relative z-10 hidden text-lg font-medium text-slate-950 duration-300 group-hover:text-white sm:block">
+        {title}
+      </h3>
+      <p className="relative z-10 hidden text-slate-400 duration-300 group-hover:text-violet-200 sm:block">
+        {subtitle}
+      </p>
+    </a>
   );
 };
 

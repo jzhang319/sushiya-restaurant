@@ -503,9 +503,6 @@ video {
 .cursor-pointer {
   cursor: pointer !important;
 }
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-}
 .flex-col {
   flex-direction: column !important;
 }
@@ -538,6 +535,9 @@ video {
 }
 .gap-4 {
   gap: 1rem !important;
+}
+.gap-8 {
+  gap: 2rem !important;
 }
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0 !important;
@@ -689,6 +689,9 @@ video {
 }
 .font-roboto {
   font-family: Roboto, sans-serif !important;
+}
+.font-abel {
+  font-family: Abel, sans-serif !important;
 }
 .text-2xl {
   font-size: 1.5rem !important;
