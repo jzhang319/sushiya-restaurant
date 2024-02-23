@@ -29,8 +29,8 @@ const HoverTabs = () => {
       </p>
       <div className="flex flex-nowrap space-x-4 overflow-x-auto">
         <Card
-          title="Sushi Ya Japanese Restaurant"
-          subtitle="Home Page"
+          title="Sushi Ya"
+          subtitle="Japanese Restaurant"
           href="/"
           Icon={AiFillHome}
         />
@@ -151,22 +151,22 @@ const DropDownCard = ({ title, subtitle, Icon, user }) => {
         <div className="absolute right-0 top-0 z-50 h-full w-full divide-y divide-gray-100 rounded-md border border-gray-200 bg-white shadow-lg">
           {user ? (
             <>
-              <div className="px-4 py-3">
-                <p className="text-sm">Signed in as</p>
+              <div className="px-4 py-2 text-center">
+                <p className="text-sm">Signed in as:</p>
                 <p className="text-sm font-medium text-gray-900">
-                  {user?.username}
+                  - {user?.username}
                 </p>
                 <p className="text-sm font-medium text-gray-900">
-                  {user?.email}
+                  - {user?.email}
                 </p>
               </div>
-              <div className="py-1">
+              <div className="">
                 <button
                   onClick={(e) => {
                     e.preventDefault();
                     dispatch(logout());
                   }}
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                  className="text-bold mx-auto block w-full px-4 py-2 text-center text-sm text-gray-700 hover:bg-violet-600 hover:text-gray-100"
                 >
                   Sign out
                 </button>
