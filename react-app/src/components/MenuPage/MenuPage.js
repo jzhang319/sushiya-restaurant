@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+// import { RefreshIcon } from "@heroicons/react/icons";
+import { RefreshIcon } from '@heroicons/react/outline'
 
 const MenuPage = () => {
   const [menu, setMenu] = useState([]);
@@ -32,8 +34,8 @@ const MenuPage = () => {
 
   if (loading) {
     return (
-      <div className="flex min-h-screen justify-center text-center text-5xl text-orange-600">
-        Loading...
+      <div className="flex min-h-screen items-center justify-center">
+        <RefreshIcon className="h-12 w-12 animate-spin text-orange-600" />
       </div>
     );
   }
