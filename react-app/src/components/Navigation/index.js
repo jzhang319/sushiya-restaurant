@@ -10,7 +10,8 @@ function Navigation({ isLoaded }) {
   // const sessionUser = useSelector((state) => state.session.user);
 
   return (
-    <div className="sticky top-0 bg-gray-100">
+    <div className="sticky top-0 bg-gray-200">
+
       <HoverTabs />
 
       {/* <ChipTabs /> */}
