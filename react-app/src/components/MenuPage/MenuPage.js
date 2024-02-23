@@ -62,10 +62,10 @@ const MenuPage = () => {
 
   return (
     <div className="flex min-h-screen w-screen flex-col items-center justify-start bg-gradient-to-r from-violet-900 to-blue-600">
-      <h1 className="font-pacifico mt-8 text-center text-5xl text-orange-600">
+      <h1 className="font-abel mt-8 text-center text-5xl text-orange-600">
         Our Menu
       </h1>
-      <p className="text-roboto mx-auto w-3/4 py-3 text-center font-thin leading-loose tracking-wider text-white">
+      <p className="text-abel mx-auto w-3/4 py-3 text-center font-thin leading-loose tracking-wider text-white">
         * May contain raw or undercooked ingredients. Consuming raw or
         undercooked meats, poultry, seafood, shellfish, or eggs may increase
         your risk of food-borne illness, especially if you have certain medical

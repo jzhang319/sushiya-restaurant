@@ -2,7 +2,9 @@ import React, { useState, useRef, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../../store/session";
 import { FiCreditCard, FiMail, FiUser, FiUsers } from "react-icons/fi";
-import { MdMenu } from "react-icons/md";
+import { FaPhoneFlip } from "react-icons/fa6";
+import { MdOutlineContactPhone } from "react-icons/md";
+import { BiFoodMenu } from "react-icons/bi";
 import { AiFillHome } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 import OpenModalButton from "../OpenModalButton";
@@ -32,24 +34,24 @@ const HoverTabs = () => {
           href="/"
           Icon={AiFillHome}
         />
-        <Card title="Menu" subtitle="Our Menu" href="/menu" Icon={MdMenu} />
+        <Card title="Menu" subtitle="Our Menu" href="/menu" Icon={BiFoodMenu} />
         <Card
           title="About-Us"
           subtitle="Location and More"
           href="/about-us"
-          Icon={FiUsers}
+          Icon={MdOutlineContactPhone}
         />
 
         <OrderCard
           title="Online Ordering"
           subtitle="Order Online"
           href="https://direct.chownow.com/order/6593/locations/8738"
-          Icon={FiUser}
+          Icon={FaPhoneFlip}
         />
         <DropDownCard
           title="Staff"
           subtitle="Management"
-          Icon={FiUser}
+          Icon={FiUsers}
           user={user}
         />
       </div>
@@ -62,11 +64,12 @@ const Card = ({ title, subtitle, Icon, href }) => {
     <NavLink
       to={href}
       className="font-roboto group relative w-full overflow-hidden rounded border-[1px] border-slate-200 bg-gray-100 p-4"
+      activeClassName="border-b-4 border-violet-600"
       isActive={(match, location) => {
         if (!match) {
           return false;
         }
-        return location.pathname.includes(href);
+        return location.pathname === href;
       }}
     >
       <div className="absolute inset-0 translate-y-[100%] bg-gradient-to-r from-violet-600 to-indigo-600 transition-transform duration-300 group-hover:translate-y-[0%]" />
@@ -130,7 +133,7 @@ const DropDownCard = ({ title, subtitle, Icon, user }) => {
   return (
     <div
       ref={dropdownRef}
-      className="group relative w-full overflow-hidden rounded border-[1px] border-slate-200 bg-gray-100 p-4"
+      className={`group relative w-full overflow-hidden rounded border-[1px] border-slate-200 bg-gray-100 p-4 ${dropdownOpen ? "border-b-4 border-violet-600" : ""}`}
       onClick={() => setDropdownOpen(!dropdownOpen)}
     >
       <div className="absolute inset-0 translate-y-[100%] bg-gradient-to-r from-violet-600 to-indigo-600 transition-transform duration-300 group-hover:translate-y-[0%]" />
