@@ -15,8 +15,16 @@ const HoverTabs = () => {
   const user = useSelector((state) => state.session.user);
 
   return (
-    <div className="p-4">
-      <p className="mb-2 text-2xl font-semibold text-black">
+    <div
+      className="p-4"
+      // style={{
+      //   backgroundImage: `url('https://images.pexels.com/photos/262959/pexels-photo-262959.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')`,
+      //   backgroundPosition: "center",
+      //   backgroundSize: "cover",
+      //   backgroundRepeat: "no-repeat",
+      // }}
+    >
+      <p className="mb-2 text-2xl font-semibold text-purple-900">
         {/* Sushi Ya Japanese Restaurant */}
       </p>
       <div className="flex flex-nowrap space-x-4 overflow-x-auto">
@@ -29,7 +37,7 @@ const HoverTabs = () => {
         <Card title="Menu" subtitle="Our Menu" href="/menu" Icon={BiFoodMenu} />
         <Card
           title="About-Us"
-          subtitle="Location and More"
+          subtitle="Hours, Location and More"
           href="/about-us"
           Icon={MdOutlineContactPhone}
         />
@@ -55,8 +63,8 @@ const Card = ({ title, subtitle, Icon, href }) => {
   return (
     <NavLink
       to={href}
-      className="group relative w-full overflow-hidden rounded border-[1px] border-gray-300 bg-white p-4 font-roboto"
-      activeClassName="border-b-4 border-yellow-600"
+      className="text-bold group relative w-full overflow-hidden rounded border-[1px] border-slate-200 bg-gray-100 p-4 font-abel"
+      activeClassName="border-b-4 border-violet-600"
       isActive={(match, location) => {
         if (!match) {
           return false;
@@ -64,14 +72,14 @@ const Card = ({ title, subtitle, Icon, href }) => {
         return location.pathname === href;
       }}
     >
-      <div className="absolute inset-0 translate-y-[100%] bg-gradient-to-r from-red-400 to-red-700 transition-transform duration-300 group-hover:translate-y-[0%]" />
+      <div className="absolute inset-0 translate-y-[100%] bg-gradient-to-r from-violet-600 to-indigo-600 transition-transform duration-300 group-hover:translate-y-[0%]" />
 
-      <Icon className="group-hover:text-gold-500 absolute -right-12 -top-12 z-10 text-9xl text-gray-700 transition-transform duration-300 group-hover:rotate-12" />
-      <Icon className="relative z-10 mb-2 text-2xl text-red-500 transition-colors duration-300 group-hover:text-white" />
-      <h3 className="relative z-10 hidden text-lg font-medium text-black duration-300 group-hover:text-white sm:block">
+      <Icon className="absolute -right-12 -top-12 z-10 text-9xl text-slate-100 transition-transform duration-300 group-hover:rotate-12 group-hover:text-violet-400" />
+      <Icon className="relative z-10 mb-2 text-2xl text-violet-600 transition-colors duration-300 group-hover:text-white" />
+      <h3 className="relative z-10 hidden text-lg font-medium text-slate-950 duration-300 group-hover:text-white sm:block">
         {title}
       </h3>
-      <p className="relative z-10 hidden text-gray-600 duration-300 group-hover:text-red-200 sm:block ">
+      <p className="relative z-10 hidden text-slate-400 duration-300 group-hover:text-violet-200 sm:block ">
         {subtitle}
       </p>
     </NavLink>
@@ -84,16 +92,16 @@ const OrderCard = ({ title, subtitle, Icon, href }) => {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative w-full overflow-hidden rounded border-[1px] border-gray-300 bg-white p-4 font-roboto"
+      className="text-bold group relative w-full overflow-hidden rounded border-[1px] border-slate-200 bg-gray-100 p-4 font-abel"
     >
-      <div className="absolute inset-0 translate-y-[100%] bg-gradient-to-r from-red-400 to-red-700 transition-transform duration-300 group-hover:translate-y-[0%]" />
+      <div className="absolute inset-0 translate-y-[100%] bg-gradient-to-r from-violet-600 to-indigo-600 transition-transform duration-300 group-hover:translate-y-[0%]" />
 
-      <Icon className="group-hover:text-gold-500 absolute -right-12 -top-12 z-10 text-9xl text-gray-700 transition-transform duration-300 group-hover:rotate-12" />
-      <Icon className="relative z-10 mb-2 text-2xl text-red-500 transition-colors duration-300 group-hover:text-white" />
-      <h3 className="relative z-10 hidden text-lg font-medium text-black duration-300 group-hover:text-white sm:block">
+      <Icon className="absolute -right-12 -top-12 z-10 text-9xl text-slate-100 transition-transform duration-300 group-hover:rotate-12 group-hover:text-violet-400" />
+      <Icon className="relative z-10 mb-2 text-2xl text-violet-600 transition-colors duration-300 group-hover:text-white" />
+      <h3 className="relative z-10 hidden text-lg font-medium text-slate-950 duration-300 group-hover:text-white sm:block">
         {title}
       </h3>
-      <p className="relative z-10 hidden text-gray-600 duration-300 group-hover:text-red-200 sm:block">
+      <p className="relative z-10 hidden text-slate-400 duration-300 group-hover:text-violet-200 sm:block">
         {subtitle}
       </p>
     </a>
@@ -125,19 +133,17 @@ const DropDownCard = ({ title, subtitle, Icon, user }) => {
   return (
     <div
       ref={dropdownRef}
-      className={`group relative w-full overflow-hidden rounded border-[1px] border-gray-300 bg-white p-4 ${
-        dropdownOpen ? "border-gold-500 border-b-4" : ""
-      }`}
+      className={`text-bold group relative w-full overflow-hidden rounded border-[1px] border-slate-200 bg-gray-100 p-4 font-abel ${dropdownOpen ? "border-b-4 border-violet-600" : ""}`}
       onClick={() => setDropdownOpen(!dropdownOpen)}
     >
-      <div className="absolute inset-0 translate-y-[100%] bg-gradient-to-r from-red-400 to-red-700 transition-transform duration-300 group-hover:translate-y-[0%]" />
+      <div className="absolute inset-0 translate-y-[100%] bg-gradient-to-r from-violet-600 to-indigo-600 transition-transform duration-300 group-hover:translate-y-[0%]" />
 
-      <Icon className="group-hover:text-gold-500 absolute -right-12 -top-12 z-10 text-9xl text-gray-700 transition-transform duration-300 group-hover:rotate-12" />
-      <Icon className="relative z-10 mb-2 text-2xl text-red-500 transition-colors duration-300 group-hover:text-white" />
-      <h3 className="relative z-10 hidden text-lg font-medium text-black duration-300 group-hover:text-white sm:block ">
+      <Icon className="absolute -right-12 -top-12 z-10 text-9xl text-slate-100 transition-transform duration-300 group-hover:rotate-12 group-hover:text-violet-400" />
+      <Icon className="relative z-10 mb-2 text-2xl text-violet-600 transition-colors duration-300 group-hover:text-white" />
+      <h3 className="relative z-10 hidden text-lg font-medium text-slate-950 duration-300 group-hover:text-white sm:block ">
         {title}
       </h3>
-      <p className="relative z-10 hidden text-gray-600 duration-300 group-hover:text-red-200 sm:block ">
+      <p className="relative z-10 hidden text-slate-400 duration-300 group-hover:text-violet-200 sm:block ">
         {subtitle}
       </p>
 
@@ -160,7 +166,7 @@ const DropDownCard = ({ title, subtitle, Icon, user }) => {
                     e.preventDefault();
                     dispatch(logout());
                   }}
-                  className="text-bol mx-auto block w-full px-4 py-2 text-center text-sm text-gray-700 hover:bg-red-700 hover:text-white"
+                  className="text-bol mx-auto block w-full px-4 py-2 text-center text-sm text-gray-700 hover:bg-violet-600 hover:text-gray-100"
                 >
                   Sign out
                 </button>

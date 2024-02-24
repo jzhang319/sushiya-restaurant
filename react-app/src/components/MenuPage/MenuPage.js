@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { RefreshIcon } from "@heroicons/react/outline";
 
 const MenuPage = () => {
   const [menu, setMenu] = useState([]);
@@ -32,8 +33,8 @@ const MenuPage = () => {
 
   if (loading) {
     return (
-      <div className="flex min-h-screen justify-center text-center text-5xl text-orange-600">
-        Loading...
+      <div className="flex items-center justify-center pt-40">
+        <RefreshIcon className="h-24 w-24 animate-spin text-yellow-700" />
       </div>
     );
   }
@@ -61,11 +62,11 @@ const MenuPage = () => {
   ];
 
   return (
-    <div className="flex min-h-screen w-screen flex-col items-center justify-start bg-gradient-to-r from-violet-900 to-blue-600">
-      <h1 className="font-abel mt-8 text-center text-5xl text-orange-600">
+    <div className="font-abel flex min-h-screen w-screen flex-col items-center justify-start bg-gray-200">
+      <h1 className="mt-8 text-center text-6xl text-gray-800">
         Our Menu
       </h1>
-      <p className="text-abel mx-auto w-3/4 py-3 text-center font-thin leading-loose tracking-wider text-white">
+      <p className="font-abel mx-auto w-3/4 py-3 text-center font-thin leading-loose tracking-wide text-gray-700">
         * May contain raw or undercooked ingredients. Consuming raw or
         undercooked meats, poultry, seafood, shellfish, or eggs may increase
         your risk of food-borne illness, especially if you have certain medical
@@ -73,11 +74,11 @@ const MenuPage = () => {
       </p>
 
       <span className="py-10">
-        <ul className="text-abel flex flex-wrap items-center justify-center space-x-9 px-10 text-xl text-white">
+        <ul className="font-abel flex flex-wrap items-center justify-center space-x-9 px-10 text-lg text-gray-800">
           {categories.map((category) => (
             <li
               key={category}
-              className={`cursor-pointer border-transparent hover:rounded hover:bg-gray-900 ${selectedCategory === category ? "rounded border-orange-600 text-orange-600 underline" : ""}`}
+              className={`cursor-pointer border-transparent hover:rounded hover:bg-gray-300 ${selectedCategory === category ? "rounded border-blue-500 text-yellow-600 underline" : ""}`}
               onClick={() => handleItemClick(category)}
             >
               {category}
@@ -86,14 +87,14 @@ const MenuPage = () => {
         </ul>
       </span>
 
-      <div className="flex flex-wrap justify-center gap-8 text-white font-abel">
+      <div className="font-abel flex flex-wrap justify-center gap-8 px-20 font-normal text-gray-800">
         {filteredMenu &&
           filteredMenu.map((item, index) => (
-            <div key={index}>
-              <h2>{item.category}</h2>
-              <h3>{item.name}</h3>
-              <p>{item.description}</p>
-              <p>${item.price}</p>
+            <div key={index} className="w-64 rounded-lg bg-white p-4 shadow-md">
+              <h2 className="text-lg font-semibold">{item.category}</h2>
+              <h3 className="text-xl font-bold">{item.name}</h3>
+              <p className="text-gray-700">{item.description}</p>
+              <p className="font-bold text-gray-800">${item.price}</p>
             </div>
           ))}
       </div>

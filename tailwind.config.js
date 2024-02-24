@@ -11,5 +11,16 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        ".gradient-text": {
+          background: "linear-gradient(to right, red, black)",
+          "-webkit-background-clip": "text",
+          "-webkit-text-fill-color": "transparent",
+        },
+      };
+      addUtilities(newUtilities);
+    },
+  ],
 };
