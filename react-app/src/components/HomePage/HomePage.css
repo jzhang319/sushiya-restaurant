@@ -1,0 +1,16 @@
+.panel-1 {
+    background-image: url('./front-page-1.jpg');
+    background-size:cover;
+    height:50vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font:150px
+
+
+
+   
+}
