@@ -4,6 +4,7 @@ module.exports = {
   important: true,
   theme: {
     extend: {
+      scrollbar: ["rounded", "dark"],
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
         pacifico: ["Pacifico", "cursive"],
@@ -12,6 +13,7 @@ module.exports = {
     },
   },
   plugins: [
+    
     function ({ addUtilities }) {
       const newUtilities = {
         ".gradient-text": {

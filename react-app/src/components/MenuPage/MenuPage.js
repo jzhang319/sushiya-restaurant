@@ -28,6 +28,7 @@ const MenuPage = () => {
           }));
         setMenu(uppercasedData);
         setLoading(false);
+        // console.log(data, " <--- data");
       });
   }, []);
 
@@ -41,32 +42,17 @@ const MenuPage = () => {
 
   const categories = [
     "ALL",
-    "GRASS",
-    "FIRE",
-    "WATER",
-    "BUG",
-    "NORMAL",
-    "ELECTRIC",
-    "FAIRY",
-    "FIGHTING",
-    "DRAGON",
-    "GHOST",
-    "POISON",
-    "GROUND",
-    "PSYCHIC",
-    "ROCK",
-    "STEEL",
-    "ICE",
-    "FLYING",
-    "DARK",
+    "Soup & Salad",
+    "Kitchen",
+    "Sushi Bar",
+    "Hibachi",
+    "Beverages",
   ];
 
   return (
-    <div className="font-abel flex min-h-screen w-screen flex-col items-center justify-start bg-gray-200">
-      <h1 className="mt-8 text-center text-6xl text-gray-800">
-        Our Menu
-      </h1>
-      <p className="font-abel mx-auto w-3/4 py-3 text-center font-thin leading-loose tracking-wide text-gray-700">
+    <div className="flex min-h-screen w-screen flex-col items-center justify-start bg-white font-abel">
+      <h1 className="mt-8 text-center text-6xl text-gray-800">Our Menu</h1>
+      <p className="mx-auto w-3/4 py-3 text-center font-abel font-thin leading-loose tracking-wide text-gray-700">
         * May contain raw or undercooked ingredients. Consuming raw or
         undercooked meats, poultry, seafood, shellfish, or eggs may increase
         your risk of food-borne illness, especially if you have certain medical
@@ -74,7 +60,7 @@ const MenuPage = () => {
       </p>
 
       <span className="py-10">
-        <ul className="font-abel flex flex-wrap items-center justify-center space-x-9 px-10 text-lg text-gray-800">
+        <ul className="flex flex-wrap items-center justify-center space-x-9 px-10 font-abel text-lg text-gray-800">
           {categories.map((category) => (
             <li
               key={category}
@@ -87,16 +73,26 @@ const MenuPage = () => {
         </ul>
       </span>
 
-      <div className="font-abel flex flex-wrap justify-center gap-8 px-20 font-normal text-gray-800">
+      <div className="flex flex-wrap justify-center gap-8 px-20 font-abel font-normal text-gray-800">
         {filteredMenu &&
-          filteredMenu.map((item, index) => (
-            <div key={index} className="w-64 rounded-lg bg-white p-4 shadow-md">
-              <h2 className="text-lg font-semibold">{item.category}</h2>
-              <h3 className="text-xl font-bold">{item.name}</h3>
-              <p className="text-gray-700">{item.description}</p>
-              <p className="font-bold text-gray-800">${item.price}</p>
-            </div>
-          ))}
+          filteredMenu.map((item, index) => {
+            console.log(item, " <--- item");
+            return (
+              <div
+                key={index}
+                className="w-64 rounded-lg bg-white p-4 shadow-md"
+              >
+                <h2 className="text-lg font-semibold">{item["category"]}</h2>
+                <h3 className="text-xl font-bold">{item["sub-category"]}</h3>
+                <h3 className="text-xl font-bold">
+                  {item["subcategory-description"]}
+                </h3>
+                <h3 className="text-xl font-bold">{item["name"]}</h3>
+                <p className="text-gray-700">{item["description"]}</p>
+                <p className="font-bold text-gray-800">{item["amount"]}</p>
+              </div>
+            );
+          })}
       </div>
     </div>
   );
