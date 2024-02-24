@@ -8,9 +8,12 @@ item_routes = Blueprint('items', __name__)
 
 @item_routes.route('/')
 def get_menu():
-    file_path = './mock_restaurant_data.csv'
+    file_path = './menu.csv'
     if os.path.isfile(file_path):
         df = pd.read_csv(file_path)
+        # print(df.columns)
+        # df.columns = df.columns.str.strip()
+        df = df.fillna("")
         grouped = df.groupby('category')
 
         menu = {}

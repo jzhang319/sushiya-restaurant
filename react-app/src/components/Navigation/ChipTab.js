@@ -1,48 +1,39 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { NavLink } from "react-router-dom"; // Import NavLink
 
-const tabs = ["Home", "Search", "About-Us", "Profile"];
+const tabs = [
+  { name: "Home", path: "/" },
+  { name: "Menu", path: "/menu" },
+  { name: "About-Us", path: "/about-us" },
+];
 
-const ChipTabs = () => {
-  const [selected, setSelected] = useState(tabs[0]);
-
+const ChipTabs = ({ className }) => {
   return (
-    <div className="px-4 py-14 bg-slate-100 flex items-center justify-between flex-wrap gap-2">
+    <div
+      className={`${className} flex flex-wrap items-center justify-end gap-2 bg-black px-4 py-10`}
+    >
       {tabs.map((tab) => (
-        <Chip
-          text={tab}
-          selected={selected === tab}
-          setSelected={setSelected}
-          key={tab}
-        />
+        <Chip text={tab.name} path={tab.path} key={tab.name} />
       ))}
     </div>
   );
 };
 
-const Chip = ({
-  text,
-  selected,
-  setSelected,
-}) => {
+const Chip = ({ text, path }) => {
   return (
-    <button
-      onClick={() => setSelected(text)}
-      className={`${
-        selected
-          ? "text-white"
-          : "text-slate-300 hover:text-slate-200 hover:bg-slate-700"
-      } text-sm transition-colors px-2.5 py-0.5 rounded-md relative`}
+    <NavLink
+      exact
+      to={path}
+      activeClassName="text-white bg-gradient-to-r from-violet-600 to-indigo-600" // Add this line
+      className={`relative rounded-md px-2.5 py-0.5 text-sm text-slate-300 transition-colors hover:bg-slate-700 hover:text-slate-200`}
     >
       <span className="relative z-10">{text}</span>
-      {selected && (
-        <motion.span
-          layoutId="pill-tab"
-          transition={{ type: "spring", duration: 0.5 }}
-          className="absolute inset-0 z-0 bg-gradient-to-r from-violet-600 to-indigo-600 rounded-md"
-        ></motion.span>
-      )}
-    </button>
+      <motion.span
+        layoutId="pill-tab"
+        transition={{ type: "spring", duration: 0.5 }}
+        className="absolute inset-0 z-0 rounded-md"
+      ></motion.span>
+    </NavLink>
   );
 };
 

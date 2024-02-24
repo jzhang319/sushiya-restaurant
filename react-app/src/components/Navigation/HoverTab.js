@@ -11,6 +11,19 @@ import OpenModalButton from "../OpenModalButton";
 import LoginFormModal from "../LoginFormModal";
 import SignupFormModal from "../SignupFormModal";
 
+// updating all 3 different card's styles at once
+// with these universal variables
+const divClassName =
+  "absolute inset-0 translate-y-[100%] bg-gradient-to-r from-gray-400 to-white transition-transform duration-300 group-hover:translate-y-[0%]";
+const smallIconClassName =
+  "absolute -right-12 -top-12 z-10 text-9xl text-yellow-600 opacity-0 transition-transform duration-300 group-hover:rotate-12 group-hover:text-yellow-700 group-hover:opacity-100";
+const bigIconClassName =
+  "relative z-10 mb-2 text-2xl text-red-500 transition-colors duration-300 group-hover:text-white";
+const h3TagClassName =
+  "relative z-10 hidden text-lg font-medium text-black duration-300 group-hover:text-yellow-900 sm:block";
+const pTagClassName =
+  "relative z-10 hidden text-gray-400 duration-300 group-hover:text-gray-200 sm:block ";
+
 const HoverTabs = () => {
   const user = useSelector((state) => state.session.user);
 
@@ -55,8 +68,8 @@ const Card = ({ title, subtitle, Icon, href }) => {
   return (
     <NavLink
       to={href}
-      className="group relative w-full overflow-hidden rounded border-[1px] border-gray-300 bg-white p-4 font-roboto"
-      activeClassName="border-b-4 border-yellow-600"
+      className="group relative w-full overflow-hidden rounded border-[1px]  border-gray-300 bg-white p-4 font-roboto"
+      activeClassName="border-[1px] border-b-4 border-yellow-600 z-50"
       isActive={(match, location) => {
         if (!match) {
           return false;
@@ -64,16 +77,11 @@ const Card = ({ title, subtitle, Icon, href }) => {
         return location.pathname === href;
       }}
     >
-      <div className="absolute inset-0 translate-y-[100%] bg-gradient-to-r from-red-400 to-red-700 transition-transform duration-300 group-hover:translate-y-[0%]" />
-
-      <Icon className="group-hover:text-gold-500 absolute -right-12 -top-12 z-10 text-9xl text-gray-700 transition-transform duration-300 group-hover:rotate-12" />
-      <Icon className="relative z-10 mb-2 text-2xl text-red-500 transition-colors duration-300 group-hover:text-white" />
-      <h3 className="relative z-10 hidden text-lg font-medium text-black duration-300 group-hover:text-white sm:block">
-        {title}
-      </h3>
-      <p className="relative z-10 hidden text-gray-600 duration-300 group-hover:text-red-200 sm:block ">
-        {subtitle}
-      </p>
+      <div className={divClassName} />
+      <Icon className={smallIconClassName} />
+      <Icon className={bigIconClassName} />
+      <h3 className={h3TagClassName}>{title}</h3>
+      <p className={pTagClassName}>{subtitle}</p>
     </NavLink>
   );
 };
@@ -86,16 +94,11 @@ const OrderCard = ({ title, subtitle, Icon, href }) => {
       rel="noopener noreferrer"
       className="group relative w-full overflow-hidden rounded border-[1px] border-gray-300 bg-white p-4 font-roboto"
     >
-      <div className="absolute inset-0 translate-y-[100%] bg-gradient-to-r from-red-400 to-red-700 transition-transform duration-300 group-hover:translate-y-[0%]" />
-
-      <Icon className="group-hover:text-gold-500 absolute -right-12 -top-12 z-10 text-9xl text-gray-700 transition-transform duration-300 group-hover:rotate-12" />
-      <Icon className="relative z-10 mb-2 text-2xl text-red-500 transition-colors duration-300 group-hover:text-white" />
-      <h3 className="relative z-10 hidden text-lg font-medium text-black duration-300 group-hover:text-white sm:block">
-        {title}
-      </h3>
-      <p className="relative z-10 hidden text-gray-600 duration-300 group-hover:text-red-200 sm:block">
-        {subtitle}
-      </p>
+      <div className={divClassName} />
+      <Icon className={smallIconClassName} />
+      <Icon className={bigIconClassName} />
+      <h3 className={h3TagClassName}>{title}</h3>
+      <p className={pTagClassName}>{subtitle}</p>
     </a>
   );
 };
@@ -125,21 +128,16 @@ const DropDownCard = ({ title, subtitle, Icon, user }) => {
   return (
     <div
       ref={dropdownRef}
-      className={`group relative w-full overflow-hidden rounded border-[1px] border-gray-300 bg-white p-4 ${
-        dropdownOpen ? "border-gold-500 border-b-4" : ""
+      className={`group relative w-full overflow-hidden rounded border-[1px]  border-gray-300 bg-white p-4 ${
+        dropdownOpen ? "border-yellow-700" : ""
       }`}
       onClick={() => setDropdownOpen(!dropdownOpen)}
     >
-      <div className="absolute inset-0 translate-y-[100%] bg-gradient-to-r from-red-400 to-red-700 transition-transform duration-300 group-hover:translate-y-[0%]" />
-
-      <Icon className="group-hover:text-gold-500 absolute -right-12 -top-12 z-10 text-9xl text-gray-700 transition-transform duration-300 group-hover:rotate-12" />
-      <Icon className="relative z-10 mb-2 text-2xl text-red-500 transition-colors duration-300 group-hover:text-white" />
-      <h3 className="relative z-10 hidden text-lg font-medium text-black duration-300 group-hover:text-white sm:block ">
-        {title}
-      </h3>
-      <p className="relative z-10 hidden text-gray-600 duration-300 group-hover:text-red-200 sm:block ">
-        {subtitle}
-      </p>
+      <div className={divClassName} />
+      <Icon className={smallIconClassName} />
+      <Icon className={bigIconClassName} />
+      <h3 className={h3TagClassName}>{title}</h3>
+      <p className={pTagClassName}>{subtitle}</p>
 
       {dropdownOpen && (
         <div className="absolute right-0 top-0 z-50 h-full w-full divide-y divide-gray-100 rounded-md border border-gray-200 bg-white shadow-lg">
