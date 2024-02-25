@@ -24,7 +24,7 @@ const Chip = ({ text, path }) => {
     <NavLink
       exact
       to={path}
-      activeClassName="text-white bg-gradient-to-r from-violet-600 to-indigo-600" // Add this line
+      activeClassName="text-white bg-gradient-to-r from-yellow-800 via-red-500 to-yellow-600"
       className={`relative rounded-md px-2.5 py-0.5 text-sm text-slate-300 transition-colors hover:bg-slate-700 hover:text-slate-200`}
     >
       <span className="relative z-10">{text}</span>

@@ -100,15 +100,17 @@ const MenuPage = () => {
 
   return (
     <div className="flex min-h-screen w-screen flex-col items-center justify-start bg-white font-abel">
-      <h1 className="mt-8 text-center text-6xl text-gray-800">Our Menu</h1>
-      <p className="mx-auto w-3/4 py-3 text-center font-abel font-thin leading-loose tracking-wide text-gray-700">
+      <h1 className="mt-8 text-center text-6xl text-gray-800 sm:text-lg">
+        Our Menu
+      </h1>
+      <p className="mx-auto hidden w-3/4 py-3 text-center font-abel font-thin leading-loose tracking-wide text-gray-700 sm:block">
         * May contain raw or undercooked ingredients. Consuming raw or
         undercooked meats, poultry, seafood, shellfish, or eggs may increase
         your risk of food-borne illness, especially if you have certain medical
         conditions
       </p>
 
-      <span className="py-10">
+      <span className="py-5 sm:py-10">
         <ul className="flex flex-wrap items-center justify-center space-x-9 px-10 font-abel text-lg text-gray-800">
           {categories.map((category) => {
             const uppercasedCategory = category.toUpperCase();
@@ -125,7 +127,7 @@ const MenuPage = () => {
               <div
                 key={category}
                 onMouseEnter={() => setHoveredCategory(uppercasedCategory)}
-                className="group relative"
+                className="group relative py-2"
               >
                 <li
                   className={`cursor-pointer border-transparent hover:rounded hover:bg-gray-300 ${selectedCategory === uppercasedCategory ? "rounded border-blue-500 text-yellow-600 underline" : ""}`}
@@ -136,7 +138,7 @@ const MenuPage = () => {
                 {hoveredCategory === uppercasedCategory &&
                   uniqueSubcategories.length > 1 && (
                     <div
-                      className="dropdown absolute left-0 mt-0 hidden transform rounded bg-white py-2 shadow-md transition-opacity duration-200 ease-in-out group-hover:block"
+                      className="dropdown absolute left-0 mt-0 hidden transform rounded bg-white py-2 shadow-md transition-opacity duration-200 ease-in-out group-hover:block z-10"
                       onMouseLeave={() => setHoveredCategory(null)}
                     >
                       {uniqueSubcategories.map((subCategory, index) => (
