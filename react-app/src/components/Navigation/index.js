@@ -3,30 +3,28 @@ import React from "react";
 // import { useSelector } from "react-redux";
 // import ProfileButton from "./ProfileButton";
 import ChipTabs from "./ChipTab";
-import HoverTabs from "./HoverTab";
+// import HoverTabs from "./HoverTab";
 import "./Navigation.css";
 
 function Navigation({ isLoaded }) {
-  // const sessionUser = useSelector((state) => state.session.user);
-
   return (
-    <div className="sticky top-0 flex w-full justify-center bg-black px-4 py-4">
+    <div className="sticky top-0 grid grid-cols-1 items-center bg-black py-6 sm:grid-cols-3">
+      <div className="col-start-1 col-end-2 self-center"></div>
+      <img
+        src="/logo.png"
+        alt=""
+        className="col-start-1 col-end-2 justify-self-center sm:col-start-2 sm:col-end-3"
+      />
+      <ChipTabs className="col-start-1 col-end-2 justify-self-center sm:col-start-3 sm:col-end-4 sm:justify-self-end sm:py-1" />
+      {/* </div> */}
 
-      {/* <HoverTabs /> */}
-
-      <div className="flex-grow"></div>
-      <div className="absolute left-1/2 -translate-x-1/2 transform">
-        <img src="/logo.png" alt="" className="" />
-      </div>
-      
-      <ChipTabs className="flex-shrink flex-grow" />
       {/* <NavLink exact to="/" className="hover:text-red-500">
         Home
-      </NavLink>
-      <NavLink exact to="/menu" className="hover:text-red-500">
+        </NavLink>
+        <NavLink exact to="/menu" className="hover:text-red-500">
         Menu
-      </NavLink>
-      <NavLink exact to="/about-us" className="hover:text-red-500">
+        </NavLink>
+        <NavLink exact to="/about-us" className="hover:text-red-500">
         About-Us
       </NavLink> */}
 
