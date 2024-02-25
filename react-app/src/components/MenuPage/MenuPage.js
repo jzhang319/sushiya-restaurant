@@ -201,9 +201,9 @@ const MenuPage = () => {
                     <h3 className="text-xl font-bold">
                       {item["sub-category"]}
                     </h3>
-                    <h3 className="text-xl font-bold">
+                    {/* <h3 className="text-xl font-bold">
                       {item["subcategory-description"]}
-                    </h3>
+                    </h3> */}
                     <h3 className="text-xl font-bold">{item["name"]}</h3>
                   </div>
                   <div>
