@@ -160,6 +160,9 @@ const MenuPage = () => {
         {Object.entries(filteredGroupedMenu).map(([category, items], index) => (
           <div key={index}>
             <h2 className="text-center text-3xl font-semibold">{category}</h2>
+            <p className="text-gray-700 text-center">
+              {items[0]["subcategory-description"]}
+            </p>
             <div className="flex flex-wrap items-start justify-center">
               {items.map((item, itemIndex) => (
                 <div
