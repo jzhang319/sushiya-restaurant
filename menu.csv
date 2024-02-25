@@ -1,0 +1,211 @@
+category,sub-category,subcategory-description,name,description,amount
+Soup & Salad,,,Miso Soup,"Bean curd, seaweed, and scallion",$4.00
+Soup & Salad,,,Hamaguri Soup,Clear broth with clam,$12.00
+Soup & Salad,,,Dobin Mushi Soup,"Clear broth with white fish, shrimp, and Japanese mushrooms",$12.00
+Soup & Salad,,,Tofu & Avocado Salad,Mixed salad with tofu and avocado,$10.00
+Soup & Salad,,,Kani Salad,"Crabmeat and julienne cucumber, flying fish roe mixed with Japanese mayonnaise",$11.00
+Soup & Salad,,,Clear Soup,"Mushroom, fried onion, and scallion",$4.00
+Soup & Salad,,,Seafood Soup,Mixed seafood with vegetables in a clear broth,$12.00
+Soup & Salad,,,Green Salad,Iceberg lettuce with ginger dressing,$8.00
+Soup & Salad,,,Seaweed Salad,Japanese seasoned seaweed,$10.00
+Soup & Salad,,,Salmon Skin Salad,Mixed green salad topped with baked salmon skin,$15.00
+Soup & Salad,,,Chef's Salad,Tuna and yellowtail on a bed of salad drizzled with chef's special dressing,$18.00
+Kitchen,Appetizer,,Shumai,Steamed or fried shrimp dumpling,$8.00
+Kitchen,Appetizer,,Yakitori,BBQ chicken on skewer,$9.00
+Kitchen,Appetizer,,Age Tofu,Lightly battered fried bean curd,$9.00
+Kitchen,Appetizer,,Edamame,Soybean pods with salt,$8.00
+Kitchen,Appetizer,,Wasabi Shumai,Steamed spicy pork dumpling,$8.00
+Kitchen,Appetizer,,Yakko Tofu,Cold soybean curd served with special sauce,$8.00
+Kitchen,Appetizer,,Chawan Mushi,Steamed egg seafood custard,$8.00
+Kitchen,Appetizer,,Nasu Shigi,Eggplant with miso sauce,$9.00
+Kitchen,Appetizer,,Yaki Nasu,Sauteed eggplant with chef's sauce,$9.00
+Kitchen,Appetizer,,Zaru Soba,Cold noodle with special sauce,$11.00
+Kitchen,Appetizer,,Volcano,"Shrimp tempura, asparagus baked on a half shell with spicy Japanese mayonnaise",$12.00
+Kitchen,Appetizer,,Ika Yaki,Sauteed squid in chef's sauce,$14.00
+Kitchen,Appetizer,,Hamachi Kama,Broiled yellowtail collar,$16.00
+Kitchen,Appetizer,,Soft-Shell Crab,Lightly fried with garlic and lemon saki sauce,$15.00
+Kitchen,Appetizer,,BBQ Short Ribs,"Barbecued to perfection, marinated chef's special sauce",$16.00
+Kitchen,Appetizer,,Gyoza,Pan-fried shrimp dumpling,$8.00
+Kitchen,Appetizer,,Haru Maki,Japanese spring roll,$8.00
+Kitchen,Appetizer,,Tatsuta Age,Deep-fried chicken served with tonkatsu sauce,$8.00
+Kitchen,Appetizer,,Oshitashi,Cold cooked spinach with ponzu sauce,$8.00
+Kitchen,Appetizer,,Yasai Gyoza,Vegetable dumpling,$8.00
+Kitchen,Appetizer,,Oshinko,Assorted Japanese pickles,$7.00
+Kitchen,Appetizer,,Garlic Edamame,Soybean pods with garlic sauce,$9.00
+Kitchen,Appetizer,,Yaki Shrimp,Sauteed shrimp with garlic and lemon sauce,$10.00
+Kitchen,Appetizer,,Garlic Broccoli,Steamed broccoli with garlic sauce,$8.00
+Kitchen,Appetizer,,Tempura,Deep-fried shrimp and vegetable,$12.00
+Kitchen,Appetizer,,Dynamite,"Scallop, crab meat, shiitake mushroom baked on half shell with Japanese mayonnaise",$12.00
+Kitchen,Appetizer,,Fried Oyster,,$14.00
+Kitchen,Appetizer,,Cod Fish,Baked cod marinated in miso sauce,$18.00
+Kitchen,Appetizer,,Beef Usuyaki,"Sauteed mushroom, scallion, onion, garlic wrapped with tender sliced beef in chef's sauce",$14.00
+Kitchen,Appetizer,,Kobe Steak,4 ounce Kobe steak with garlic lemon vinegar sauce,$60.00
+Sushi Bar,Appetizer,,Kanu Su,Crabmeat seasoned with vinegar sauce,$10.00
+Sushi Bar,Appetizer,,Idako Ajisuki,Small octopus,$12.00
+Sushi Bar,Appetizer,,Tiger Eye,Squid wrapped around smoked salmon scallion,$12.00
+Sushi Bar,Appetizer,,Sunomono,Mixed seafood with vinegar sauce,$14.00
+Sushi Bar,Appetizer,,Beef Tataki,Seared thin slices of beef with ponzu sauce,$16.00
+Sushi Bar,Appetizer,,Usuzukuri,Thin slices of fluke with ponzu sauce,$16.00
+Sushi Bar,Appetizer,,Daily Sampler,Chef's choice of three independently prepared fish,$20.00
+Sushi Bar,Appetizer,,Sushi Starter,4 pieces of sushi,$12.00
+Sushi Bar,Appetizer,,Tako Su,Octopus with vinegar sauce,$13.00
+Sushi Bar,Appetizer,,Maguro Natto,Tuna with ferment soy beans and scallions,$13.00
+Sushi Bar,Appetizer,,Sashimi Starter,8 pieces of raw fish,$16.00
+Sushi Bar,Appetizer,,Tuna Tataki,Seared tuna with ponzu sauce,$16.00
+Sushi Bar,Appetizer,,Tricolor Tataki,"Seared tuna, salmon and white tuna with ponzu sauce",$18.00
+Sushi Bar,Appetizer,,Ninja,Lightly fried eel sushi tempura with spicy mayo and eel sauce,$20.00
+Sushi Bar,Appetizer,,Iron Tuna,Chopped spicy tuba wrapped with seared tuna with chef's special sauce,$20.00
+Sushi Bar,Appetizer,,Cajun Tataki,"Lightly seared with Cajun seasoning choose: tuna, salmon, yellowtail, white tuna or fluke with spicy mayo and eel sauce",$20.00
+Sushi Bar,Appetizer,,Blue Fin Ootoro,Fatty fin tuna delicately prepared to please the palate,$35.00
+Sushi Bar,Appetizer,,Hirame Mono,Chopped spicy tuna wrapped with fluke in spicy mayo and eel sauce,$20.00
+Sushi Bar,Appetizer,,Foie Gras Yellowtail,Yellowtail topped with foie gras and spring mixed and chef's special sauce,$31.00
+Sushi Bar,Appetizer,,Oshinko,Assorted Japanese pickles,$7.00
+Kitchen,Rice & Noodles,,Tommy Tropical Fried Rice,"Sauteed rice with diced chicken, shrimp, and fresh pineapple topped with cashew nuts served on a half pineapple",$23.00
+Kitchen,Rice & Noodles,,Yaki Udon,Pan-fried noodles with chicken and vegetables,$16.00
+Kitchen,Rice & Noodles,,Tempura Udon,Battered fried shrimp and vegetable over noodle in soup,$18.00
+Kitchen,Rice & Noodles,,Beef Sukiyaki,"Sliced beef, bean curd, and vegetable in sukiyaki sauce",$22.00
+Kitchen,Rice & Noodles,,King Crab Udon,King crabmeat over noodle with garlic sauce,$45.00
+Kitchen,Rice & Noodles,,Seafood Udon,"Pan-fried noodles with shrimp, scallop, and vegetables",$26.00
+Kitchen,Rice & Noodles,,Yose Nabe,"Soup noodle with scallop, crab, meat, shrimp, fish, and vegetable",$22.00
+Kitchen,Rice & Noodles,,Chicken Sukiyaki,"Sliced chicken, bean curd and vegetable in sukiyaki sauce",$22.00
+Kitchen,Rice & Noodles,,Fried Rice,Vegetable or Chicken',8/14
+Kitchen,Rice & Noodles,,Fried Rice,"Shrimp, Pork or Beef",9/16
+Sushi Bar,A la Carte,Choice of sushi or sashimi,Tamago ,Japanese omelete,$3.50
+Sushi Bar,A la Carte,Choice of sushi or sashimi,Shrimp ,,$4.00
+Sushi Bar,A la Carte,Choice of sushi or sashimi,Flying Fish Roe ,,$4.00
+Sushi Bar,A la Carte,Choice of sushi or sashimi,Salmon ,,$4.00
+Sushi Bar,A la Carte,Choice of sushi or sashimi,Eel ,,$4.00
+Sushi Bar,A la Carte,Choice of sushi or sashimi,Fluke ,,$4.00
+Sushi Bar,A la Carte,Choice of sushi or sashimi,Octopus ,,$4.00
+Sushi Bar,A la Carte,Choice of sushi or sashimi,Tuna ,,$4.00
+Sushi Bar,A la Carte,Choice of sushi or sashimi,Smoked Salmon ,,$4.00
+Sushi Bar,Rolls,Choice of roll or handroll,Cucumber Roll,,$6.00
+Sushi Bar,Rolls,Choice of roll or handroll,Shiitake Roll,Marinated shiitake mushroom,$6.00
+Sushi Bar,Rolls,Choice of roll or handroll,California Roll,"with imitation crabmeat, avocado and cucumber",$7.00
+Sushi Bar,Rolls,Choice of roll or handroll,Salmon Roll,,$6.00
+Sushi Bar,Rolls,Choice of roll or handroll,Eel Avocado Roll,,$8.00
+Sushi Bar,Rolls,Choice of roll or handroll,Alaskan Roll,"with smoked salmon, avocado and cucumber",$8.00
+Sushi Bar,Rolls,Choice of roll or handroll,Spicy Tuna Roll,with cucumber,$8.00
+Sushi Bar,Rolls,Choice of roll or handroll,Spicy Tuna Roll,"with smoked salmon, cream cheese and cucumber",$8.00
+Sushi Bar,Rolls,Choice of roll or handroll,Boston Roll,Cooked shrimp with lettuce cucumber and Japanese mayonnaise,$8.00
+Sushi Bar,Rolls,Choice of roll or handroll,Shrimp Tempura Roll,"Cucumber, lettuce, eel sauce and mayonnaise",$9.00
+Sushi Bar,Rolls,Choice of roll or handroll,Rainbow Roll,"California roll with tuna, salmon, yellowtail, and white fish",$14.00
+Sushi Bar,Rolls,Choice of roll or handroll,Spicy Yellowtail Roll,with cucumber,$8.00
+Sushi Bar,Rolls,Choice of roll or handroll,Oshinko Roll,Marinated picked yellow radish,$6.00
+Sushi Bar,Rolls,Choice of roll or handroll,Tuna Roll,,$8.00
+Sushi Bar,Rolls,Choice of roll or handroll,Eel Cucumber Roll,,$8.00
+Sushi Bar,Rolls,Choice of roll or handroll,Salmon Skin Roll,,$8.00
+Sushi Bar,Rolls,Choice of roll or handroll,Chicken Tempura Roll,"Cucumber, lettuce, and mayonnaise eel sauce",$8.00
+Sushi Bar,Rolls,Choice of roll or handroll,Spicy Salmon Roll,,$7.00
+Sushi Bar,Rolls,Choice of roll or handroll,Philly Roll,Smoked salmon cucumber and cream cheese,$8.00
+Sushi Bar,Rolls,Choice of roll or handroll,Spider Roll,"Soft-shell crab tempura, avocado, cucumber, lettuce, mayonnaise, tobiko, and eel sauce",$12.00
+Sushi Bar,Rolls,Choice of roll or handroll,Dragon Roll,"Eel, cucumber topped with avocado",$14.00
+Sushi Bar,Rolls,Choice of roll or handroll,Negi Hamachi Roll,Yellowtail and Scallion Rol,$7.00
+Sushi Bar,Specialty Rolls,,Andy Roll,"Spicy tuna, asparagus, crunchy topped with avocado, red caviar, and eel",$16.00
+Sushi Bar,Specialty Rolls,,Tina Roll,"Kani, avocado, spicy tuna wrapped in cucumber topped with spicy sauce. No rice",$16.00
+Sushi Bar,Specialty Rolls,,Rich & Robert Roll,"Lightly battered fried roll with white fish, kani, tuna, salmon, avocado and avocado and caviar",$16.00
+Sushi Bar,Specialty Rolls,,Alliana Roll,"Spicy yellowtail, crunchy topped with crunchy tuna in Kelly's special sauce",$16.00
+Sushi Bar,Specialty Rolls,,East-West Roll,"Spicy white tuna, avocado topped with seared tuna with fresh ginger sauce",$16.00
+Sushi Bar,Specialty Rolls,,U.F.O. Roll,"Shrimp tempura, cucumber topped with eel, avocado, and red caviar",$16.00
+Sushi Bar,Specialty Rolls,,Marie Roll,"Eel, avocado topped with kani, mayo and caviar",$14.00
+Sushi Bar,Specialty Rolls,,Mona Roll,"Tuna, salmon, yellowtail, avocado and caviar wrapped in cucumber. No rice",$14.00
+Sushi Bar,Specialty Rolls,,Sushi Boy Roll,"Tuna, salmon and yellowtail inside topped with red, black and orange caviar",$14.00
+Sushi Bar,Specialty Rolls,,Iso Yuki Maki,"Tuna, salmon, yellowtail, mango, and masago wrapped with soy paper",$18.00
+Sushi Bar,Specialty Rolls,,Ben & John Roll,Eel and avocado inside topped with craw fish salmon salad,$18.00
+Sushi Bar,Specialty Rolls,,Crazy Rock N Roll,"Spicy tuna, eel, cucumber and crunchy inside topped with wasabi caviar and bonito flakes",$18.00
+Sushi Bar,Specialty Rolls,,Peter & Richie Roll,"Spicy white tuna, crunchy and cucumber inside, topped with yellowtail red caviar and shredded seaweed",$18.00
+Sushi Bar,Specialty Rolls,,Dustin Roll,Spicy crunchy tuna and cucumber inside topped with cream cheese and avocado,$18.00
+Sushi Bar,Specialty Rolls,,Scott & Michelle Roll,"Fluke, caviar crunch, topped with spicy white tuna, spicy tuna, and crunchy spicy mayo",$18.00
+Sushi Bar,Specialty Rolls,,Pink Lady Roll,"Tuna, salmon, white tuna, spicy mayo wrapped with pink soy paper topped with red and black caviar",$20.00
+Sushi Bar,Specialty Rolls,,Bob & Barbara Roll,"Tuna, squid, crunchy and mayo topped with avocado and three kids of caviar",$18.00
+Sushi Bar,Specialty Rolls,,DJ Roll,"Spicy yellowtail, crunchy topped with shrimp, avocado and 3 kids of caviar",$18.00
+Sushi Bar,Specialty Rolls,,Sandy & Arthur Roll,"Yellowtail, salmon, avocado and caviar topped with eel and picked radish",$18.00
+Sushi Bar,Specialty Rolls,,Old Country Roll,"Spicy lobster, shrimp, cucumber, lettuce, and caviar",$18.00
+Sushi Bar,Specialty Rolls,,Anthony Roll,"Spicy white tuna, crunchy topped with seared white tuna, miso sauce, and wasabi caviar",$18.00
+Sushi Bar,Specialty Rolls,,Red Head Roll,"Lobster tempura, avocado, lettuce, mayo and caviar",$18.00
+Sushi Bar,Specialty Rolls,,Eric-San Roll,"Spicy tuna with crunchy, cucumber topped with tuna, and black caviar",$18.00
+Sushi Bar,Specialty Rolls,,GCP Roll,"Tuna, salmon, yellowtail roll deep-fried with spicy tuna",$14.00
+Sushi Bar,Specialty Rolls,,Monster Roll,Deep-fried spicy tuna roll topped with crabmeat salad,$16.00
+Sushi Bar,Specialty Rolls,,Sushi Ya Roll,"Spicy salmon, crunchy topped with chopped yellowtail in garlic sauce and 3 kinds of caviar",$18.00
+Sushi Bar,Specialty Rolls,,Uncle Barry Roll,"Spicy yellowtail, cucumber and dried onion inside, topped with spicy crabmeat and scallions",$18.00
+Sushi Bar,Specialty Rolls,,Phoenix Roll,"Spicy white tuna, crunchy and cucumber inside, topped with yellowtail red caviar and shredded seaweed",$18.00
+Sushi Bar,Specialty Rolls,,Orange Roll,"Spicy crunchy salmon inside, topped with salmon and ikura",$18.00
+Sushi Bar,Specialty Rolls,,Ines Roll,"Spicy crunchy tuna topped with tuna, pineapple with plum sauce, and spicy mayo",$18.00
+Sushi Bar,Specialty Rolls,,Silk Roll,Spicy crabmeat topped with eel sauce chopped sweet potato and crunchy spicy mayo,$18.00
+Sushi Bar,Specialty Rolls,,King Crab Roll,Shrimp tempura inside topped with king crab mayo and caviar,$20.00
+Sushi Bar,Entrees,Choice of soup or salad,Combo Roll Entree,"California, tuna and yellowtail. Served with soup or salad",$18.00
+Sushi Bar,Entrees,Choice of soup or salad,Sushi Regular Entree,8 pieces of sushi and 1 spicy tuna roll. Served with soup or salad,$24.00
+Sushi Bar,Entrees,Choice of soup or salad,Tri Color Sashimi Entree,"4 pieces of salmon, 4 pieces of tuna, and 4 pieces of yellowtail. Served with soup or salad",$30.00
+Sushi Bar,Entrees,Choice of soup or salad,Sushi Deluxe Entree,10 pieces of sushi and 1 spicy yellow tail roll. Served with soup or salad,$28.00
+Sushi Bar,Entrees,Choice of soup or salad,Sushi & Sashimi Combo Entree,"10 pieces of sashimi, 4 pieces of sushi, and 1 tuna roll. Served with soup or salad",$32.00
+Sushi Bar,Entrees,Choice of soup or salad,Sushi Ya Love Boat Entree,"Assorted sushi and sashimi, 1 dragon roll, 1 spider roll, and 1 California roll. Served with soup or salad",$70.00
+Sushi Bar,Entrees,Choice of soup or salad,Spicy Roll Combo Entree,"Tuna, yellowtail and salmon. Served with soup or salad",$19.00
+Sushi Bar,Entrees,Choice of soup or salad,Chirashi Entree,Assorted raw fish over rice. Served with soup or salad,$26.00
+Sushi Bar,Entrees,Choice of soup or salad,Tri Color Sushi Entree,"3 pieces of tuna, 3 pieces of salmon, 3 pieces of yellowtail and 1 spicy salmon roll. Served with soup or salad",$29.00
+Sushi Bar,Entrees,Choice of soup or salad,Sashimi Deluxe Entree,16 pieces of raw fish. Served with soup or salad,$32.00
+Sushi Bar,Entrees,Choice of soup or salad,Sushi & Sashimi for 2 Entree,"16 pieces of sashimi, 8 pieces of sushi, 1 spicy salmon roll, and 1 dragon roll. Served with soup or salad",$65.00
+Sushi Bar,Entrees,Choice of soup or salad,Tonkatsu,Breaded pork cutlet,$20.00
+Sushi Bar,Entrees,Choice of soup or salad,Beef Katsu,,$22.00
+Kitchen,Entrees,Choice of soup or salad,Vegetable Tempura,,$18.00
+Kitchen,Entrees,Choice of soup or salad,Shrimp & Vegetable Tempura,,$24.00
+Kitchen,Entrees,Choice of soup or salad,Chicken & Vegetable Tempura,,$24.00
+Kitchen,Entrees,Choice of soup or salad,Chicken Katsu,,$22.00
+Kitchen,Entrees,Choice of soup or salad,House Tempura,"Shrimp, crab, scallop, white fish, and vegetables",$30.00
+Kitchen,Entrees,Choice of soup or salad,Vegetable Teriyaki,Served with soup or salad,$18.00
+Kitchen,Entrees,Choice of soup or salad,Salmon Teriyaki,Served with soup or salad,$22.00
+Kitchen,Entrees,Choice of soup or salad,Shrimp Teriyaki,Served with soup or salad,$24.00
+Kitchen,Entrees,Choice of soup or salad,Bento Regular,"3 pieces of sushi, 1 California roll, chicken teriyaki, and shumai. Served with soup or salad",$26.00
+Kitchen,Entrees,Choice of soup or salad,Bento Deluxe,"4 pieces of sashimi, beef teriyaki, shrimp tempura, and shumai. Served with soup or salad",$30.00
+Kitchen,Entrees,Choice of soup or salad,Kobe Steak,8 oz. Served with soup or salad,$90.00
+Kitchen,Entrees,Choice of soup or salad,Chicken Teriyaki,Served with soup or salad,$18.00
+Kitchen,Entrees,Choice of soup or salad,Beef Teriyaki,Served with soup or salad,$26.00
+Kitchen,Entrees,Choice of soup or salad,Chicken or Beef Negimaki,Served with soup or salad,$24.00
+Kitchen,Entrees,Choice of soup or salad,Teriyaki Combo,"Choice of protein. Served with soup or salad. Choice of protein: Beef & Shrimp, Chicken & Shrimp",$28.00
+Kitchen,Entrees,Choice of soup or salad,Filet Mignon Teriyaki,Served with soup or salad,$32.00
+Kitchen,Entrees,Choice of soup or salad,Lobster Teriyaki,Served with soup or salad,$40.00
+Kitchen,Entrees,Choice of soup or salad,"Chicken, Shrimp & Vegetable Tempura",,$26.00
+Hibachi,Entrees,"Served with house salad, clear soup, vegetables, rice, and shrimp appetizer",Hibachi Vegetable Delight,"Mixed vegetables with tofu. Served with house salad, clear soup, vegetables, and rice",$20.00
+Hibachi,Entrees,"Served with house salad, clear soup, vegetables, rice, and shrimp appetizer",Hibachi Shrimp & Chicken,,$30.00
+Hibachi,Entrees,"Served with house salad, clear soup, vegetables, rice, and shrimp appetizer",Hibachi Steak & Scallop,,$29.00
+Hibachi,Entrees,"Served with house salad, clear soup, vegetables, rice, and shrimp appetizer",Hibachi Filet Mignon & Chicken,,$34.00
+Hibachi,Entrees,"Served with house salad, clear soup, vegetables, rice, and shrimp appetizer",Hibachi Steak & Lobster (6 oz.),,$42.00
+Hibachi,Entrees,"Served with house salad, clear soup, vegetables, rice, and shrimp appetizer",Hibachi Twin Lobster,,$45.00
+Hibachi,Entrees,"Served with house salad, clear soup, vegetables, rice, and shrimp appetizer",Hibachi Shrimp,,$26.00
+Hibachi,Entrees,"Served with house salad, clear soup, vegetables, rice, and shrimp appetizer",Hibachi Steak,,$28.00
+Hibachi,Entrees,"Served with house salad, clear soup, vegetables, rice, and shrimp appetizer",Hibachi Tuna,,$32.00
+Hibachi,Entrees,"Served with house salad, clear soup, vegetables, rice, and shrimp appetizer",Hibachi Chilean Sea Bass,,$45.00
+Hibachi,Entrees,"Served with house salad, clear soup, vegetables, rice, and shrimp appetizer",Hibachi Steak & Chicken,,$32.00
+Hibachi,Entrees,"Served with house salad, clear soup, vegetables, rice, and shrimp appetizer",Hibachi Shrimp & Steak,,$32.00
+Hibachi,Entrees,"Served with house salad, clear soup, vegetables, rice, and shrimp appetizer",Hibachi Shrimp & Scallop,,$32.00
+Hibachi,Entrees,"Served with house salad, clear soup, vegetables, rice, and shrimp appetizer",Hibachi Shrimp & Lobster Tail,,$40.00
+Hibachi,Entrees,"Served with house salad, clear soup, vegetables, rice, and shrimp appetizer",Hibachi Seafood Combo,"Scallop, lobster, and shrimp. Served with house salad, clear soup, vegetables, rice, and shrimp appetizer",$45.00
+Hibachi,Entrees,"Served with house salad, clear soup, vegetables, rice, and shrimp appetizer",Hibachi Chicken,,$22.00
+Hibachi,Entrees,"Served with house salad, clear soup, vegetables, rice, and shrimp appetizer",Hibachi Salmon,,$25.00
+Hibachi,Entrees,"Served with house salad, clear soup, vegetables, rice, and shrimp appetizer",Hibachi Filet Mignon,,$32.00
+Hibachi,Entrees,"Served with house salad, clear soup, vegetables, rice, and shrimp appetizer",Hibachi Lamb Chop,,$35.00
+Hibachi,Entrees,"Served with house salad, clear soup, vegetables, rice, and shrimp appetizer",Hibachi Kobe Steak (8 oz.),,$90.00
+Hibachi,Entrees,"Served with house salad, clear soup, vegetables, rice, and shrimp appetizer",Kids Chicken Hibachi,,$16.00
+Hibachi,Entrees,"Served with house salad, clear soup, vegetables, rice, and shrimp appetizer",Kids Scallop Hibachi,,$18.00
+Hibachi,Entrees,"Served with house salad, clear soup, vegetables, rice, and shrimp appetizer",Kids Chicken & Shrimp Hibachi,,$24.00
+Hibachi,Entrees,"Served with house salad, clear soup, vegetables, rice, and shrimp appetizer",Kids Shrimp & Steak Hibachi,,$26.00
+Hibachi,Entrees,"Served with house salad, clear soup, vegetables, rice, and shrimp appetizer",Kids Steak Hibachi,,$20.00
+Hibachi,Entrees,"Served with house salad, clear soup, vegetables, rice, and shrimp appetizer",Kids Shrimp Hibachi,,$16.00
+Hibachi,Entrees,"Served with house salad, clear soup, vegetables, rice, and shrimp appetizer",Kids Chicken & Steak Hibachi,,$24.00
+Hibachi,Side,,Hibachi Shrimp Side,,$10.00
+Hibachi,Side,,Hibachi Scallop Side,,$10.00
+Hibachi,Side,,Hibachi Udon,"Sauteed udon noodles with chicken and vegetables. Served with a house salad, clear soup, vegetables, rice, and shrimp appetizer",$20.00
+Hibachi,Side,,Hibachi Soba,"Sauteed soba noodles with chicken and vegetables. Served with house salad, clear soup, vegetables, rice, and shrimp appetizer",$20.00
+Kitchen,Side,,White Rice,,$2.50
+Kitchen,Side,,Brown Rice,,$3.00
+Kitchen,Side,,Fried Rice,,$4.00
+Sushi Bar,Side,,Cup of Spicy Mayo,,$2.00
+Sushi Bar,Side,,Cup of Eel Sauce,,$2.00
+Kitchen,Dessert,,Ice Cream,"Choose a flavor: Vanilla, Red Bean, Chocolate, Green Tea",$4.00
+Kitchen,Dessert,,Fried Cheesecake,"Choose a flavor: Vanilla, Red Bean, Chocolate, Green Tea",$6.00
+Kitchen,Dessert,,Fried Ice Cream,"Choose a flavor: Vanilla, Red Bean, Chocolate, Green Tea",$6.00
+Kitchen,Dessert,,Fresh Fruit for 2,,$7.00
+Kitchen,Dessert,,Fresh Fruit for 3,,$10.00
+Beverages,,,Canned Soda,"Choice of Flavor: Ginger Ale, Sprite, Diet Coke, Club Soda, Coke, Ramune Japanese Soda | Bottled $3",$3.00
+Beverages,,,Still Water,,$6.00
+Beverages,,,Sparkling Water,,$6.00
+Beverages,,,Spring Water,,$3.00
