@@ -10,7 +10,7 @@ const tabs = [
 const ChipTabs = ({ className }) => {
   return (
     <div
-      className={`${className} flex flex-wrap items-center justify-end gap-2 bg-black px-4 py-10`}
+      className={`${className}`}
     >
       {tabs.map((tab) => (
         <Chip text={tab.name} path={tab.path} key={tab.name} />
