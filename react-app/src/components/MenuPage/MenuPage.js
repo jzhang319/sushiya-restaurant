@@ -129,7 +129,7 @@ const MenuPage = () => {
                 {hoveredCategory === uppercasedCategory &&
                   uniqueSubcategories.length > 1 && (
                     <div
-                      className="dropdown absolute left-0 mt-0 hidden transform rounded bg-white py-2 shadow-md transition-opacity duration-200 ease-in-out group-hover:block z-10"
+                      className="dropdown absolute left-0 z-10 mt-0 hidden transform rounded bg-white py-2 shadow-md transition-opacity duration-200 ease-in-out group-hover:block"
                       onMouseLeave={() => setHoveredCategory(null)}
                     >
                       {uniqueSubcategories.map((subCategory, index) => (
@@ -191,16 +191,16 @@ const MenuPage = () => {
                 >
                   <div>
                     <h3 className="text-xl font-bold">{item["category"]}</h3>
-                    <h3 className="text-xl font-bold">
-                      {item["sub-category"]}
-                    </h3>
                     {/* <h3 className="text-xl font-bold">
                       {item["subcategory-description"]}
                     </h3> */}
                     <h3 className="text-xl font-bold">{item["name"]}</h3>
+                    <h2 className="text-gray-700">{item["description"]}</h2>
                   </div>
-                  <div>
-                    <p className="text-gray-700">{item["description"]}</p>
+                  <div className="flex justify-between">
+                    <h3 className="text-xl font-bold">
+                      {item["sub-category"]}
+                    </h3>
                     <p className="font-bold text-gray-800">{item["amount"]}</p>
                   </div>
                 </div>
