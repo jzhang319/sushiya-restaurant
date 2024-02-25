@@ -21,7 +21,6 @@ const MenuPage = () => {
           }));
         setMenu(uppercasedData);
         setLoading(false);
-        // console.log(data, " <--- data");
       });
   }, []);
 
@@ -51,14 +50,6 @@ const MenuPage = () => {
     setSelectedCategory(hoveredCategory || "ALL");
     setSelectedSubCategory(selectedSubCategory);
   };
-
-  // const handleSubItemClick = (selectedSubCategory) => {
-  //   const categoryOfSelectedSubCategory = menu
-  //     .find((item) => item["sub-category"] === selectedSubCategory)
-  //     ?.category.toUpperCase();
-  //   setSelectedCategory(categoryOfSelectedSubCategory || "ALL");
-  //   setSelectedSubCategory(selectedSubCategory);
-  // };
 
   const filteredMenu = menu.filter((item) => {
     if (selectedCategory !== "ALL" && item.category !== selectedCategory) {

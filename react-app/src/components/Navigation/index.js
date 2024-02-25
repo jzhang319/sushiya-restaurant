@@ -1,14 +1,13 @@
 import React from "react";
+import ChipTabs from "./ChipTab";
 // import { NavLink } from "react-router-dom";
 // import { useSelector } from "react-redux";
 // import ProfileButton from "./ProfileButton";
-import ChipTabs from "./ChipTab";
 // import HoverTabs from "./HoverTab";
-import "./Navigation.css";
 
 function Navigation({ isLoaded }) {
   return (
-    <div className="sticky top-0 grid grid-cols-1 items-center bg-black py-6 sm:grid-cols-3">
+    <div className="sticky top-0 grid grid-cols-1 items-center bg-black py-6 sm:grid-cols-3 z-50">
       <div className="col-start-1 col-end-2 self-center"></div>
       <img
         src="/logo.png"
@@ -16,7 +15,6 @@ function Navigation({ isLoaded }) {
         className="col-start-1 col-end-2 justify-self-center sm:col-start-2 sm:col-end-3"
       />
       <ChipTabs className="space-x-3 pr-6 col-start-1 col-end-2 justify-self-center sm:col-start-3 sm:col-end-4 sm:justify-self-end sm:py-1" />
-      {/* </div> */}
 
       {/* <NavLink exact to="/" className="hover:text-red-500">
         Home

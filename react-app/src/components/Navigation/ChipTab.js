@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { NavLink } from "react-router-dom"; // Import NavLink
+import { NavLink } from "react-router-dom";
 
 const tabs = [
   { name: "Home", path: "/" },
