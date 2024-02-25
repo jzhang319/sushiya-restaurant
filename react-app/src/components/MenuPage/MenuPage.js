@@ -156,7 +156,7 @@ const MenuPage = () => {
         </ul>
       </span>
 
-      <div className="flex flex-col flex-wrap justify-center gap-4 px-20 font-abel font-normal text-gray-800">
+      {/* <div className="flex flex-col flex-wrap justify-center gap-4 px-20 font-abel font-normal text-gray-800">
         {Object.entries(filteredGroupedMenu).map(([category, items], index) => (
           <div key={index}>
             <h2 className="text-center text-3xl font-semibold">{category}</h2>
@@ -177,6 +177,39 @@ const MenuPage = () => {
                   <h3 className="text-xl font-bold">{item["name"]}</h3>
                   <p className="text-gray-700">{item["description"]}</p>
                   <p className="font-bold text-gray-800">{item["amount"]}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div> */}
+      <div className="flex flex-col flex-wrap justify-center gap-4 px-20 font-abel font-normal text-gray-800">
+        {Object.entries(filteredGroupedMenu).map(([category, items], index) => (
+          <div key={index}>
+            <h2 className="text-center text-3xl font-semibold">{category}</h2>
+            <p className="text-center text-gray-700">
+              {items[0]["subcategory-description"]}
+            </p>
+            <div className="flex flex-wrap items-start justify-center">
+              {items.map((item, itemIndex) => (
+                <div
+                  key={itemIndex}
+                  className="m-2 flex h-64 w-64 flex-col justify-between rounded-lg bg-white p-4 shadow-md"
+                >
+                  <div>
+                    <h3 className="text-xl font-bold">{item["category"]}</h3>
+                    <h3 className="text-xl font-bold">
+                      {item["sub-category"]}
+                    </h3>
+                    <h3 className="text-xl font-bold">
+                      {item["subcategory-description"]}
+                    </h3>
+                    <h3 className="text-xl font-bold">{item["name"]}</h3>
+                  </div>
+                  <div>
+                    <p className="text-gray-700">{item["description"]}</p>
+                    <p className="font-bold text-gray-800">{item["amount"]}</p>
+                  </div>
                 </div>
               ))}
             </div>
