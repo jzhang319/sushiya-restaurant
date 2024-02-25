@@ -11,3 +11,17 @@
     color: black;
 
 }
+
+.panel-2 {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+
+}
+
+.panel-2 img {
+    width: 50%;
+}
+.panel-2 div {
+    width: 50%;
+}
