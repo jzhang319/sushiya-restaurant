@@ -438,9 +438,12 @@ video {
 .left-0 {
   left: 0px !important;
 }
+<<<<<<< HEAD
 .left-1\/2 {
   left: 50% !important;
 }
+=======
+>>>>>>> main
 .right-0 {
   right: 0px !important;
 }
@@ -455,6 +458,12 @@ video {
 }
 .z-50 {
   z-index: 50 !important;
+}
+.col-start-1 {
+  grid-column-start: 1 !important;
+}
+.col-end-2 {
+  grid-column-end: 2 !important;
 }
 .mx-auto {
   margin-left: auto !important;
@@ -514,6 +523,7 @@ video {
 .w-screen {
   width: 100vw !important;
 }
+<<<<<<< HEAD
 .flex-shrink {
   flex-shrink: 1 !important;
 }
@@ -528,6 +538,12 @@ video {
   --tw-translate-y: 0.25rem !important;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
 }
+=======
+.translate-y-1 {
+  --tw-translate-y: 0.25rem !important;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
+}
+>>>>>>> main
 .translate-y-\[100\%\] {
   --tw-translate-y: 100% !important;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
@@ -546,6 +562,12 @@ video {
 .cursor-pointer {
   cursor: pointer !important;
 }
+<<<<<<< HEAD
+=======
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+}
+>>>>>>> main
 .flex-col {
   flex-direction: column !important;
 }
@@ -564,17 +586,11 @@ video {
 .justify-start {
   justify-content: flex-start !important;
 }
-.justify-end {
-  justify-content: flex-end !important;
-}
 .justify-center {
   justify-content: center !important;
 }
 .gap-1 {
   gap: 0.25rem !important;
-}
-.gap-2 {
-  gap: 0.5rem !important;
 }
 .gap-4 {
   gap: 1rem !important;
@@ -597,6 +613,12 @@ video {
 .divide-gray-100 > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-opacity: 1 !important;
   border-color: rgb(243 244 246 / var(--tw-divide-opacity)) !important;
+}
+.self-center {
+  align-self: center !important;
+}
+.justify-self-center {
+  justify-self: center !important;
 }
 .overflow-hidden {
   overflow: hidden !important;
@@ -735,9 +757,15 @@ video {
   padding-top: 0.75rem !important;
   padding-bottom: 0.75rem !important;
 }
+<<<<<<< HEAD
 .py-4 {
   padding-top: 1rem !important;
   padding-bottom: 1rem !important;
+=======
+.py-6 {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+>>>>>>> main
 }
 .pt-40 {
   padding-top: 10rem !important;
@@ -977,8 +1005,33 @@ video {
   opacity: 1 !important;
 }
 @media (min-width: 640px) {
+  .sm\:col-start-2 {
+    grid-column-start: 2 !important;
+  }
+  .sm\:col-start-3 {
+    grid-column-start: 3 !important;
+  }
+  .sm\:col-end-3 {
+    grid-column-end: 3 !important;
+  }
+  .sm\:col-end-4 {
+    grid-column-end: 4 !important;
+  }
   .sm\:block {
     display: block !important;
+  }
+  .sm\:w-1\/2 {
+    width: 50% !important;
+  }
+  .sm\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+  .sm\:justify-self-end {
+    justify-self: end !important;
+  }
+  .sm\:py-1 {
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
   }
 }
 
