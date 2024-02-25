@@ -15,7 +15,7 @@ function Navigation({ isLoaded }) {
         alt=""
         className="col-start-1 col-end-2 justify-self-center sm:col-start-2 sm:col-end-3"
       />
-      <ChipTabs className="col-start-1 col-end-2 justify-self-center sm:col-start-3 sm:col-end-4 sm:justify-self-end sm:py-1" />
+      <ChipTabs className="space-x-3 pr-5 col-start-1 col-end-2 justify-self-center sm:col-start-3 sm:col-end-4 sm:justify-self-end sm:py-1" />
       {/* </div> */}
 
       {/* <NavLink exact to="/" className="hover:text-red-500">
