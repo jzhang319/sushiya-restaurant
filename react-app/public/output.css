@@ -470,11 +470,7 @@ video {
   margin-bottom: 0.5rem;
 }
 .mt-0 {
-<<<<<<< HEAD
-  margin-top: 0px !important;
-=======
   margin-top: 0px;
->>>>>>> jackz
 }
 .block {
   display: block;
@@ -498,17 +494,10 @@ video {
   height: 5rem;
 }
 .h-24 {
-<<<<<<< HEAD
-  height: 6rem !important;
-}
-.h-full {
-  height: 100% !important;
-=======
   height: 6rem;
 }
 .h-full {
   height: 100%;
->>>>>>> jackz
 }
 .min-h-screen {
   min-height: 100vh;
@@ -522,12 +511,9 @@ video {
 .w-3\/4 {
   width: 75%;
 }
-<<<<<<< HEAD
-=======
 .w-96 {
   width: 24rem;
 }
->>>>>>> jackz
 .w-full {
   width: 100%;
 }
@@ -746,13 +732,8 @@ video {
   padding-right: 0.5rem;
 }
 .px-2\.5 {
-<<<<<<< HEAD
-  padding-left: 0.625rem !important;
-  padding-right: 0.625rem !important;
-=======
   padding-left: 0.625rem;
   padding-right: 0.625rem;
->>>>>>> jackz
 }
 .px-4 {
   padding-left: 1rem;
@@ -775,21 +756,6 @@ video {
   padding-bottom: 6rem;
 }
 .py-3 {
-<<<<<<< HEAD
-  padding-top: 0.75rem !important;
-  padding-bottom: 0.75rem !important;
-}
-.py-4 {
-  padding-top: 1rem !important;
-  padding-bottom: 1rem !important;
-}
-.py-6 {
-  padding-top: 1.5rem !important;
-  padding-bottom: 1.5rem !important;
-}
-.pr-6 {
-  padding-right: 1.5rem !important;
-=======
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
@@ -801,26 +767,11 @@ video {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
-<<<<<<< HEAD
-.pr-6 {
-  padding-right: 1.5rem;
->>>>>>> jackz
-}
-=======
->>>>>>> jackz
 .pt-3 {
   padding-top: 0.75rem;
 }
 .pt-40 {
   padding-top: 10rem;
-}
-<<<<<<< HEAD
-.pt-40 {
-  padding-top: 10rem !important;
-=======
-.pr-6 {
-  padding-right: 1.5rem;
->>>>>>> jackz
 }
 .text-center {
   text-align: center;
@@ -836,13 +787,8 @@ video {
   line-height: 2rem;
 }
 .text-3xl {
-<<<<<<< HEAD
-  font-size: 1.875rem !important;
-  line-height: 2.25rem !important;
-=======
   font-size: 1.875rem;
   line-height: 2.25rem;
->>>>>>> jackz
 }
 .text-9xl {
   font-size: 8rem;
@@ -1145,17 +1091,10 @@ video {
     margin-top: 2rem;
   }
   .sm\:block {
-<<<<<<< HEAD
-    display: block !important;
-  }
-  .sm\:h-52 {
-    height: 13rem !important;
-=======
     display: block;
   }
   .sm\:h-52 {
     height: 13rem;
->>>>>>> jackz
   }
   .sm\:w-60 {
     width: 15rem;
@@ -1170,22 +1109,13 @@ video {
     padding-left: 15rem;
     padding-right: 15rem;
   }
-  .sm\:px-10 {
-    padding-left: 2.5rem !important;
-    padding-right: 2.5rem !important;
-  }
   .sm\:py-1 {
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
   }
   .sm\:py-10 {
-<<<<<<< HEAD
-    padding-top: 2.5rem !important;
-    padding-bottom: 2.5rem !important;
-=======
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
->>>>>>> jackz
   }
   .sm\:pr-6 {
     padding-right: 1.5rem;
@@ -1197,9 +1127,6 @@ video {
 }
 
 @media (min-width: 768px) {
-  .md\:pr-6 {
-    padding-right: 1.5rem;
-  }
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -1207,13 +1134,6 @@ video {
 }
 
 @media (min-width: 1024px) {
-<<<<<<< HEAD
-  .lg\:px-20 {
-    padding-left: 5rem !important;
-    padding-right: 5rem !important;
-  }
-=======
->>>>>>> jackz
   .lg\:text-5xl {
     font-size: 3rem;
     line-height: 1;
