@@ -1,7 +1,24 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { GoogleMap, LoadScript } from '@react-google-maps/api';
 import './HomePage.css'
 import image2 from './front-page-2.jpg'
+
+
+
+
+const containerStyle = {
+  width: '100%',
+  height: '400px'
+}
+
+const center = {
+  lat: 43.642567,
+  lng: -79.387054
+}
+
+
+
 function HomePage() {
   return (
     <div className='homepage'>
@@ -22,7 +39,20 @@ function HomePage() {
           <h1>SUSHI YA</h1>
 
         </div>
-        <img src={image2}  />
+        <img src={image2} />
+      </div>
+      <div>
+        <LoadScript
+          googleMapsApiKey="AIzaSyCeKDpXRdjmrGdjpU06UsCUmVa0L_MMWlk"
+        >
+          <GoogleMap
+            mapContainerStyle={containerStyle}
+            center={center}
+            zoom={10}
+          >
+            { /* You can add markers or directions here */ }
+          </GoogleMap>
+        </LoadScript>
       </div>
     </div>
 
