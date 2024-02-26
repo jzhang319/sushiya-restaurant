@@ -988,9 +988,6 @@ video {
   .sm\:block {
     display: block !important;
   }
-  .sm\:w-1\/2 {
-    width: 50% !important;
-  }
   .sm\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   }
