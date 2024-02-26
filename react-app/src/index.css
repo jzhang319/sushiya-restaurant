@@ -4,3 +4,23 @@
 @tailwind utilities;
 
 
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-1 * 50%));
+  }
+}
+
+.image-scroller {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.image-scroller div {
+  display: flex;
+  width: 300%;
+  animation: scroll 30s linear infinite;
+}
