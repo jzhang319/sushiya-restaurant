@@ -4,28 +4,9 @@ import { RefreshIcon } from "@heroicons/react/outline";
 const MenuPage = () => {
   const [menu, setMenu] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("ALL");
-  const [selectedSubCategory, setSelectedSubCategory] = useState(null);
+  const [selectedSubCategory, setSelectedSubCategory] = useState("ALL");
   const [hoveredCategory, setHoveredCategory] = useState(null);
   const [loading, setLoading] = useState(true);
-
-  const handleItemClick = (category) => {
-    setSelectedCategory(category.toUpperCase());
-  };
-
-  const handleSubItemClick = (item) => {
-    setSelectedSubCategory(item["sub-category"]);
-  };
-
-  const filteredMenu =
-    selectedCategory === "ALL"
-      ? menu
-      : menu.filter(
-          (item) =>
-            item.category === selectedCategory &&
-            (selectedSubCategory
-              ? item["sub-category"] === selectedSubCategory
-              : true),
-        );
 
   useEffect(() => {
     setLoading(true);
@@ -40,7 +21,6 @@ const MenuPage = () => {
           }));
         setMenu(uppercasedData);
         setLoading(false);
-        // console.log(data, " <--- data");
       });
   }, []);
 
@@ -61,6 +41,29 @@ const MenuPage = () => {
     "Beverages",
   ];
 
+  const handleItemClick = (category) => {
+    setSelectedCategory(category.toUpperCase());
+    setSelectedSubCategory("ALL");
+  };
+
+  const handleSubItemClick = (selectedSubCategory) => {
+    setSelectedCategory(hoveredCategory || "ALL");
+    setSelectedSubCategory(selectedSubCategory);
+  };
+
+  const filteredMenu = menu.filter((item) => {
+    if (selectedCategory !== "ALL" && item.category !== selectedCategory) {
+      return false;
+    }
+    if (
+      selectedSubCategory !== "ALL" &&
+      item["sub-category"] !== selectedSubCategory
+    ) {
+      return false;
+    }
+    return true;
+  });
+
   const groupedMenu = filteredMenu.reduce((acc, item) => {
     const category = item.category;
     if (!acc[category]) {
@@ -72,12 +75,14 @@ const MenuPage = () => {
 
   const filteredGroupedMenu = Object.entries(groupedMenu).reduce(
     (acc, [category, items]) => {
-      if (selectedCategory === "ALL" || category === selectedCategory) {
-        acc[category] = items.filter(
-          (item) =>
-            !selectedSubCategory ||
-            item["sub-category"] === selectedSubCategory,
-        );
+      const filteredItems = items.filter((item) => {
+        if (selectedSubCategory !== "ALL") {
+          return item["sub-category"] === selectedSubCategory;
+        }
+        return true;
+      });
+      if (filteredItems.length > 0) {
+        acc[category] = filteredItems;
       }
       return acc;
     },
@@ -86,24 +91,26 @@ const MenuPage = () => {
 
   return (
     <div className="flex min-h-screen w-screen flex-col items-center justify-start bg-white font-abel">
-      <h1 className="mt-8 text-center text-6xl text-gray-800">Our Menu</h1>
-      <p className="mx-auto w-3/4 py-3 text-center font-abel font-thin leading-loose tracking-wide text-gray-700">
+      <h1 className="mt-8 text-center text-6xl text-gray-800 sm:text-lg">
+        Our Menu
+      </h1>
+      <p className="mx-auto hidden w-3/4 py-3 text-center font-abel font-thin leading-loose tracking-wide text-gray-700 sm:block">
         * May contain raw or undercooked ingredients. Consuming raw or
         undercooked meats, poultry, seafood, shellfish, or eggs may increase
         your risk of food-borne illness, especially if you have certain medical
         conditions
       </p>
 
-      <span className="py-10">
+      <span className="py-5 sm:py-10">
         <ul className="flex flex-wrap items-center justify-center space-x-9 px-10 font-abel text-lg text-gray-800">
           {categories.map((category) => {
             const uppercasedCategory = category.toUpperCase();
 
             const uniqueSubcategories = [
               ...new Set(
-                (groupedMenu[uppercasedCategory] || []).map(
-                  (item) => item["sub-category"],
-                ),
+                menu
+                  .filter((item) => item.category === uppercasedCategory)
+                  .map((item) => item["sub-category"]),
               ),
             ];
 
@@ -111,8 +118,7 @@ const MenuPage = () => {
               <div
                 key={category}
                 onMouseEnter={() => setHoveredCategory(uppercasedCategory)}
-                onMouseLeave={() => setHoveredCategory(null)}
-                className="group relative" // Add group class
+                className="group relative py-2"
               >
                 <li
                   className={`cursor-pointer border-transparent hover:rounded hover:bg-gray-300 ${selectedCategory === uppercasedCategory ? "rounded border-blue-500 text-yellow-600 underline" : ""}`}
@@ -121,14 +127,15 @@ const MenuPage = () => {
                   {category}
                 </li>
                 {hoveredCategory === uppercasedCategory &&
-                  uniqueSubcategories.length > 1 && ( // Only show the dropdown if there's more than one unique subcategory
-                    <div className="absolute left-0 mt-1 hidden translate-y-1 transform rounded bg-white py-2 shadow-md group-hover:block">
-                      {" "}
-                      {/* Modify this line */}
+                  uniqueSubcategories.length > 1 && (
+                    <div
+                      className="dropdown absolute left-0 z-10 mt-0 hidden transform rounded bg-white py-2 shadow-md transition-opacity duration-200 ease-in-out group-hover:block"
+                      onMouseLeave={() => setHoveredCategory(null)}
+                    >
                       {uniqueSubcategories.map((subCategory, index) => (
                         <div
                           key={index}
-                          className="px-4 py-2 hover:bg-gray-200"
+                          className="cursor-pointer px-4 py-2 hover:bg-gray-200"
                           onClick={() => handleSubItemClick(subCategory)}
                         >
                           {subCategory}
@@ -142,24 +149,63 @@ const MenuPage = () => {
         </ul>
       </span>
 
+      {/* <div className="flex flex-col flex-wrap justify-center gap-4 px-20 font-abel font-normal text-gray-800">
+        {Object.entries(filteredGroupedMenu).map(([category, items], index) => (
+          <div key={index}>
+            <h2 className="text-center text-3xl font-semibold">{category}</h2>
+            <p className="text-gray-700 text-center">
+              {items[0]["subcategory-description"]}
+            </p>
+            <div className="flex flex-wrap items-start justify-center">
+              {items.map((item, itemIndex) => (
+                <div
+                  key={itemIndex}
+                  className="m-2 w-64 rounded-lg bg-white p-4 shadow-md"
+                >
+                  <h3 className="text-xl font-bold">{item["category"]}</h3>
+                  <h3 className="text-xl font-bold">{item["sub-category"]}</h3>
+                  <h3 className="text-xl font-bold">
+                    {item["subcategory-description"]}
+                  </h3>
+                  <h3 className="text-xl font-bold">{item["name"]}</h3>
+                  <p className="text-gray-700">{item["description"]}</p>
+                  <p className="font-bold text-gray-800">{item["amount"]}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div> */}
       <div className="flex flex-col flex-wrap justify-center gap-4 px-20 font-abel font-normal text-gray-800">
         {Object.entries(filteredGroupedMenu).map(([category, items], index) => (
           <div key={index}>
-            <h2 className="text-3xl font-semibold">{category}</h2>
-            {items.map((item, itemIndex) => (
-              <div
-                key={itemIndex}
-                className="w-64 rounded-lg bg-white p-4 shadow-md"
-              >
-                <h3 className="text-xl font-bold">{item["sub-category"]}</h3>
-                <h3 className="text-xl font-bold">
-                  {item["subcategory-description"]}
-                </h3>
-                <h3 className="text-xl font-bold">{item["name"]}</h3>
-                <p className="text-gray-700">{item["description"]}</p>
-                <p className="font-bold text-gray-800">{item["amount"]}</p>
-              </div>
-            ))}
+            <h2 className="text-center text-3xl font-semibold">{category}</h2>
+            <p className="text-center text-gray-700">
+              {items[0]["subcategory-description"]}
+            </p>
+            <div className="flex flex-wrap items-start justify-center">
+              {items.map((item, itemIndex) => (
+                <div
+                  key={itemIndex}
+                  className="m-2 flex h-64 w-64 flex-col justify-between rounded-lg bg-white p-4 shadow-md"
+                >
+                  <div>
+                    <h3 className="text-xl font-bold">{item["category"]}</h3>
+                    {/* <h3 className="text-xl font-bold">
+                      {item["subcategory-description"]}
+                    </h3> */}
+                    <h3 className="text-xl font-bold">{item["name"]}</h3>
+                    <h2 className="text-gray-700">{item["description"]}</h2>
+                  </div>
+                  <div className="flex justify-between">
+                    <h3 className="text-xl font-bold">
+                      {item["sub-category"]}
+                    </h3>
+                    <p className="font-bold text-gray-800">{item["amount"]}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         ))}
       </div>
