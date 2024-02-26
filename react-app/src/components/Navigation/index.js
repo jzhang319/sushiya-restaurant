@@ -11,10 +11,10 @@ function Navigation({ isLoaded }) {
       <div className="col-start-1 col-end-2 self-center"></div>
       <img
         src="/logo.png"
-        alt=""
+        alt="Sushiya Logo"
         className="col-start-1 col-end-2 justify-self-center sm:col-start-2 sm:col-end-3"
       />
-      <ChipTabs className="col-start-1 col-end-2 space-x-3 items-center sm:col-start-3 sm:col-end-4 sm:justify-self-end sm:py-1 sm:pr-6" />
+      <ChipTabs className="col-start-1 col-end-2 items-center space-x-3 sm:col-start-3 sm:col-end-4 sm:justify-self-end sm:py-1 sm:pr-6" />
 
       {/* <NavLink exact to="/" className="hover:text-red-500">
         Home

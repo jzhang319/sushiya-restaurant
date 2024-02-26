@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { RefreshIcon } from "@heroicons/react/outline";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import AnimationCategory from "./AnimationCategory";
 import ScrollingImages from "./ScrollingImages";
 
