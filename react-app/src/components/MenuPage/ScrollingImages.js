@@ -20,7 +20,7 @@ function ScrollingImages() {
 
   return (
     <div className="image-scroller hidden sm:block">
-      <div>
+      <div className="space-x-1">
         {images.concat(images).map((src, index) => (
           <img
             key={index}
