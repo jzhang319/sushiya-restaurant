@@ -11,7 +11,14 @@
     color: black;
 
 }
+.panel-1 button {
+    margin: 10px;
+    font-size: 20px;
+  }
 
+  .panel-2 img, .panel-2 div {
+    margin: 20px;
+  }
 .panel-2 {
     display: flex;
     justify-content:space-between;
@@ -19,9 +26,13 @@
 
 }
 
-.panel-2 img {
-    width: 50%;
-}
-.panel-2 div {
-    width: 50%;
-}
+.google-map {
+    margin: 20px 0;
+  }
+
+  h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2em;
+    color: #333;
+    font-weight: bold;
+  }
