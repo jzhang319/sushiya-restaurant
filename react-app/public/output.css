@@ -773,9 +773,6 @@ video {
 .pt-40 {
   padding-top: 10rem;
 }
-.pr-6 {
-  padding-right: 1.5rem;
-}
 .text-center {
   text-align: center;
 }
@@ -1130,9 +1127,6 @@ video {
 }
 
 @media (min-width: 768px) {
-  .md\:pr-6 {
-    padding-right: 1.5rem;
-  }
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
