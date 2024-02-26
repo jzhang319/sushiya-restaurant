@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { GoogleMap, LoadScript,Marker } from '@react-google-maps/api';
+import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
 import './HomePage.css'
 import image2 from './front-page-2.jpg'
 
@@ -50,7 +50,14 @@ function HomePage() {
             center={center}
             zoom={10}
           >
-            <Marker position={center}/>
+            <InfoWindow position={center}>
+              <div>
+                <h4>Sushi Ya</h4>
+                <p>949 Franklin Ave, Garden City, NY 11530</p>
+                <a href="https://www.google.com/maps/dir//Sushi+Ya/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89c27d8f3c3feabb:0x53d8e7d6588a9a73?sa=X&ved=2ahUKEwiJotbB4PzvAhW1l-AKHQJiDzQQ9RcwFHoECAYQBA" target="_blank" rel="noopener noreferrer">Get Directions</a>
+              </div>
+            </InfoWindow>
+            <Marker position={center} />
           </GoogleMap>
         </LoadScript>
       </div>
