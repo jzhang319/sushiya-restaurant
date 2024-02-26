@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { RefreshIcon } from "@heroicons/react/outline";
+import { motion } from "framer-motion";
+import AnimationCategory from "./AnimationCategory";
+import ScrollingImages from "./ScrollingImages";
 
 const MenuPage = () => {
   const [menu, setMenu] = useState([]);
@@ -108,7 +111,7 @@ const MenuPage = () => {
         your risk of food-borne illness, especially if you have certain medical
         conditions
       </p>
-
+      <ScrollingImages />
       <span className="py-4 sm:py-10">
         <ul className="flex flex-wrap items-center justify-center space-x-9 px-10 font-abel text-lg text-gray-800">
           {categories.map((category) => {
@@ -157,9 +160,24 @@ const MenuPage = () => {
           })}
         </ul>
       </span>
-      <div className="flex flex-col flex-wrap justify-center gap-4 px-4 font-abel font-normal text-gray-800 sm:px-10 lg:px-20">
+      <div className="flex flex-col flex-wrap justify-center gap-4 px-4 font-abel font-normal text-gray-800 sm:px-60">
+        {/* <motion.img
+          initial={{ x: "100vw", opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ type: "spring", stiffness: 50, duration: 2.0 }}
+          src="https://cdn.discordapp.com/attachments/885032629299212308/1211556825863028787/97159fad-a505-4b38-b337-1b1ec14b06c5.png?ex=65eea138&is=65dc2c38&hm=6de26adb459fdb4627977272a71db31f7c0e3080e3f1947642cbc54893741ec8&"
+          alt="restaurant"
+          class="w-96"
+        /> */}
         {Object.entries(filteredGroupedMenu).map(([category, items], index) => (
-          <div key={index}>
+          <>
+            <AnimationCategory key={index} category={category} items={items} />
+          </>
+        ))}
+      </div>
+      {/* <div className="flex flex-col flex-wrap justify-center gap-4 px-4 font-abel font-normal text-gray-800 sm:px-60">
+        {Object.entries(filteredGroupedMenu).map(([category, items], index) => (
+          <div className="transform transition-all duration-500 ease-in-out">
             <h2 className="text-center text-3xl font-semibold">{category}</h2>
             <p className="text-center text-gray-700">
               {items[0]["subcategory-description"]}
@@ -171,7 +189,6 @@ const MenuPage = () => {
                   className="h-42 m-4 flex w-full flex-col justify-between rounded-lg bg-white p-4 shadow-md sm:h-52 sm:w-60"
                 >
                   <div>
-                    {/* <h3 className="text-xl font-bold">{item["category"]}</h3> */}
                     <h3 className="text-2xl font-bold">{item["name"]}</h3>
                     <h2 className="text-gray-700">{item["description"]}</h2>
                   </div>
@@ -186,7 +203,7 @@ const MenuPage = () => {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };
