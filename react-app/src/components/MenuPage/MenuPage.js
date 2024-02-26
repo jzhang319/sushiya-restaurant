@@ -54,6 +54,7 @@ const MenuPage = () => {
   const handleSubItemClick = (selectedSubCategory) => {
     setSelectedCategory(hoveredCategory || "ALL");
     setSelectedSubCategory(selectedSubCategory);
+    setHoveredCategory(null);
   };
 
   const filteredMenu = menu.flatMap((categoryData) => {
@@ -167,11 +168,11 @@ const MenuPage = () => {
               {items.map((item, itemIndex) => (
                 <div
                   key={itemIndex}
-                  className="h-42 lg:w-70 m-2 flex w-full flex-col justify-between rounded-lg bg-white p-4 shadow-md sm:h-52 sm:w-60"
+                  className="h-42 m-4 flex w-full flex-col justify-between rounded-lg bg-white p-4 shadow-md sm:h-52 sm:w-60"
                 >
                   <div>
-                    <h3 className="text-xl font-bold">{item["category"]}</h3>
-                    <h3 className="text-xl font-bold">{item["name"]}</h3>
+                    {/* <h3 className="text-xl font-bold">{item["category"]}</h3> */}
+                    <h3 className="text-2xl font-bold">{item["name"]}</h3>
                     <h2 className="text-gray-700">{item["description"]}</h2>
                   </div>
                   <div className="flex justify-between">
