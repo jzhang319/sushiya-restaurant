@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { GoogleMap, LoadScript } from '@react-google-maps/api';
+import { GoogleMap, LoadScript,Marker } from '@react-google-maps/api';
 import './HomePage.css'
 import image2 from './front-page-2.jpg'
 
@@ -8,8 +8,8 @@ import image2 from './front-page-2.jpg'
 
 
 const containerStyle = {
-  width: '100%',
-  height: '400px'
+  width: '50%',
+  height: '200px'
 }
 
 const center = {
@@ -50,7 +50,7 @@ function HomePage() {
             center={center}
             zoom={10}
           >
-            { /* You can add markers or directions here */ }
+            <Marker position={center}/>
           </GoogleMap>
         </LoadScript>
       </div>
