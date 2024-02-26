@@ -21,7 +21,19 @@ def get_menu():
             items = group.to_dict(orient='records')
             menu[name] = items
 
-        return jsonify(menu)
+        orderedCategories = ["Soup & Salad","Kitchen","Sushi Bar","Hibachi","Beverages",]
+
+        # Create a new list to hold the sorted data
+        sortedData = []
+
+        # Iterate over the ordered categories
+        for category in orderedCategories:
+            # If the category is in the grouped data, append it to the sorted data
+            if category in grouped.groups:
+                items = grouped.get_group(category).to_dict(orient='records')
+                sortedData.append({'category': category, 'items': items})
+
+        return jsonify(sortedData)
     else:
         return jsonify({'error': 'File not found'}), 404
 

@@ -13,13 +13,18 @@ const MenuPage = () => {
     fetch("/api/items/")
       .then((response) => response.json())
       .then((data) => {
-        const uppercasedData = Object.values(data)
-          .flat()
-          .map((item) => ({
-            ...item,
-            category: item.category.toUpperCase(),
-          }));
+        const uppercasedData = data
+          .map((categoryData) => ({
+            ...categoryData,
+            category: categoryData.category.toUpperCase(),
+            items: categoryData.items.map((item) => ({
+              ...item,
+              category: item.category.toUpperCase(),
+            })),
+          }))
+          .flat();
         setMenu(uppercasedData);
+        // console.log(uppercasedData, " <--- uppercasedData");
         setLoading(false);
       });
   }, []);
@@ -51,17 +56,19 @@ const MenuPage = () => {
     setSelectedSubCategory(selectedSubCategory);
   };
 
-  const filteredMenu = menu.filter((item) => {
-    if (selectedCategory !== "ALL" && item.category !== selectedCategory) {
-      return false;
-    }
-    if (
-      selectedSubCategory !== "ALL" &&
-      item["sub-category"] !== selectedSubCategory
-    ) {
-      return false;
-    }
-    return true;
+  const filteredMenu = menu.flatMap((categoryData) => {
+    return categoryData.items.filter((item) => {
+      if (selectedCategory !== "ALL" && item.category !== selectedCategory) {
+        return false;
+      }
+      if (
+        selectedSubCategory !== "ALL" &&
+        item["sub-category"] !== selectedSubCategory
+      ) {
+        return false;
+      }
+      return true;
+    });
   });
 
   const groupedMenu = filteredMenu.reduce((acc, item) => {
@@ -91,7 +98,7 @@ const MenuPage = () => {
 
   return (
     <div className="flex min-h-screen w-screen flex-col items-center justify-start bg-white font-abel">
-      <h1 className="mt-8 text-center text-6xl text-gray-800 sm:text-lg">
+      <h1 className="pt-3 text-center text-3xl text-gray-800 sm:mt-8 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
         Our Menu
       </h1>
       <p className="mx-auto hidden w-3/4 py-3 text-center font-abel font-thin leading-loose tracking-wide text-gray-700 sm:block">
@@ -101,7 +108,7 @@ const MenuPage = () => {
         conditions
       </p>
 
-      <span className="py-5 sm:py-10">
+      <span className="py-4 sm:py-10">
         <ul className="flex flex-wrap items-center justify-center space-x-9 px-10 font-abel text-lg text-gray-800">
           {categories.map((category) => {
             const uppercasedCategory = category.toUpperCase();
@@ -109,6 +116,7 @@ const MenuPage = () => {
             const uniqueSubcategories = [
               ...new Set(
                 menu
+                  .flatMap((categoryData) => categoryData.items)
                   .filter((item) => item.category === uppercasedCategory)
                   .map((item) => item["sub-category"]),
               ),
@@ -148,35 +156,7 @@ const MenuPage = () => {
           })}
         </ul>
       </span>
-
-      {/* <div className="flex flex-col flex-wrap justify-center gap-4 px-20 font-abel font-normal text-gray-800">
-        {Object.entries(filteredGroupedMenu).map(([category, items], index) => (
-          <div key={index}>
-            <h2 className="text-center text-3xl font-semibold">{category}</h2>
-            <p className="text-gray-700 text-center">
-              {items[0]["subcategory-description"]}
-            </p>
-            <div className="flex flex-wrap items-start justify-center">
-              {items.map((item, itemIndex) => (
-                <div
-                  key={itemIndex}
-                  className="m-2 w-64 rounded-lg bg-white p-4 shadow-md"
-                >
-                  <h3 className="text-xl font-bold">{item["category"]}</h3>
-                  <h3 className="text-xl font-bold">{item["sub-category"]}</h3>
-                  <h3 className="text-xl font-bold">
-                    {item["subcategory-description"]}
-                  </h3>
-                  <h3 className="text-xl font-bold">{item["name"]}</h3>
-                  <p className="text-gray-700">{item["description"]}</p>
-                  <p className="font-bold text-gray-800">{item["amount"]}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div> */}
-      <div className="flex flex-col flex-wrap justify-center gap-4 px-20 font-abel font-normal text-gray-800">
+      <div className="flex flex-col flex-wrap justify-center gap-4 px-4 font-abel font-normal text-gray-800 sm:px-10 lg:px-20">
         {Object.entries(filteredGroupedMenu).map(([category, items], index) => (
           <div key={index}>
             <h2 className="text-center text-3xl font-semibold">{category}</h2>
@@ -187,13 +167,10 @@ const MenuPage = () => {
               {items.map((item, itemIndex) => (
                 <div
                   key={itemIndex}
-                  className="m-2 flex h-64 w-64 flex-col justify-between rounded-lg bg-white p-4 shadow-md"
+                  className="h-42 lg:w-70 m-2 flex w-full flex-col justify-between rounded-lg bg-white p-4 shadow-md sm:h-52 sm:w-60"
                 >
                   <div>
                     <h3 className="text-xl font-bold">{item["category"]}</h3>
-                    {/* <h3 className="text-xl font-bold">
-                      {item["subcategory-description"]}
-                    </h3> */}
                     <h3 className="text-xl font-bold">{item["name"]}</h3>
                     <h2 className="text-gray-700">{item["description"]}</h2>
                   </div>
