@@ -801,18 +801,26 @@ video {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
+<<<<<<< HEAD
 .pr-6 {
   padding-right: 1.5rem;
 >>>>>>> jackz
 }
+=======
+>>>>>>> jackz
 .pt-3 {
   padding-top: 0.75rem;
 }
 .pt-40 {
   padding-top: 10rem;
 }
+<<<<<<< HEAD
 .pt-40 {
   padding-top: 10rem !important;
+=======
+.pr-6 {
+  padding-right: 1.5rem;
+>>>>>>> jackz
 }
 .text-center {
   text-align: center;
@@ -1006,9 +1014,15 @@ video {
 }
 
 .image-scroller {
-  display: flex;
+  display: none;
   overflow: hidden;
   width: 100%;
+
+}
+@media (min-width: 640px) {
+  .image-scroller {
+    display: flex;
+  }
 }
 
 .image-scroller div {
@@ -1173,6 +1187,9 @@ video {
     padding-bottom: 2.5rem;
 >>>>>>> jackz
   }
+  .sm\:pr-6 {
+    padding-right: 1.5rem;
+  }
   .sm\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -1180,6 +1197,9 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:pr-6 {
+    padding-right: 1.5rem;
+  }
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
