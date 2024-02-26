@@ -14,9 +14,15 @@
 }
 
 .image-scroller {
-  display: flex;
+  display: none;
   overflow: hidden;
   width: 100%;
+
+}
+@media (min-width: 640px) {
+  .image-scroller {
+    display: flex;
+  }
 }
 
 .image-scroller div {

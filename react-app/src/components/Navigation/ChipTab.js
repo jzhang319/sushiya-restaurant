@@ -9,9 +9,7 @@ const tabs = [
 
 const ChipTabs = ({ className }) => {
   return (
-    <div
-      className={`${className}`}
-    >
+    <div className={`flex justify-center space-x-3 ${className}`}>
       {tabs.map((tab) => (
         <Chip text={tab.name} path={tab.path} key={tab.name} />
       ))}

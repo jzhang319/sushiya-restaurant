@@ -767,14 +767,14 @@ video {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
-.pr-6 {
-  padding-right: 1.5rem;
-}
 .pt-3 {
   padding-top: 0.75rem;
 }
 .pt-40 {
   padding-top: 10rem;
+}
+.pr-6 {
+  padding-right: 1.5rem;
 }
 .text-center {
   text-align: center;
@@ -963,9 +963,15 @@ video {
 }
 
 .image-scroller {
-  display: flex;
+  display: none;
   overflow: hidden;
   width: 100%;
+
+}
+@media (min-width: 640px) {
+  .image-scroller {
+    display: flex;
+  }
 }
 
 .image-scroller div {
@@ -1114,6 +1120,9 @@ video {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
   }
+  .sm\:pr-6 {
+    padding-right: 1.5rem;
+  }
   .sm\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -1121,6 +1130,9 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:pr-6 {
+    padding-right: 1.5rem;
+  }
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
