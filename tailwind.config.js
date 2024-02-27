@@ -3,9 +3,6 @@ module.exports = {
   content: ["./react-app/src/**/*.{html,js}"],
   theme: {
     extend: {
-      backgroundImage: {
-        "diamond-shape": "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)",
-      },
       scrollbar: ["rounded", "dark"],
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],

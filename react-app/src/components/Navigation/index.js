@@ -18,7 +18,7 @@ function Navigation({ isLoaded }) {
 
   return (
     <div
-      className={`sticky top-0 z-50 grid grid-cols-1 items-center py-2 sm:py-6 sm:grid-cols-3 ${user ? "bg-gradient-to-r from-black from-20% via-red-500 to-black to-80%" : "bg-gradient-to-r from-gray-800 from-20% via-black to-gray-800 to-80%"}`}
+      className={`sticky top-0 z-50 grid grid-cols-1 items-center py-2 sm:grid-cols-3 sm:py-3 ${user ? "bg-gradient-to-r from-black from-20% via-red-500 to-black to-80%" : "bg-gradient-to-r from-gray-800 from-20% via-black to-gray-800 to-80%"}`}
     >
       <div className="col-start-1 col-end-2 flex items-center justify-center">
         {user ? (
@@ -35,7 +35,7 @@ function Navigation({ isLoaded }) {
         alt="Sushiya Logo"
         className="col-start-1 col-end-2 w-40 justify-self-center sm:col-start-2 sm:col-end-3 sm:w-60"
       />
-      <ChipTabs className="col-start-1 col-end-2 items-center space-x-3 sm:col-start-3 sm:col-end-4 sm:justify-self-end py-1 sm:pr-6" />
+      <ChipTabs className="col-start-1 col-end-2 flex h-full items-end justify-center space-x-3 py-1 sm:col-start-3 sm:col-end-4 sm:justify-self-end sm:pr-6" />
       {/* <NavLink exact to="/" className="hover:text-red-500">
         Home
         </NavLink>
