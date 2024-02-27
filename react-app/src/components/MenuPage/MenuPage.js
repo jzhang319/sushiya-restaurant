@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { RefreshIcon } from "@heroicons/react/outline";
-// import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import AnimationCategory from "./AnimationCategory";
 import ScrollingImages from "./ScrollingImages";
 
@@ -10,6 +10,8 @@ const MenuPage = () => {
   const [selectedSubCategory, setSelectedSubCategory] = useState("ALL");
   const [hoveredCategory, setHoveredCategory] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [currentCategory, setCurrentCategory] = useState("");
+  const [imageSrc, setImageSrc] = useState("");
 
   useEffect(() => {
     setLoading(true);
@@ -27,10 +29,40 @@ const MenuPage = () => {
           }))
           .flat();
         setMenu(uppercasedData);
-        // console.log(uppercasedData, " <--- uppercasedData");
         setLoading(false);
       });
-  }, []);
+    switch (currentCategory) {
+      case "Soup & Salad":
+        setImageSrc(
+          "https://cdn.discordapp.com/attachments/885032629299212308/1211556699752628275/Kakitamajiru-Egg-Drop-Soup-1398-I.png?ex=65eea11a&is=65dc2c1a&hm=79f5002a4ebafed735b7ab553a09dac02409fc70fd1c5a53c584faae1dbd9183&",
+        );
+        break;
+      case "Kitchen":
+        setImageSrc(
+          "https://cdn.discordapp.com/attachments/885032629299212308/1211556396445864006/2f5e3418-dabb-4591-8186-16e3d7272aa1.png?ex=65eea0d2&is=65dc2bd2&hm=d7c73f5ca69f8a7b356fabb1202164a170a9d57f9c704e46a2588406f65f052f&",
+        );
+        break;
+      case "Sushi Bar":
+        setImageSrc(
+          "https://cdn.discordapp.com/attachments/885032629299212308/1211556461340135455/restaurant-6451.png?ex=65eea0e2&is=65dc2be2&hm=98fd6b865f0fec00d9b3570bc5b18b22a0abd3acef5a28691ba034e346a1aaa0&",
+        );
+        break;
+      case "Hibachi":
+        setImageSrc(
+          "https://cdn.discordapp.com/attachments/885032629299212308/1211557163911086100/hibachi-restaurants-chef-1.png?ex=65eea189&is=65dc2c89&hm=34fd331aee891749acce7b8ccab44a8732e2f70f8d8580858a56ca2544015504&",
+        );
+        break;
+      case "Beverages":
+        setImageSrc(
+          "https://cdn.discordapp.com/attachments/885032629299212308/1211557649628274718/38232178-1629-4365-a578-38c7ac678828.png?ex=65eea1fd&is=65dc2cfd&hm=b1ff6efa2b29610c14cbfd482e2fde41fde5d054ff5f9d2ed56de9c3349171d1&",
+        );
+        break;
+      default:
+        setImageSrc(
+          "https://cdn.discordapp.com/attachments/885032629299212308/1211556825863028787/97159fad-a505-4b38-b337-1b1ec14b06c5.png?ex=65eea138&is=65dc2c38&hm=6de26adb459fdb4627977272a71db31f7c0e3080e3f1947642cbc54893741ec8&",
+        );
+    }
+  }, [currentCategory]);
 
   if (loading) {
     return (
@@ -52,12 +84,14 @@ const MenuPage = () => {
   const handleItemClick = (category) => {
     setSelectedCategory(category.toUpperCase());
     setSelectedSubCategory("ALL");
+    setCurrentCategory(category);
   };
 
-  const handleSubItemClick = (selectedSubCategory) => {
+  const handleSubItemClick = (category, selectedSubCategory) => {
     setSelectedCategory(hoveredCategory || "ALL");
     setSelectedSubCategory(selectedSubCategory);
     setHoveredCategory(null);
+    setCurrentCategory(category);
   };
 
   const filteredMenu = menu.flatMap((categoryData) => {
@@ -113,7 +147,7 @@ const MenuPage = () => {
       </p>
       <ScrollingImages />
       <span className="py-4 sm:py-10">
-        <ul className="flex flex-wrap items-center justify-center space-x-9 px-10 font-abel text-lg text-gray-800">
+        <ul className="z-10 flex flex-wrap items-center justify-center space-x-9 px-10 font-abel text-lg text-gray-800">
           {categories.map((category) => {
             const uppercasedCategory = category.toUpperCase();
 
@@ -148,7 +182,9 @@ const MenuPage = () => {
                         <div
                           key={index}
                           className="cursor-pointer px-4 py-2 hover:bg-gray-200"
-                          onClick={() => handleSubItemClick(subCategory)}
+                          onClick={() =>
+                            handleSubItemClick(category, subCategory)
+                          }
                         >
                           {subCategory}
                         </div>
@@ -160,20 +196,46 @@ const MenuPage = () => {
           })}
         </ul>
       </span>
-      <div className="flex flex-col flex-wrap justify-center gap-4 px-4 font-abel font-normal text-gray-800 sm:px-60">
-        {/* <motion.img
-          initial={{ x: "100vw", opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ type: "spring", stiffness: 50, duration: 2.0 }}
-          src="https://cdn.discordapp.com/attachments/885032629299212308/1211556825863028787/97159fad-a505-4b38-b337-1b1ec14b06c5.png?ex=65eea138&is=65dc2c38&hm=6de26adb459fdb4627977272a71db31f7c0e3080e3f1947642cbc54893741ec8&"
-          alt="restaurant"
-          class="w-96"
-        /> */}
-        {Object.entries(filteredGroupedMenu).map(([category, items], index) => (
-          <>
-            <AnimationCategory key={index} category={category} items={items} />
-          </>
-        ))}
+
+      <div className="grid grid-cols-5 gap-4 px-4 font-abel font-normal text-gray-800">
+        <div className="col-span-3 flex flex-wrap ">
+          {Object.entries(filteredGroupedMenu).map(
+            ([category, items], index) => (
+              <div key={index} className="w-full">
+                <AnimationCategory category={category} items={items} />
+              </div>
+            ),
+          )}
+        </div>
+        <div className="col-span-2 flex items-start justify-center">
+          {/* <motion.img
+            initial={{ x: "100vw", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 50,
+              damping: 20,
+              mass: 1,
+            }}
+            src={imageSrc}
+            alt="restaurant"
+            class="sticky top-1/2 w-96 -translate-y-1/2 transform rounded"
+          /> */}
+          <motion.img
+            initial={{ x: 0 }}
+            animate={{ x: ["-10%", "30%", "-10%"], opacity: 1 }}
+            transition={{
+              type: "tween",
+              ease: "easeInOut",
+              times: [0, 0.5, 1],
+              duration: 5,
+              loop: Infinity,
+            }}
+            src={imageSrc}
+            alt="restaurant"
+            class="sticky top-1/2 w-96 -translate-y-1/2 transform rounded"
+          />
+        </div>
       </div>
       {/* <div className="flex flex-col flex-wrap justify-center gap-4 px-4 font-abel font-normal text-gray-800 sm:px-60">
         {Object.entries(filteredGroupedMenu).map(([category, items], index) => (
