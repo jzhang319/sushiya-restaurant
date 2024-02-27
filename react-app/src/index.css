@@ -31,3 +31,8 @@
   animation: scroll 30s linear infinite;
 }
 
+@layer components {
+  .diamond {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 10% 50%);
+  }
+}

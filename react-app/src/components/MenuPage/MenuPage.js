@@ -146,7 +146,7 @@ const MenuPage = () => {
         conditions
       </p>
       <ScrollingImages />
-      <span className="py-4 sm:py-10">
+      <span className="py-1 sm:py-10">
         <ul className="z-10 flex flex-wrap items-center justify-center space-x-9 px-10 font-abel text-lg text-gray-800">
           {categories.map((category) => {
             const uppercasedCategory = category.toUpperCase();
@@ -198,7 +198,7 @@ const MenuPage = () => {
       </span>
 
       <div className="grid grid-cols-5 gap-4 px-4 font-abel font-normal text-gray-800">
-        <div className="col-span-3 flex flex-wrap ">
+        <div className="col-span-5 flex flex-wrap sm:col-span-3 ">
           {Object.entries(filteredGroupedMenu).map(
             ([category, items], index) => (
               <div key={index} className="w-full">
@@ -207,7 +207,8 @@ const MenuPage = () => {
             ),
           )}
         </div>
-        <div className="col-span-2 flex items-start justify-center">
+
+        <div className="col-span-2 hidden items-start justify-center sm:flex">
           {/* <motion.img
             initial={{ x: "100vw", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -233,10 +234,11 @@ const MenuPage = () => {
             }}
             src={imageSrc}
             alt="restaurant"
-            class="sticky top-1/2 w-96 -translate-y-1/2 transform rounded"
+            className="diamond sticky top-1/2 w-96 -translate-y-1/2 transform rounded"
           />
         </div>
       </div>
+
       {/* <div className="flex flex-col flex-wrap justify-center gap-4 px-4 font-abel font-normal text-gray-800 sm:px-60">
         {Object.entries(filteredGroupedMenu).map(([category, items], index) => (
           <div className="transform transition-all duration-500 ease-in-out">

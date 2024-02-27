@@ -417,6 +417,9 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.diamond {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 10% 50%);
+  }
 .sr-only {
   position: absolute;
   width: 1px;
@@ -470,8 +473,8 @@ video {
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
-.col-span-3 {
-  grid-column: span 3 / span 3;
+.col-span-5 {
+  grid-column: span 5 / span 5;
 }
 .col-start-1 {
   grid-column-start: 1;
@@ -539,6 +542,9 @@ video {
 }
 .w-3\/4 {
   width: 75%;
+}
+.w-40 {
+  width: 10rem;
 }
 .w-70 {
   width: 17.5rem;
@@ -614,6 +620,9 @@ video {
 }
 .items-start {
   align-items: flex-start;
+}
+.items-end {
+  align-items: flex-end;
 }
 .items-center {
   align-items: center;
@@ -801,9 +810,9 @@ video {
   --tw-gradient-to: rgb(124 58 237 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
-.from-yellow-800 {
-  --tw-gradient-from: #854d0e var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(133 77 14 / 0) var(--tw-gradient-to-position);
+.from-yellow-700 {
+  --tw-gradient-from: #a16207 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(161 98 7 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 .from-20\% {
@@ -869,6 +878,10 @@ video {
   padding-top: 0.125rem;
   padding-bottom: 0.125rem;
 }
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -885,15 +898,11 @@ video {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+.pt-2 {
+  padding-top: 0.5rem;
 }
 .pt-3 {
   padding-top: 0.75rem;
-}
-.pt-4 {
-  padding-top: 1rem;
 }
 .pt-40 {
   padding-top: 10rem;
@@ -1260,6 +1269,9 @@ video {
 }
 
 @media (min-width: 640px) {
+  .sm\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
   .sm\:col-start-2 {
     grid-column-start: 2;
   }
@@ -1277,6 +1289,9 @@ video {
   }
   .sm\:block {
     display: block;
+  }
+  .sm\:flex {
+    display: flex;
   }
   .sm\:h-52 {
     height: 13rem;
@@ -1301,16 +1316,19 @@ video {
     padding-left: 15rem;
     padding-right: 15rem;
   }
-  .sm\:py-1 {
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-  }
   .sm\:py-10 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
   }
+  .sm\:py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
   .sm\:pr-6 {
     padding-right: 1.5rem;
+  }
+  .sm\:pt-4 {
+    padding-top: 1rem;
   }
   .sm\:text-3xl {
     font-size: 1.875rem;
@@ -1358,4 +1376,3 @@ video {
     line-height: 1;
   }
 }
-
