@@ -198,7 +198,7 @@ const MenuPage = () => {
       </span>
 
       <div className="grid grid-cols-5 gap-4 px-4 font-abel font-normal text-gray-800">
-        <div className="col-span-3 flex flex-wrap ">
+        <div className="col-span-5 sm:col-span-3 flex flex-wrap ">
           {Object.entries(filteredGroupedMenu).map(
             ([category, items], index) => (
               <div key={index} className="w-full">
@@ -207,7 +207,7 @@ const MenuPage = () => {
             ),
           )}
         </div>
-        <div className="col-span-2 flex items-start justify-center">
+        <div className="col-span-2 hidden sm:flex items-start justify-center">
           {/* <motion.img
             initial={{ x: "100vw", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
