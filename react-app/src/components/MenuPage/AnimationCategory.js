@@ -10,7 +10,7 @@ function AnimationCategory({ category, items }) {
       ref={ref}
       className={`transform transition-all duration-1000 ease-in-out ${inView ? "translate-x-0" : "-translate-x-full"}`}
     >
-      <h2 className="pt-4 text-center text-3xl font-semibold">{category}</h2>
+      <h2 className="pt-2 sm:pt-4 text-center text-3xl font-semibold">{category}</h2>
       <p className="text-center text-gray-700">
         {items[0]["subcategory-description"]}
       </p>
