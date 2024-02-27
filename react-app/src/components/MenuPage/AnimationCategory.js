@@ -25,7 +25,7 @@ function AnimationCategory({ category, items }) {
               <h2 className="text-gray-700">{item["description"]}</h2>
             </div>
             <div className="flex justify-between">
-              <h3 className="text-xl font-bold">{item["sub-category"]}</h3>
+              <h3 className="text-gray-400 text-xl font-bold">{item["sub-category"]}</h3>
               <p className="font-bold text-gray-800">{item["amount"]}</p>
             </div>
           </div>

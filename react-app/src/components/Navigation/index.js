@@ -1,11 +1,11 @@
 import React from "react";
 import ChipTabs from "./ChipTab";
-// import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
-// import ProfileButton from "./ProfileButton";
-// import HoverTabs from "./HoverTab";
 import { useDispatch } from "react-redux";
 import { logout } from "../../store/session";
+// import { NavLink } from "react-router-dom";
+// import ProfileButton from "./ProfileButton";
+// import HoverTabs from "./HoverTab";
 
 function Navigation({ isLoaded }) {
   const dispatch = useDispatch();
@@ -15,9 +15,10 @@ function Navigation({ isLoaded }) {
     e.preventDefault();
     dispatch(logout());
   };
+  
   return (
     <div
-      className={`sticky top-0 z-50 grid grid-cols-1 items-center py-6 sm:grid-cols-3 ${user ? "bg-gradient-to-r from-black from-20% via-red-500 to-black to-80%" : "bg-black"}`}
+      className={`sticky top-0 z-50 grid grid-cols-1 items-center py-6 sm:grid-cols-3 ${user ? "bg-gradient-to-r from-black from-20% via-red-500 to-black to-80%" : "bg-gradient-to-r from-gray-800 from-20% via-black to-gray-800 to-80%"}`}
     >
       <div className="col-start-1 col-end-2 flex items-center justify-center">
         {user ? (
