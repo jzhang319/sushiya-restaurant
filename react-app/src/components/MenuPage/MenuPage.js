@@ -59,7 +59,7 @@ const MenuPage = () => {
         break;
       default:
         setImageSrc(
-          "https://cdn.discordapp.com/attachments/885032629299212308/1211556825863028787/97159fad-a505-4b38-b337-1b1ec14b06c5.png?ex=65eea138&is=65dc2c38&hm=6de26adb459fdb4627977272a71db31f7c0e3080e3f1947642cbc54893741ec8&",
+          "https://cdn.discordapp.com/attachments/885032629299212308/1212471830489595994/black-and-white-tuna-sashimi-lisa-top.png?ex=65f1f563&is=65df8063&hm=9aee96ffa6f000bc5cc18a65bd758ecb92163af488f1ba184f0271e2cb33a212&",
         );
     }
   }, [currentCategory]);
