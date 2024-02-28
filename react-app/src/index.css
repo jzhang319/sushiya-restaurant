@@ -4,3 +4,35 @@
 @tailwind utilities;
 
 
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-1 * 50%));
+  }
+}
+
+.image-scroller {
+  display: none;
+  overflow: hidden;
+  width: 100%;
+
+}
+@media (min-width: 640px) {
+  .image-scroller {
+    display: flex;
+  }
+}
+
+.image-scroller div {
+  display: flex;
+  width: 300%;
+  animation: scroll 30s linear infinite;
+}
+
+@layer components {
+  .diamond {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 10% 50%);
+  }
+}

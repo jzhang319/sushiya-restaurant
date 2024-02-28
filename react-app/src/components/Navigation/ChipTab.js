@@ -9,9 +9,7 @@ const tabs = [
 
 const ChipTabs = ({ className }) => {
   return (
-    <div
-      className={`${className}`}
-    >
+    <div className={` ${className}`}>
       {tabs.map((tab) => (
         <Chip text={tab.name} path={tab.path} key={tab.name} />
       ))}
@@ -24,8 +22,8 @@ const Chip = ({ text, path }) => {
     <NavLink
       exact
       to={path}
-      activeClassName="text-white bg-gradient-to-r from-yellow-800 via-red-500 to-yellow-600"
-      className={`relative rounded-md px-2.5 py-0.5 text-sm text-slate-300 transition-colors hover:bg-slate-700 hover:text-slate-200`}
+      activeClassName="text-white bg-gradient-to-r from-yellow-700 via-red-500 to-yellow-600"
+      className={`relative w-24 text-center rounded-md px-2.5 py-0.5 text-sm text-slate-300 transition-colors hover:bg-slate-700 hover:text-slate-200`}
     >
       <span className="relative z-10">{text}</span>
       <motion.span

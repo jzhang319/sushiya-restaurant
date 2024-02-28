@@ -13,6 +13,7 @@ import "../src/index.css";
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
+
   useEffect(() => {
     dispatch(authenticate()).then(() => setIsLoaded(true));
   }, [dispatch]);
@@ -22,14 +23,13 @@ function App() {
       <Navigation isLoaded={isLoaded} />
       {isLoaded && (
         <Switch>
-
           <Route path="/login">
             <LoginFormPage />
           </Route>
 
-          <Route path="/signup">
+          {/* <Route path="/signup">
             <SignupFormPage />
-          </Route>
+          </Route> */}
 
           <Route path="/menu">
             <MenuPage />
@@ -42,7 +42,6 @@ function App() {
           <Route path="/">
             <HomePage />
           </Route>
-
         </Switch>
       )}
     </>

@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { RefreshIcon } from "@heroicons/react/outline";
+import { motion } from "framer-motion";
+import AnimationCategory from "./AnimationCategory";
+import ScrollingImages from "./ScrollingImages";
 
 const MenuPage = () => {
   const [menu, setMenu] = useState([]);
@@ -7,22 +10,59 @@ const MenuPage = () => {
   const [selectedSubCategory, setSelectedSubCategory] = useState("ALL");
   const [hoveredCategory, setHoveredCategory] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [currentCategory, setCurrentCategory] = useState("");
+  const [imageSrc, setImageSrc] = useState("");
 
   useEffect(() => {
     setLoading(true);
     fetch("/api/items/")
       .then((response) => response.json())
       .then((data) => {
-        const uppercasedData = Object.values(data)
-          .flat()
-          .map((item) => ({
-            ...item,
-            category: item.category.toUpperCase(),
-          }));
+        const uppercasedData = data
+          .map((categoryData) => ({
+            ...categoryData,
+            category: categoryData.category.toUpperCase(),
+            items: categoryData.items.map((item) => ({
+              ...item,
+              category: item.category.toUpperCase(),
+            })),
+          }))
+          .flat();
         setMenu(uppercasedData);
         setLoading(false);
       });
-  }, []);
+    switch (currentCategory) {
+      case "Soup & Salad":
+        setImageSrc(
+          "https://cdn.discordapp.com/attachments/885032629299212308/1211556699752628275/Kakitamajiru-Egg-Drop-Soup-1398-I.png?ex=65eea11a&is=65dc2c1a&hm=79f5002a4ebafed735b7ab553a09dac02409fc70fd1c5a53c584faae1dbd9183&",
+        );
+        break;
+      case "Kitchen":
+        setImageSrc(
+          "https://cdn.discordapp.com/attachments/885032629299212308/1211556396445864006/2f5e3418-dabb-4591-8186-16e3d7272aa1.png?ex=65eea0d2&is=65dc2bd2&hm=d7c73f5ca69f8a7b356fabb1202164a170a9d57f9c704e46a2588406f65f052f&",
+        );
+        break;
+      case "Sushi Bar":
+        setImageSrc(
+          "https://cdn.discordapp.com/attachments/885032629299212308/1211556461340135455/restaurant-6451.png?ex=65eea0e2&is=65dc2be2&hm=98fd6b865f0fec00d9b3570bc5b18b22a0abd3acef5a28691ba034e346a1aaa0&",
+        );
+        break;
+      case "Hibachi":
+        setImageSrc(
+          "https://cdn.discordapp.com/attachments/885032629299212308/1211557163911086100/hibachi-restaurants-chef-1.png?ex=65eea189&is=65dc2c89&hm=34fd331aee891749acce7b8ccab44a8732e2f70f8d8580858a56ca2544015504&",
+        );
+        break;
+      case "Beverages":
+        setImageSrc(
+          "https://cdn.discordapp.com/attachments/885032629299212308/1211557649628274718/38232178-1629-4365-a578-38c7ac678828.png?ex=65eea1fd&is=65dc2cfd&hm=b1ff6efa2b29610c14cbfd482e2fde41fde5d054ff5f9d2ed56de9c3349171d1&",
+        );
+        break;
+      default:
+        setImageSrc(
+          "https://cdn.discordapp.com/attachments/885032629299212308/1211556825863028787/97159fad-a505-4b38-b337-1b1ec14b06c5.png?ex=65eea138&is=65dc2c38&hm=6de26adb459fdb4627977272a71db31f7c0e3080e3f1947642cbc54893741ec8&",
+        );
+    }
+  }, [currentCategory]);
 
   if (loading) {
     return (
@@ -44,24 +84,29 @@ const MenuPage = () => {
   const handleItemClick = (category) => {
     setSelectedCategory(category.toUpperCase());
     setSelectedSubCategory("ALL");
+    setCurrentCategory(category);
   };
 
-  const handleSubItemClick = (selectedSubCategory) => {
+  const handleSubItemClick = (category, selectedSubCategory) => {
     setSelectedCategory(hoveredCategory || "ALL");
     setSelectedSubCategory(selectedSubCategory);
+    setHoveredCategory(null);
+    setCurrentCategory(category);
   };
 
-  const filteredMenu = menu.filter((item) => {
-    if (selectedCategory !== "ALL" && item.category !== selectedCategory) {
-      return false;
-    }
-    if (
-      selectedSubCategory !== "ALL" &&
-      item["sub-category"] !== selectedSubCategory
-    ) {
-      return false;
-    }
-    return true;
+  const filteredMenu = menu.flatMap((categoryData) => {
+    return categoryData.items.filter((item) => {
+      if (selectedCategory !== "ALL" && item.category !== selectedCategory) {
+        return false;
+      }
+      if (
+        selectedSubCategory !== "ALL" &&
+        item["sub-category"] !== selectedSubCategory
+      ) {
+        return false;
+      }
+      return true;
+    });
   });
 
   const groupedMenu = filteredMenu.reduce((acc, item) => {
@@ -91,7 +136,7 @@ const MenuPage = () => {
 
   return (
     <div className="flex min-h-screen w-screen flex-col items-center justify-start bg-white font-abel">
-      <h1 className="mt-8 text-center text-6xl text-gray-800 sm:text-lg">
+      <h1 className="pt-3 text-center text-3xl text-gray-800 sm:mt-8 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
         Our Menu
       </h1>
       <p className="mx-auto hidden w-3/4 py-3 text-center font-abel font-thin leading-loose tracking-wide text-gray-700 sm:block">
@@ -100,15 +145,16 @@ const MenuPage = () => {
         your risk of food-borne illness, especially if you have certain medical
         conditions
       </p>
-
-      <span className="py-5 sm:py-10">
-        <ul className="flex flex-wrap items-center justify-center space-x-9 px-10 font-abel text-lg text-gray-800">
+      <ScrollingImages />
+      <span className="py-1 sm:py-10">
+        <ul className="z-10 flex flex-wrap items-center justify-center space-x-9 px-10 font-abel text-lg text-gray-800">
           {categories.map((category) => {
             const uppercasedCategory = category.toUpperCase();
 
             const uniqueSubcategories = [
               ...new Set(
                 menu
+                  .flatMap((categoryData) => categoryData.items)
                   .filter((item) => item.category === uppercasedCategory)
                   .map((item) => item["sub-category"]),
               ),
@@ -136,7 +182,9 @@ const MenuPage = () => {
                         <div
                           key={index}
                           className="cursor-pointer px-4 py-2 hover:bg-gray-200"
-                          onClick={() => handleSubItemClick(subCategory)}
+                          onClick={() =>
+                            handleSubItemClick(category, subCategory)
+                          }
                         >
                           {subCategory}
                         </div>
@@ -149,36 +197,51 @@ const MenuPage = () => {
         </ul>
       </span>
 
-      {/* <div className="flex flex-col flex-wrap justify-center gap-4 px-20 font-abel font-normal text-gray-800">
+      <div className="grid grid-cols-5 gap-4 px-4 font-abel font-normal text-gray-800">
+        <div className="col-span-5 flex flex-wrap sm:col-span-3 ">
+          {Object.entries(filteredGroupedMenu).map(
+            ([category, items], index) => (
+              <div key={index} className="w-full">
+                <AnimationCategory category={category} items={items} />
+              </div>
+            ),
+          )}
+        </div>
+
+        <div className="col-span-2 hidden items-start justify-center sm:flex">
+          {/* <motion.img
+            initial={{ x: "100vw", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 50,
+              damping: 20,
+              mass: 1,
+            }}
+            src={imageSrc}
+            alt="restaurant"
+            class="sticky top-1/2 w-96 -translate-y-1/2 transform rounded"
+          /> */}
+          <motion.img
+            initial={{ x: 0 }}
+            animate={{ x: ["-10%", "30%", "-10%"], opacity: 1 }}
+            transition={{
+              type: "tween",
+              ease: "easeInOut",
+              times: [0, 0.5, 1],
+              duration: 5,
+              loop: Infinity,
+            }}
+            src={imageSrc}
+            alt="restaurant"
+            className="diamond sticky top-1/2 w-96 -translate-y-1/2 transform rounded"
+          />
+        </div>
+      </div>
+
+      {/* <div className="flex flex-col flex-wrap justify-center gap-4 px-4 font-abel font-normal text-gray-800 sm:px-60">
         {Object.entries(filteredGroupedMenu).map(([category, items], index) => (
-          <div key={index}>
-            <h2 className="text-center text-3xl font-semibold">{category}</h2>
-            <p className="text-gray-700 text-center">
-              {items[0]["subcategory-description"]}
-            </p>
-            <div className="flex flex-wrap items-start justify-center">
-              {items.map((item, itemIndex) => (
-                <div
-                  key={itemIndex}
-                  className="m-2 w-64 rounded-lg bg-white p-4 shadow-md"
-                >
-                  <h3 className="text-xl font-bold">{item["category"]}</h3>
-                  <h3 className="text-xl font-bold">{item["sub-category"]}</h3>
-                  <h3 className="text-xl font-bold">
-                    {item["subcategory-description"]}
-                  </h3>
-                  <h3 className="text-xl font-bold">{item["name"]}</h3>
-                  <p className="text-gray-700">{item["description"]}</p>
-                  <p className="font-bold text-gray-800">{item["amount"]}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div> */}
-      <div className="flex flex-col flex-wrap justify-center gap-4 px-20 font-abel font-normal text-gray-800">
-        {Object.entries(filteredGroupedMenu).map(([category, items], index) => (
-          <div key={index}>
+          <div className="transform transition-all duration-500 ease-in-out">
             <h2 className="text-center text-3xl font-semibold">{category}</h2>
             <p className="text-center text-gray-700">
               {items[0]["subcategory-description"]}
@@ -187,14 +250,10 @@ const MenuPage = () => {
               {items.map((item, itemIndex) => (
                 <div
                   key={itemIndex}
-                  className="m-2 flex h-64 w-64 flex-col justify-between rounded-lg bg-white p-4 shadow-md"
+                  className="h-42 m-4 flex w-full flex-col justify-between rounded-lg bg-white p-4 shadow-md sm:h-52 sm:w-60"
                 >
                   <div>
-                    <h3 className="text-xl font-bold">{item["category"]}</h3>
-                    {/* <h3 className="text-xl font-bold">
-                      {item["subcategory-description"]}
-                    </h3> */}
-                    <h3 className="text-xl font-bold">{item["name"]}</h3>
+                    <h3 className="text-2xl font-bold">{item["name"]}</h3>
                     <h2 className="text-gray-700">{item["description"]}</h2>
                   </div>
                   <div className="flex justify-between">
@@ -208,7 +267,7 @@ const MenuPage = () => {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };
