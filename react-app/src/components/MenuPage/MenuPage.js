@@ -209,7 +209,7 @@ const MenuPage = () => {
         </div>
 
         <div className="col-span-2 hidden items-start justify-center sm:flex">
-          {/* <motion.img
+          <motion.img
             initial={{ x: "100vw", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{
@@ -221,8 +221,8 @@ const MenuPage = () => {
             src={imageSrc}
             alt="restaurant"
             class="sticky top-1/2 w-96 -translate-y-1/2 transform rounded"
-          /> */}
-          <motion.img
+          />
+          {/* <motion.img
             initial={{ x: 0 }}
             animate={{ x: ["-10%", "30%", "-10%"], opacity: 1 }}
             transition={{
@@ -235,7 +235,7 @@ const MenuPage = () => {
             src={imageSrc}
             alt="restaurant"
             className="diamond sticky top-1/2 w-96 -translate-y-1/2 transform rounded"
-          />
+          /> */}
         </div>
       </div>
 
