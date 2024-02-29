@@ -1,7 +1,7 @@
 """random
 
 Revision ID: f6a979133923
-Revises: 
+Revises:
 Create Date: 2024-02-24 11:26:17.192137
 
 """
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'f6a979133923'
+revision = 'e15984f6a21e'
 down_revision = None
 branch_labels = None
 depends_on = None
