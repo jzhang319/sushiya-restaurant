@@ -54,9 +54,9 @@ function HomePage() {
           <h1 className="text-4xl font-bold">WELCOME TO</h1>
           <h1 className="text-4xl font-bold">SUSHI YA</h1>
         </div>
-        <img src={image2} className="w-1/2" />
+        <img src={image2} alt='' className="w-1/2" />
       </div>
-      <LoadScript
+      {/* <LoadScript
         googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}
       >
         <GoogleMap
@@ -76,7 +76,7 @@ function HomePage() {
             )}
           </Marker>
         </GoogleMap>
-      </LoadScript>
+      </LoadScript> */}
     </div>
 
 
