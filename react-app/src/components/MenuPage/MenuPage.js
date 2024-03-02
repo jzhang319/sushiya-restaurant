@@ -59,7 +59,7 @@ const MenuPage = () => {
         break;
       default:
         setImageSrc(
-          "https://cdn.discordapp.com/attachments/885032629299212308/1211556825863028787/97159fad-a505-4b38-b337-1b1ec14b06c5.png?ex=65eea138&is=65dc2c38&hm=6de26adb459fdb4627977272a71db31f7c0e3080e3f1947642cbc54893741ec8&",
+          "https://cdn.discordapp.com/attachments/885032629299212308/1212471830489595994/black-and-white-tuna-sashimi-lisa-top.png?ex=65f1f563&is=65df8063&hm=9aee96ffa6f000bc5cc18a65bd758ecb92163af488f1ba184f0271e2cb33a212&",
         );
     }
   }, [currentCategory]);
@@ -209,7 +209,7 @@ const MenuPage = () => {
         </div>
 
         <div className="col-span-2 hidden items-start justify-center sm:flex">
-          {/* <motion.img
+          <motion.img
             initial={{ x: "100vw", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{
@@ -221,8 +221,8 @@ const MenuPage = () => {
             src={imageSrc}
             alt="restaurant"
             class="sticky top-1/2 w-96 -translate-y-1/2 transform rounded"
-          /> */}
-          <motion.img
+          />
+          {/* <motion.img
             initial={{ x: 0 }}
             animate={{ x: ["-10%", "30%", "-10%"], opacity: 1 }}
             transition={{
@@ -235,7 +235,7 @@ const MenuPage = () => {
             src={imageSrc}
             alt="restaurant"
             className="diamond sticky top-1/2 w-96 -translate-y-1/2 transform rounded"
-          />
+          /> */}
         </div>
       </div>
 
