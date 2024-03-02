@@ -220,7 +220,7 @@ const MenuPage = () => {
             }}
             src={imageSrc}
             alt="restaurant"
-            class="sticky top-1/2 w-96 -translate-y-1/2 transform rounded"
+            class="sticky top-1/2 -translate-y-1/2 transform rounded"
           />
           {/* <motion.img
             initial={{ x: 0 }}
