@@ -23,11 +23,11 @@ const center = {
 
 function HomePage() {
 
-  const [showInfoWindow, setShowInfoWindow] = useState(false);
+  // const [showInfoWindow, setShowInfoWindow] = useState(false);
 
-  const handleMarkerClick = () => {
-    setShowInfoWindow(true);
-  };
+  // const handleMarkerClick = () => {
+  //   setShowInfoWindow(true);
+  // };
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
