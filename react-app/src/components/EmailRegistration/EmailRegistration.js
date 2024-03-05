@@ -7,11 +7,22 @@ function EmailRegistration() {
     const handleSubmit = async (e) =>{
         e.preventDefault();
         try{
-            await axios.post{'/subscribe',{email}};
-            alert('Subscription successful');
+            const response = await fetch('/subscribe',{
+                method: 'POST',
+                headers:{
+                    'Constent-Type': 'application/json'
+                },
+                body: JSON.stringify({email})
+            })
+            if (!response.ok){
+                throw new Error("Network response was not ok")
+            }
+            alert('Subscription successful')
         }catch(error){
-            alert('An error occured while subscribing')
+            alert('An error occurred. Please try again.')
         }
+        
+
     };
 
     return (
