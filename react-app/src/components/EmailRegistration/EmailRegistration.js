@@ -1,51 +1,56 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 
 function EmailRegistration() {
-    const [email,setEmail] = useState('');
+    const [email, setEmail] = useState('');
     const [isloading, setIsloading] = useState(false);
     const [message, setMessage] = useState('')
 
-    const handleSubmit = async (e) =>{
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setIsloading(true);
         setMessage('')
-        try{
-            const response = await fetch('/subscribe',{
+        try {
+            const response = await fetch('/subscribe', {
                 method: 'POST',
-                headers:{
+                headers: {
                     'Constent-Type': 'application/json'
                 },
-                body: JSON.stringify({email})
+                body: JSON.stringify({ email })
             })
-            if (!response.ok){
+            if (!response.ok) {
                 throw new Error("Network response was not ok")
             }
             setEmail('');
             setMessage('Subscription successful')
             alert('Subscription successful')
-        }catch(error){
+        } catch (error) {
             setMessage('An error occurred. Please try again.')
-        }finally{
+        } finally {
             setIsloading(false)
         }
-        
+
 
     };
 
     return (
-        <form onSubmit = {handleSubmit}>
+        <form onSubmit={handleSubmit}>
             <label>
                 Email:
 
                 <input
                     type='email'
                     value={email}
-                    onChange={e =>setEmail(e.target.value)}
+                    onChange={e => setEmail(e.target.value)}
                     required
                 />
             </label>
-            <button type="submit>Subscribe</button>"></button>
+            <button type="submit" disabled={isLoading}>
+                {isLoading ? 'Subscribing...' : 'Subscribe'}
+
+            </button>
+            {isLoading && <div>Loading...</div>}
+            {message && <p>{message}</p>}
         </form>
     )
 }
