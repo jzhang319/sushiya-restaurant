@@ -1,11 +1,15 @@
 import React, {useState} from 'react';
-import axios from 'axios';
+
 
 function EmailRegistration() {
-    const [email,setEmail] = useState('');;
+    const [email,setEmail] = useState('');
+    const [isloading, setIsloading] = useState(false);
+    const [message, setMessage] = useState('')
 
     const handleSubmit = async (e) =>{
         e.preventDefault();
+        setIsloading(true);
+        setMessage('')
         try{
             const response = await fetch('/subscribe',{
                 method: 'POST',
@@ -17,9 +21,13 @@ function EmailRegistration() {
             if (!response.ok){
                 throw new Error("Network response was not ok")
             }
+            setEmail('');
+            setMessage('Subscription successful')
             alert('Subscription successful')
         }catch(error){
-            alert('An error occurred. Please try again.')
+            setMessage('An error occurred. Please try again.')
+        }finally{
+            setIsloading(false)
         }
         
 
