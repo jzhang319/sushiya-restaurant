@@ -23,3 +23,11 @@ def subscribe():
 
 
     return jsonify({'message': 'Subscribed successfully!'})
+
+@email_routes.route('/<int:id>')
+def get_email(id):
+    """
+    Query for a user by id and returns that user's email in a dictionary
+    """
+    user = User.query.get(id)  # Query the database for a user with the provided id
+    return {'email': user.email}  # Return the user's email
