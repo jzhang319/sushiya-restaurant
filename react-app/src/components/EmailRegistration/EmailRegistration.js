@@ -54,3 +54,5 @@ function EmailRegistration() {
         </form>
     )
 }
+
+export default EmailRegistration
