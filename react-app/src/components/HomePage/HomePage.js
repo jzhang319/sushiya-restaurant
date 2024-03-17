@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-
 function HomePage() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100">

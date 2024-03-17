@@ -18,7 +18,7 @@ function Navigation({ isLoaded }) {
 
   return (
     <div
-      className={`sticky top-0 z-50 grid grid-cols-1 items-center py-2 sm:grid-cols-3 sm:py-3 ${user ? "bg-gradient-to-r from-black from-20% via-red-500 to-black to-80%" : "bg-gradient-to-r from-gray-800 from-20% via-black to-gray-800 to-80%"}`}
+      className={`sticky top-0 z-50 grid grid-cols-1 items-center py-2 sm:grid-cols-3 sm:py-3 ${user ? "bg-gradient-to-r from-gray-100 from-20% via-red-500 to-gray-400 to-80%" : "bg-slate-100"}`}
     >
       <div className="col-start-1 col-end-2 flex items-center justify-center">
         {user ? (
@@ -31,7 +31,7 @@ function Navigation({ isLoaded }) {
         ) : null}
       </div>
       <img
-        src="/logo.png"
+        src="/logo1.png"
         alt="Sushiya Logo"
         className="col-start-1 col-end-2 w-40 justify-self-center sm:col-start-2 sm:col-end-3 sm:w-60"
       />
