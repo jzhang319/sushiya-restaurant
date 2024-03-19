@@ -14,7 +14,7 @@ function AnimationCategory({ category, items }) {
       <p className="text-center text-gray-700">
         {items[0]["subcategory-description"]}
       </p>
-      <div className="mx-auto flex w-full max-w-screen-lg flex-wrap items-start justify-between ">
+      <div className="mx-auto flex w-full max-w-screen-lg flex-wrap items-start">
         {items.map((item, itemIndex) => (
           <div
             key={itemIndex}
