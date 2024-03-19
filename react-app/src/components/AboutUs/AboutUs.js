@@ -1,8 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import restaurantSection from "./images/bg_Restaurant-section-1024x683.jpg";
-// import ButtonUsage from "./test";
-// import Skeleton from "@mui/material/Skeleton";
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
 
 export const AboutUs = () => {
   const form = useRef();
@@ -26,9 +25,10 @@ export const AboutUs = () => {
 
   return (
     <>
-      <div class="m-28 flex justify-center">
-        <iframe
-          title="image of restaurant location"
+      <div class="mb-28 flex justify-center">
+        <Stack direction="column">
+        <h1 className="text-8xl flex justify-center">Location</h1>
+          <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.502624603083!2d-73.63762672401968!3d40.728964471391116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c27d4145b10001%3A0xf4d9d38e4a3e756c!2sSushi%20Ya!5e0!3m2!1sen!2sus!4v1708575084944!5m2!1sen!2sus"
           width="1400"
           height="500"
@@ -37,16 +37,18 @@ export const AboutUs = () => {
           referrerpolicy="no-referrer-when-downgrade"
           className="1/2-screen"
         ></iframe>
+
+      </Stack>
       </div>
 
-      {/* <ButtonUsage></ButtonUsage> */}
-      {/* <Skeleton variant="rectangular" width={210} height={118} /> */}
+
       <div className="flex-start flex w-full items-center">
         <div>
-          <img src={restaurantSection} alt='restaurant'></img>
+          <img src="restaurant.jpeg" alt="restaurant"></img>
         </div>
-        <div>
+        <div className="ml-28">
           <h1 className="text-5xl">Hours of Operation</h1>
+          {/* <Skeleton variant="rectangular" width={395} height={60} /> */}
           <br></br>
           <h1 className="text-2xl">Dining In</h1>
           <p>Monday - Friday: 11 AM - 10 PM</p>
@@ -70,43 +72,59 @@ export const AboutUs = () => {
             <input
               type="text"
               name="user_name"
-              className="h-25 mb-4 w-full cursor-pointer border-2 border-gray-500 bg-white p-4"
+              className="h-25 mb-4 w-full cursor-pointer border border-2 border-gray-500 bg-white p-4"
               placeholder="Eric"
             />
             <label>Email</label>
             <input
               type="email"
               name="user_email"
-              className="h-25 mb-4 w-full cursor-pointer border-2 border-gray-500 bg-white p-4"
+              className="h-25 mb-4 w-full cursor-pointer border border-2 border-gray-500 bg-white p-4"
               placeholder="eric@sushiyany.com"
             />
             <label>Message</label>
             <textarea
               name="message"
-              className="h-25 mb-4 w-full cursor-pointer border-2 border-gray-500 bg-white p-4"
+              className="h-25 mb-4 w-full cursor-pointer border border-2 border-gray-500 bg-white p-4"
               placeholder="Hello..."
             />
 
-            <input
+            {/* <input
               type="submit"
               value="Send"
-              className="h-25 w-full cursor-pointer border-2 border-black bg-white p-4"
-            />
+              className="h-25 w-full cursor-pointer border border-2 border-black hover:border-gray-500 hover:text-gray-500 bg-white p-4"
+            /> */}
+
+            <Button
+              variant="contained"
+              color="primary"
+              size="large"
+              type="submit"
+              className="h-25 w-full cursor-pointer border border-2 border-black bg-white p-4 hover:border-gray-500 hover:text-gray-500"
+            >
+              Send
+            </Button>
           </form>
         </div>
       </div>
 
-      <div className="bg-white-100 m-10 flex h-28 w-full flex-col items-center justify-center">
-        <div>
-          {/* <img src="https://youmesushi.com/wp-content/uploads/2016/06/Home-Light2-10-1024x362.jpg"/> */}
-        </div>
-        <div>
-          949 Franklin Avenue,<br></br> Garden City, NY 11530<br></br>
-          (516) 873-8818
-        </div>
+      <div className="bg-white-100 m-10 flex h-28 w-full w-full flex-col items-center justify-center">
+        <Stack
+          direction="row"
+          justifyContent="space-evenly"
+          alignItems="center"
+          spacing={12}
+        >
+          <img src="footer.png" alt="restaurant" className="h-28"></img>
+          <div>
+            949 Franklin Avenue,<br></br> Garden City, NY 11530<br></br>
+            (516) 873-8818
+          </div>
+        </Stack>
       </div>
     </>
   );
 };
 
 export default AboutUs;
+
