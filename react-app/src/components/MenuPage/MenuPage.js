@@ -3,6 +3,12 @@ import { RefreshIcon } from "@heroicons/react/outline";
 import { motion } from "framer-motion";
 import AnimationCategory from "./AnimationCategory";
 import ScrollingImages from "./ScrollingImages";
+import hibachiImage from "./images/hibachi.png";
+import soupImage from "./images/soup.png";
+import sushiImage from "./images/sushi.png";
+import kitchenImage from "./images/kitchen.png";
+import beverageImage from "./images/beverage.png";
+import defaultImage from "./images/default.png";
 
 const MenuPage = () => {
   const [menu, setMenu] = useState([]);
@@ -33,34 +39,22 @@ const MenuPage = () => {
       });
     switch (currentCategory) {
       case "Soup & Salad":
-        setImageSrc(
-          "https://cdn.discordapp.com/attachments/885032629299212308/1211556699752628275/Kakitamajiru-Egg-Drop-Soup-1398-I.png?ex=65eea11a&is=65dc2c1a&hm=79f5002a4ebafed735b7ab553a09dac02409fc70fd1c5a53c584faae1dbd9183&",
-        );
+        setImageSrc(soupImage);
         break;
       case "Kitchen":
-        setImageSrc(
-          "https://cdn.discordapp.com/attachments/885032629299212308/1211556396445864006/2f5e3418-dabb-4591-8186-16e3d7272aa1.png?ex=65eea0d2&is=65dc2bd2&hm=d7c73f5ca69f8a7b356fabb1202164a170a9d57f9c704e46a2588406f65f052f&",
-        );
+        setImageSrc(kitchenImage);
         break;
       case "Sushi Bar":
-        setImageSrc(
-          "https://cdn.discordapp.com/attachments/885032629299212308/1211556461340135455/restaurant-6451.png?ex=65eea0e2&is=65dc2be2&hm=98fd6b865f0fec00d9b3570bc5b18b22a0abd3acef5a28691ba034e346a1aaa0&",
-        );
+        setImageSrc(sushiImage);
         break;
       case "Hibachi":
-        setImageSrc(
-          "https://cdn.discordapp.com/attachments/885032629299212308/1211557163911086100/hibachi-restaurants-chef-1.png?ex=65eea189&is=65dc2c89&hm=34fd331aee891749acce7b8ccab44a8732e2f70f8d8580858a56ca2544015504&",
-        );
+        setImageSrc(hibachiImage);
         break;
       case "Beverages":
-        setImageSrc(
-          "https://cdn.discordapp.com/attachments/885032629299212308/1211557649628274718/38232178-1629-4365-a578-38c7ac678828.png?ex=65eea1fd&is=65dc2cfd&hm=b1ff6efa2b29610c14cbfd482e2fde41fde5d054ff5f9d2ed56de9c3349171d1&",
-        );
+        setImageSrc(beverageImage);
         break;
       default:
-        setImageSrc(
-          "https://cdn.discordapp.com/attachments/885032629299212308/1212471830489595994/black-and-white-tuna-sashimi-lisa-top.png?ex=65f1f563&is=65df8063&hm=9aee96ffa6f000bc5cc18a65bd758ecb92163af488f1ba184f0271e2cb33a212&",
-        );
+        setImageSrc(defaultImage);
     }
   }, [currentCategory]);
 
