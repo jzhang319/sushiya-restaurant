@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
 import './HomePage.css'
 import image2 from './front-page-2.jpg'
 import image1 from './front-page-1.jpg'
