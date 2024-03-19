@@ -7,11 +7,8 @@
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
     "@heroicons/react": "^1.0.6",
-<<<<<<< HEAD
     "@react-google-maps/api": "^2.19.3",
-=======
     "@mui/material": "^5.15.13",
->>>>>>> jackz
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
