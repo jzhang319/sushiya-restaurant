@@ -4,7 +4,7 @@ import os
 
 email_routes = Blueprint('email', __name__)
 
-@email__routes.route('/subscribe',methods=['POST'])
+@email_routes.route('/subscribe',methods=['POST'])
 def subscribe():
     data = request.get_json()
     email = data.get('email')
