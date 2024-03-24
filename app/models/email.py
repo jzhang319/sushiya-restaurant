@@ -12,3 +12,6 @@ class Email(db.Model):
     name = db.Column(db.String(40))
     email = db.Column(db.String(100),nullable=False, unique=True)
     phone = db.Column(db.Integer)
+    created_at = db.Column(db.DateTime, server_default=db.func.now())
+    updated_at = db.Column(db.DateTime, server_default=db.func.now(), server_onupdate=db.func.now())
+
