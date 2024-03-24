@@ -15,3 +15,12 @@ class Email(db.Model):
     created_at = db.Column(db.DateTime, server_default=db.func.now())
     updated_at = db.Column(db.DateTime, server_default=db.func.now(), server_onupdate=db.func.now())
 
+    def to_dic(self):
+        return {
+            'id':self.id,
+            'name':self.name,
+            'email':self.email,
+            'phone':self.phone,
+            'created_at':self.created_at,
+            'updated_at':self.updated_at
+        }
