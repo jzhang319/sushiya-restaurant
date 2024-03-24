@@ -1,38 +1,7 @@
-/* .panel-1 {
-    background-image: url('./front-page-1.jpg');
-    background-size:cover;
-    height:50vh;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    color: black;
-
-}
-.panel-1 button {
-    margin: 10px;
-    font-size: 20px;
-  }
-
-  .panel-2 img, .panel-2 div {
-    margin: 20px;
-  }
-.panel-2 {
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-
+.slide-up {
+  transition: transform 0.3s ease-out;
 }
 
-.google-map {
-    margin: 20px 0;
-  }
-
-  h1 {
-    font-family: 'Arial', sans-serif;
-    font-size: 2em;
-    color: #333;
-    font-weight: bold;
-  } */
+.slide-up:hover {
+  transform: translateY(-10px);
+}

@@ -36,9 +36,9 @@ function EmailRegistration() {
     return (
         <form onSubmit={handleSubmit} style={{ backgroundImage: `url(${image3})`, backgroundSize: 'cover' }} className="w-full h-screen flex items-center justify-center bg-contain">
             <div className="flex flex-col max-w-md mx-auto bg-white p-8 rounded shadow-lg">
-                <div className="flex flex-row justify-center space-x-4 mb-6">
+                <div className="flex flex-row justify-center mb-6">
                     <input
-                        className="border py-2 px-3 text-grey-darkest mr-2"
+                        className="border py-2 px-3 text-grey-darkest mr-4"
                         id="email"
                         type="email"
                         placeholder="Email Address"

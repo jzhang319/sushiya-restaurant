@@ -23,28 +23,24 @@ const center = {
 
 function HomePage() {
 
-  // const [showInfoWindow, setShowInfoWindow] = useState(false);
 
-  // const handleMarkerClick = () => {
-  //   setShowInfoWindow(true);
-  // };
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <div className="flex flex-col justify-center items-center space-y-4 w-full h-screen p-6 mt-4 bg-white shadow"
+      <div className="flex flex-col justify-center items-center space-y-4 w-full h-screen p-6 bg-white shadow"
         style={{ backgroundImage: `url(${image1})`, backgroundSize: 'cover' }}>
         <Link to="/about-us" className="btn-blue">
-          <button className="bg-transparent hover:bg-transparent text-white text-2xl sm:text-3xl font-bold py-2 px-4 rounded shadow-lg">
+          <button className="bg-transparent hover:bg-transparent text-white text-2xl sm:text-3xl font-bold py-2 px-4 rounded shadow-lg slide-up">
             Location
           </button>
         </Link>
         <Link to="/menu" className="btn-blue">
-          <button className="bg-transparent hover:bg-transparent text-white text-2xl sm:text-3xl font-bold py-2 px-4 rounded shadow-lg">
+          <button className="bg-transparent hover:bg-transparent text-white text-2xl sm:text-3xl font-bold py-2 px-4 rounded shadow-lg slide-up">
             Menu
           </button>
         </Link>
         <Link to="/about-us" className="btn-blue">
-          <button className="bg-transparent hover:bg-transparent text-white text-2xl sm:text-3xl font-bold py-2 px-4 rounded shadow-lg">
+          <button className="bg-transparent hover:bg-transparent text-white text-2xl sm:text-3xl font-bold py-2 px-4 rounded shadow-lg slide-up">
             Contact Us
           </button>
         </Link>
@@ -56,7 +52,7 @@ function HomePage() {
         </div>
         <img src={image2} alt='' className="w-1/2" />
       </div>
-      <EmailRegistration/>
+      <EmailRegistration />
     </div>
 
 
