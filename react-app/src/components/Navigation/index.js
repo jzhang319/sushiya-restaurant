@@ -33,7 +33,7 @@ function Navigation({ isLoaded }) {
       <img
         src="/logo1.png"
         alt="Sushiya Logo"
-        className="col-start-1 col-end-2 w-40 justify-self-center sm:col-start-2 sm:col-end-3 sm:w-60"
+        className="col-start-1 col-end-2 w-40 justify-self-center sm:col-start-2 sm:col-end-3 sm:w-40"
       />
       <ChipTabs className="col-start-1 col-end-2 flex h-full items-end justify-center space-x-3 py-1 sm:col-start-3 sm:col-end-4 sm:justify-self-end sm:pr-6" />
       {/* <NavLink exact to="/" className="hover:text-red-500">
