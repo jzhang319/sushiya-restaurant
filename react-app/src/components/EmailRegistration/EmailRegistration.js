@@ -11,10 +11,10 @@ function EmailRegistration() {
         setIsloading(true);
         setMessage('')
         try {
-            const response = await fetch('/subscribe', {
+            const response = await fetch('/api/email/subscribe', {
                 method: 'POST',
                 headers: {
-                    'Constent-Type': 'application/json'
+                    'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({ email })
             })
