@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
+import "./AboutUs.css";
 
 export const AboutUs = () => {
   const form = useRef();
@@ -27,15 +28,17 @@ export const AboutUs = () => {
     <>
       <div class="mb-28 flex justify-center">
         <Stack direction="column">
-        <h1 className="text-8xl flex justify-center">Location</h1>
+        <h1 className="text-5xl sm:text-8xl my-4 flex justify-center">Location</h1>
           <iframe
+          title="location"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.502624603083!2d-73.63762672401968!3d40.728964471391116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c27d4145b10001%3A0xf4d9d38e4a3e756c!2sSushi%20Ya!5e0!3m2!1sen!2sus!4v1708575084944!5m2!1sen!2sus"
           width="1400"
           height="500"
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          className="1/2-screen"
+          className="map"
+          // className="sm:1/2-screen map"
         ></iframe>
 
       </Stack>
@@ -61,12 +64,12 @@ export const AboutUs = () => {
         </div>
       </div>
 
-      <div className="flex h-screen w-full items-center justify-center bg-gray-100">
-        <div className="contact-us">
-          <h1 className="text-8xl">Contact Us</h1>
-        </div>
+      <div className="sm:flex sm:h-screen w-full items-center justify-center bg-gray-100">
+        {/* <div> */}
+          <h1 className="text-5xl sm:text-8xl">Contact Us</h1>
+        {/* </div> */}
 
-        <div className="mx-28 w-1/4">
+        <div className="mx-28 w-1/4 ">
           <form ref={form} onSubmit={sendEmail}>
             <label>Name</label>
             <input
