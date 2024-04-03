@@ -1,7 +1,7 @@
 import React from "react";
 import ChipTabs from "./ChipTab";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { logout } from "../../store/session";
 // import { NavLink } from "react-router-dom";
 // import ProfileButton from "./ProfileButton";
@@ -30,11 +30,12 @@ function Navigation({ isLoaded }) {
           </button>
         ) : null}
       </div>
-      <img
-        src="/logo1.png"
-        alt="Sushiya Logo"
-        className="col-start-1 col-end-2 w-40 justify-self-center sm:col-start-2 sm:col-end-3 sm:w-40"
-      />
+      <Link
+        to="/"
+        className="col-start-1 col-end-2 justify-self-center sm:col-start-2 sm:col-end-3"
+      >
+        <img src="/logo1.png" alt="Sushiya Logo" className="w-40" />
+      </Link>
       <ChipTabs className="col-start-1 col-end-2 flex h-full items-end justify-center space-x-3 py-1 sm:col-start-3 sm:col-end-4 sm:justify-self-end sm:pr-6" />
       {/* <NavLink exact to="/" className="hover:text-red-500">
         Home
@@ -43,7 +44,7 @@ function Navigation({ isLoaded }) {
         Menu
         </NavLink>
         <NavLink exact to="/about-us" className="hover:text-red-500">
-        About-Us
+        About-Usß
       </NavLink> */}
 
       {/* {isLoaded && <ProfileButton user={sessionUser} />} */}

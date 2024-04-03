@@ -1487,10 +1487,6 @@ video {
     height: 16rem;
   }
 
-  .sm\:w-40 {
-    width: 10rem;
-  }
-
   .sm\:w-60 {
     width: 15rem;
   }
