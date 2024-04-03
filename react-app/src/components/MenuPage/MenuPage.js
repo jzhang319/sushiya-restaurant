@@ -144,7 +144,7 @@ const MenuPage = () => {
         your risk of food-borne illness, especially if you have certain medical
         conditions
       </p>
-      <ScrollingImages />
+      {/* <ScrollingImages /> */}
       <span className="py-1 sm:py-10">
         <ul className="z-10 flex flex-wrap items-center justify-center space-x-9 px-10 font-abel text-lg text-gray-800">
           {categories.map((category) => {
@@ -206,8 +206,7 @@ const MenuPage = () => {
             ),
           )}
         </div>
-
-        <div className="col-span-2 hidden items-start justify-center sm:flex">
+        <div className="relative col-span-2 hidden items-start justify-center sm:flex">
           <motion.img
             initial={{ x: "100vw", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -219,7 +218,8 @@ const MenuPage = () => {
             }}
             src={imageSrc}
             alt="restaurant"
-            class="sticky top-1/2 -translate-y-1/2 transform rounded"
+            class="sticky top-0 transform rounded"
+            style={{ width: "100vh ", height: "100vh" }}
           />
           {/* <motion.img
             initial={{ x: 0 }}
