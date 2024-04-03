@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 
 const tabs = [
-  { name: "Menu", path: "/menu" },
+  { name: "Our Menu", path: "/menu" },
   {
     name: "Order Now",
     path: "https://direct.chownow.com/order/6593/locations/8738",
