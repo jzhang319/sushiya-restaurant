@@ -1,7 +1,6 @@
 import React from "react";
 import ChipTabs from "./ChipTab";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../../store/session";
 // import { NavLink } from "react-router-dom";
 // import ProfileButton from "./ProfileButton";
