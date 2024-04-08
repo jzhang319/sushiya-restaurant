@@ -65,7 +65,7 @@ const MenuPage = () => {
     }
   }, [currentCategory]);
 
-  if (!loading) {
+  if (loading) {
     return (
       <div className="flex w-full flex-col items-center justify-center p-8">
         {/* Menu Title */}
