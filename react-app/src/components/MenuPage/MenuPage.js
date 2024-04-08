@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import { RefreshIcon } from "@heroicons/react/outline";
 import { motion } from "framer-motion";
 import AnimationCategory from "./AnimationCategory";
-import ScrollingImages from "./ScrollingImages";
-// import Card from '@mui/material/Card';
-// import CardContent from '@mui/material/CardContent';
-// import CardMedia from '@mui/material/CardMedia';
-// import Typography from '@mui/material/Typography';
-// import Skeleton from '@mui/material/Skeleton';
+// import ScrollingImages from "./ScrollingImages";
+
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import Skeleton from "@mui/material/Skeleton";
+
 import hibachiImage from "./images/hibachi.png";
 import soupImage from "./images/soup.png";
 import sushiImage from "./images/sushi.png";
@@ -63,10 +65,37 @@ const MenuPage = () => {
     }
   }, [currentCategory]);
 
-  if (loading) {
+  if (!loading) {
     return (
-      <div className="flex items-center justify-center pt-40">
-        <RefreshIcon className="h-24 w-24 animate-spin text-yellow-700" />
+      <div className="flex w-full flex-col items-center justify-center p-8">
+        {/* Menu Title */}
+        <Skeleton variant="rounded" width={200} height={100} />
+        <Skeleton variant="text" width={800} sx={{ fontSize: "2rem" }} />
+        <Skeleton variant="text" width={500} sx={{ fontSize: "2rem" }} />
+        {/* Menu Categories */}
+        <div className="mt-6">
+          <Skeleton variant="text" width={650} sx={{ fontSize: "2.5rem" }} />
+        </div>
+        {/* Menu Items */}
+        <div className="hidden sm:ml-2 sm:mt-8 sm:flex">
+          <div className="flex flex-col items-center justify-center">
+            <Skeleton variant="text" width={300} sx={{ fontSize: "4rem" }} />
+            <div className="grid grid-cols-3 gap-4">
+              <Skeleton variant="rounded" width={300} height={200} />
+              <Skeleton variant="rounded" width={300} height={200} />
+              <Skeleton variant="rounded" width={300} height={200} />
+              <Skeleton variant="rounded" width={300} height={200} />
+              <Skeleton variant="rounded" width={300} height={200} />
+              <Skeleton variant="rounded" width={300} height={200} />
+            </div>
+          </div>
+          <div className="ml-8 mr-2">
+            <Skeleton variant="rounded" width={700} height={510} />
+          </div>
+        </div>
+        <div className="block sm:hidden">
+          <Skeleton variant="rounded" width={480} height={600} />
+        </div>
       </div>
     );
   }
