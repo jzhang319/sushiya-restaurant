@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { RefreshIcon } from "@heroicons/react/outline";
 import { motion } from "framer-motion";
 import AnimationCategory from "./AnimationCategory";
+// import { RefreshIcon } from "@heroicons/react/outline";
 // import ScrollingImages from "./ScrollingImages";
-
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
+// import Card from "@mui/material/Card";
+// import CardContent from "@mui/material/CardContent";
+// import CardMedia from "@mui/material/CardMedia";
+// import Typography from "@mui/material/Typography";
 import Skeleton from "@mui/material/Skeleton";
-
 import hibachiImage from "./images/hibachi.png";
 import soupImage from "./images/soup.png";
 import sushiImage from "./images/sushi.png";
