@@ -45,11 +45,11 @@ export const AboutUs = () => {
       </div>
 
 
-      <div className="flex-start flex w-full items-center">
+      <div className="flex md:flex-start w-full items-center">
         <div>
-          <img src="restaurant.jpeg" alt="restaurant"></img>
+          <img src="restaurant.jpeg" alt="restaurant" className="w-0 md:w-full"></img>
         </div>
-        <div className="ml-28">
+        <div className="ml-14 md:ml-28 mb-28 md:m-0">
           <h1 className="text-5xl">Hours of Operation</h1>
           {/* <Skeleton variant="rectangular" width={395} height={60} /> */}
           <br></br>
@@ -64,46 +64,38 @@ export const AboutUs = () => {
         </div>
       </div>
 
-      <div className="sm:flex sm:h-screen w-full items-center justify-center bg-gray-100">
-        {/* <div> */}
-          <h1 className="text-5xl sm:text-8xl">Contact Us</h1>
-        {/* </div> */}
-
-        <div className="mx-28 w-1/4 ">
+      <div className="flex flex-col md:flex-row md:h-screen md:w-full md:items-center md:justify-center bg-gray-100">
+        <div className="my-8 md:mt-0 ml-14">
+          <h1 className="text-5xl md:text-8xl">Contact Us</h1>
+        </div>
+        <div className="mx-14 md:mx-28 w-full md:w-1/4">
           <form ref={form} onSubmit={sendEmail}>
-            <label>Name</label>
+            <label>Name</label><br/>
             <input
               type="text"
               name="user_name"
-              className="h-25 mb-4 w-full cursor-pointer border border-2 border-gray-500 bg-white p-4"
+              className="h-25 mb-4 w-80 md:w-full cursor-pointer border border-2 border-gray-500 bg-white p-4"
               placeholder="Eric"
-            />
-            <label>Email</label>
+            /><br/>
+            <label>Email</label><br/>
             <input
               type="email"
               name="user_email"
-              className="h-25 mb-4 w-full cursor-pointer border border-2 border-gray-500 bg-white p-4"
+              className="h-25 mb-4 w-80 md:w-full cursor-pointer border border-2 border-gray-500 bg-white p-4"
               placeholder="eric@sushiyany.com"
-            />
-            <label>Message</label>
+            /><br/>
+            <label>Message</label><br/>
             <textarea
               name="message"
-              className="h-25 mb-4 w-full cursor-pointer border border-2 border-gray-500 bg-white p-4"
+              className="h-25 mb-4 w-80 md:w-full cursor-pointer border border-2 border-gray-500 bg-white p-4"
               placeholder="Hello..."
-            />
-
-            {/* <input
-              type="submit"
-              value="Send"
-              className="h-25 w-full cursor-pointer border border-2 border-black hover:border-gray-500 hover:text-gray-500 bg-white p-4"
-            /> */}
-
+            /><br/>
             <Button
               variant="contained"
               color="primary"
               size="large"
               type="submit"
-              className="h-25 w-full cursor-pointer border border-2 border-black bg-white p-4 hover:border-gray-500 hover:text-gray-500"
+              className="w-80 md:w-full cursor-pointer border border-2 border-black bg-white p-4 hover:border-gray-500 hover:text-gray-500"
             >
               Send
             </Button>
@@ -111,7 +103,7 @@ export const AboutUs = () => {
         </div>
       </div>
 
-      <div className="bg-white-100 m-10 flex h-28 w-full w-full flex-col items-center justify-center">
+      {/* <div className="bg-white-100 m-10 flex h-28 w-80 md:w-full md:flex-col items-center justify-center">
         <Stack
           direction="row"
           justifyContent="space-evenly"
@@ -124,10 +116,9 @@ export const AboutUs = () => {
             (516) 873-8818
           </div>
         </Stack>
-      </div>
+      </div> */}
     </>
   );
 };
 
 export default AboutUs;
-
