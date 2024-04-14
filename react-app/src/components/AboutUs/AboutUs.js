@@ -38,12 +38,12 @@ export const AboutUs = () => {
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
           className="map"
-          // className="sm:1/2-screen map"
         ></iframe>
 
       </Stack>
       </div>
 
+      <img src="restaurant.jpeg" alt="restaurant" className="w-full my-14 md:my-0 md:w-0"></img>
 
       <div className="flex md:flex-start w-full items-center">
         <div>
@@ -68,7 +68,7 @@ export const AboutUs = () => {
         <div className="my-8 md:mt-0 ml-14">
           <h1 className="text-5xl md:text-8xl">Contact Us</h1>
         </div>
-        <div className="mx-14 md:mx-28 w-full md:w-1/4">
+        <div className="mx-14 md:mx-28 w-full md:w-1/4 mb-14">
           <form ref={form} onSubmit={sendEmail}>
             <label>Name</label><br/>
             <input
@@ -103,20 +103,13 @@ export const AboutUs = () => {
         </div>
       </div>
 
-      {/* <div className="bg-white-100 m-10 flex h-28 w-80 md:w-full md:flex-col items-center justify-center">
-        <Stack
-          direction="row"
-          justifyContent="space-evenly"
-          alignItems="center"
-          spacing={12}
-        >
-          <img src="footer.png" alt="restaurant" className="h-28"></img>
-          <div>
+      <div className="bg-white-100 m-2 md:m-10 flex flex-row h-28 w-full items-center justify-center">
+          <img src="footer.png" alt="restaurant" className="h-14 md:h-28"></img>
+          <div className="mx-10">
             949 Franklin Avenue,<br></br> Garden City, NY 11530<br></br>
             (516) 873-8818
           </div>
-        </Stack>
-      </div> */}
+      </div>
     </>
   );
 };
