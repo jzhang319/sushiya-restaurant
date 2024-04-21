@@ -29,7 +29,8 @@ const Chip = ({ text, path }) => {
         href={path}
         target="_blank"
         rel="noopener noreferrer"
-        className={`relative w-24 rounded-md px-2.5 py-0.5 text-center text-sm text-slate-300 transition-colors hover:bg-slate-700 hover:text-slate-200`}
+        className={`relative w-24 rounded-md px-2.5 py-0.5 text-center text-sm text-red-700 transition-colors hover:bg-slate-700 hover:text-slate-200`}
+        // style={{ color: "#9e1613" }}
       >
         <span className="relative z-10">{text}</span>
         <motion.span
@@ -45,7 +46,8 @@ const Chip = ({ text, path }) => {
         exact
         to={path}
         activeClassName="text-white bg-gradient-to-r from-yellow-700 via-red-500 to-yellow-600"
-        className={`relative w-24 rounded-md px-2.5 py-0.5 text-center text-sm text-slate-300 transition-colors hover:bg-slate-700 hover:text-slate-200`}
+        className={`relative w-24 rounded-md px-2.5 py-0.5 text-center text-sm text-red-700 transition-colors hover:bg-slate-700 hover:text-slate-200`}
+        // style={{ color: "#9e1613" }}
       >
         <span className="relative z-10">{text}</span>
         <motion.span
