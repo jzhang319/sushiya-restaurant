@@ -30,12 +30,12 @@ function HomePage() {
         style={{ backgroundImage: `url(${image1})`, backgroundSize: 'cover' }}>
         <Link to="/about-us" className="btn-blue">
           <button className="bg-transparent hover:bg-transparent text-white text-2xl sm:text-3xl font-bold py-2 px-4 rounded shadow-lg slide-up">
-            Location
+            About-Us
           </button>
         </Link>
         <Link to="/menu" className="btn-blue">
           <button className="bg-transparent hover:bg-transparent text-white text-2xl sm:text-3xl font-bold py-2 px-4 rounded shadow-lg slide-up">
-            Menu
+            Our Menu
           </button>
         </Link>
         <Link to="/about-us" className="btn-blue">
