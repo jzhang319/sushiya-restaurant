@@ -162,7 +162,10 @@ const MenuPage = () => {
 
   return (
     <div className="flex min-h-screen w-screen flex-col items-center justify-start bg-white font-abel">
-      <h1 className="pt-3 text-center text-3xl text-gray-800 sm:mt-8 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+      <h1
+        className="pt-3 text-center text-3xl text-gray-800 sm:mt-8 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
+        style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
+      >
         Our Menu
       </h1>
       <p className="mx-auto hidden w-3/4 py-3 text-center font-abel font-thin leading-loose tracking-wide text-gray-700 sm:block">
@@ -173,7 +176,9 @@ const MenuPage = () => {
       </p>
       {/* <ScrollingImages /> */}
       <span className="py-1 sm:py-10">
-        <ul className="z-10 flex flex-wrap items-center justify-center space-x-9 px-10 font-abel text-lg text-gray-800">
+        <ul
+          className="z-10 flex flex-wrap items-center justify-center space-x-9 px-10 font-abel text-lg text-gray-800"
+        >
           {categories.map((category) => {
             const uppercasedCategory = category.toUpperCase();
 
@@ -223,8 +228,8 @@ const MenuPage = () => {
         </ul>
       </span>
 
-      <div className="grid grid-cols-5 gap-4 px-4 font-abel font-normal text-gray-800">
-        <div className="col-span-5 flex flex-wrap sm:col-span-3 ">
+      <div className="grid grid-cols-5 gap-4 px-4 font-abel font-normal text-gray-800" >
+        <div className="col-span-5 flex flex-wrap sm:col-span-3">
           {Object.entries(filteredGroupedMenu).map(
             ([category, items], index) => (
               <div key={index} className="w-full">

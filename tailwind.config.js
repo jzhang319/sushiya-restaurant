@@ -3,6 +3,10 @@ module.exports = {
   content: ["./react-app/src/**/*.{html,js}"],
   theme: {
     extend: {
+      textShadow: {
+        default: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+        // Add more if needed
+      },
       scrollbar: ["rounded", "dark"],
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
@@ -17,6 +21,10 @@ module.exports = {
         50: "12.5rem",
         60: "15rem",
         70: "17.5rem",
+      },
+      height: {
+        128: "32rem",
+        192: "48rem",
       },
       animation: {
         "slide-in": "slide-in 2s forwards",

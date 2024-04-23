@@ -1,12 +1,11 @@
-.map {
-    width: 1400px;
-}
+/* .map {
+    width: 100vh;
+} */
 
-
-@media (max-width: 500px) {
-    .map {
+/* 
+@media (max-width: 500px) { */
+    /* .map {
         width: auto;
         height: 250px;
-    }
-
-  }
+    } */
+/* } */
