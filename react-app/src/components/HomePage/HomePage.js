@@ -30,7 +30,7 @@ function HomePage() {
         style={{ backgroundImage: `url(${image1})`, backgroundSize: 'cover' }}>
         <Link to="/about-us" className="btn-blue">
           <button className="bg-transparent hover:bg-transparent text-white text-2xl sm:text-3xl font-bold py-2 px-4 rounded shadow-lg slide-up">
-            About-Us
+            About Us
           </button>
         </Link>
         <Link to="/menu" className="btn-blue">
@@ -38,11 +38,11 @@ function HomePage() {
             Our Menu
           </button>
         </Link>
-        <Link to="/about-us" className="btn-blue">
+        {/* <Link to="/about-us" className="btn-blue">
           <button className="bg-transparent hover:bg-transparent text-white text-2xl sm:text-3xl font-bold py-2 px-4 rounded shadow-lg slide-up">
             Contact Us
           </button>
-        </Link>
+        </Link> */}
       </div>
       <div className="flex flex-col justify-around items-center w-full bg-white shadow p-6 mt-4 sm:flex-row">
         <div>
