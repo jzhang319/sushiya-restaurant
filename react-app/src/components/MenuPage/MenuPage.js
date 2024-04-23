@@ -1,19 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import AnimationCategory from "./AnimationCategory";
-// import { RefreshIcon } from "@heroicons/react/outline";
-// import ScrollingImages from "./ScrollingImages";
-// import Card from "@mui/material/Card";
-// import CardContent from "@mui/material/CardContent";
-// import CardMedia from "@mui/material/CardMedia";
-// import Typography from "@mui/material/Typography";
 import Skeleton from "@mui/material/Skeleton";
-import hibachiImage from "./images/hibachi.png";
-import soupImage from "./images/soup.png";
-import sushiImage from "./images/sushi.png";
-import kitchenImage from "./images/kitchen.png";
-import beverageImage from "./images/beverage.png";
-import defaultImage from "./images/default.png";
+import defaultImage from "./images/sushi4.jpg";
+import hibachiImage from "./images/sushi2.jpg";
+import soupImage from "./images/sushi3.jpg";
+import sushiImage from "./images/sushi6.jpg";
+import kitchenImage from "./images/sushi7.jpg";
+import beverageImage from "./images/sushi5.jpg";
 
 const MenuPage = () => {
   const [menu, setMenu] = useState([]);
@@ -176,9 +170,7 @@ const MenuPage = () => {
       </p>
       {/* <ScrollingImages /> */}
       <span className="py-1 sm:py-10">
-        <ul
-          className="z-10 flex flex-wrap items-center justify-center space-x-9 px-10 font-abel text-lg text-gray-800"
-        >
+        <ul className="z-10 flex flex-wrap items-center justify-center space-x-9 px-10 font-abel text-lg text-gray-800">
           {categories.map((category) => {
             const uppercasedCategory = category.toUpperCase();
 
@@ -228,7 +220,7 @@ const MenuPage = () => {
         </ul>
       </span>
 
-      <div className="grid grid-cols-5 gap-4 px-4 font-abel font-normal text-gray-800" >
+      <div className="grid grid-cols-5 gap-4 px-4 font-abel font-normal text-gray-800">
         <div className="col-span-5 flex flex-wrap sm:col-span-3">
           {Object.entries(filteredGroupedMenu).map(
             ([category, items], index) => (
@@ -239,15 +231,17 @@ const MenuPage = () => {
           )}
         </div>
         <div className="relative col-span-2 hidden items-start justify-center sm:flex">
-          <motion.img
-            initial={{ x: "100vw", opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 50,
-              damping: 20,
-              mass: 1,
-            }}
+          {/* <motion.img
+           */}
+          <img
+            // initial={{ x: "100vw", opacity: 0 }}
+            // animate={{ x: 0, opacity: 1 }}
+            // transition={{
+            //   type: "spring",
+            //   stiffness: 50,
+            //   damping: 20,
+            //   mass: 1,
+            // }}
             src={imageSrc}
             alt="restaurant"
             class="sticky top-0 transform rounded"
