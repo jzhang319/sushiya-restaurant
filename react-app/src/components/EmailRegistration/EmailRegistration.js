@@ -34,7 +34,7 @@ function EmailRegistration() {
 
     return (
         <form onSubmit={handleSubmit} style={{ backgroundImage: `url(${image3})`, backgroundSize: 'cover' }} className="w-full h-screen flex items-center justify-center bg-contain">
-            <div className="flex flex-col max-w-md mx-auto bg-transparent p-8 rounded shadow-lg">
+            <div className="flex flex-col max-w-md mx-auto bg-transparent p-8 rounded ">
                 <div className="flex flex-row justify-center mb-6">
                     {isRegistered ? (
                         <p className="text-center mt-3 text-blue-500">{message}</p>
@@ -44,7 +44,7 @@ function EmailRegistration() {
                                 className="border py-2 px-3 text-grey-darkest mr-4"
                                 id="email"
                                 type="email"
-                                placeholder="Email Address"
+                                placeholder="Email Address"ß
                                 value={email}
                                 onChange={e => setEmail(e.target.value)}
                                 required
