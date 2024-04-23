@@ -29,20 +29,20 @@ function HomePage() {
       <div className="flex flex-col justify-center items-center space-y-4 w-full h-screen p-6 bg-white shadow sm:space-y-0 sm:flex-row sm:space-x-4"
         style={{ backgroundImage: `url(${image1})`, backgroundSize: 'cover' }}>
         <Link to="/about-us" className="btn-blue">
-          <button className="bg-transparent hover:bg-transparent text-white text-2xl sm:text-3xl font-bold py-2 px-4 rounded shadow-lg slide-up">
+          <button className="bg-transparent hover:bg-transparent text-white text-2xl sm:text-3xl font-bold py-2 px-4 rounded  slide-up">
             About Us
           </button>
         </Link>
         <Link to="/menu" className="btn-blue">
-          <button className="bg-transparent hover:bg-transparent text-white text-2xl sm:text-3xl font-bold py-2 px-4 rounded shadow-lg slide-up">
+          <button className="bg-transparent hover:bg-transparent text-white text-2xl sm:text-3xl font-bold py-2 px-4 rounded  slide-up">
             Our Menu
           </button>
         </Link>
-        {/* <Link to="/about-us" className="btn-blue">
-          <button className="bg-transparent hover:bg-transparent text-white text-2xl sm:text-3xl font-bold py-2 px-4 rounded shadow-lg slide-up">
-            Contact Us
+        <a href="https://direct.chownow.com/order/6593/locations/8738" className="btn-blue">
+          <button className="bg-transparent hover:bg-transparent text-white text-2xl sm:text-3xl font-bold py-2 px-4 rounded slide-up">
+            Order Now
           </button>
-        </Link> */}
+        </a>
       </div>
       <div className="flex flex-col justify-around items-center w-full bg-white shadow p-6 mt-4 sm:flex-row">
         <div>
