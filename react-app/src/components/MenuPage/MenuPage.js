@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
 import AnimationCategory from "./AnimationCategory";
 import Skeleton from "@mui/material/Skeleton";
 import defaultImage from "./images/sushi4.jpg";
@@ -10,6 +13,7 @@ import kitchenImage from "./images/sushi7.jpg";
 import beverageImage from "./images/sushi5.jpg";
 
 const MenuPage = () => {
+  library.add(fab);
   const [menu, setMenu] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("ALL");
   const [selectedSubCategory, setSelectedSubCategory] = useState("ALL");
@@ -156,10 +160,7 @@ const MenuPage = () => {
 
   return (
     <div className="flex min-h-screen w-screen flex-col items-center justify-start bg-white font-abel">
-      <h1
-        className="pt-3 text-center text-3xl text-gray-800 sm:mt-8 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
-        style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
-      >
+      <h1 className="pt-3 text-center text-3xl text-gray-800 sm:mt-8 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
         Our Menu
       </h1>
       <p className="mx-auto hidden w-3/4 py-3 text-center font-abel font-thin leading-loose tracking-wide text-gray-700 sm:block">
@@ -293,6 +294,38 @@ const MenuPage = () => {
           </div>
         ))}
       </div> */}
+      <div className="bg-white-100 m-2 flex h-28 w-full flex-row items-center justify-center md:m-10">
+        <div className="mt-7 flex h-full flex-col items-center font-abel text-2xl">
+          Follow Us:
+          <div className="flex items-center space-x-4">
+            <a
+              href="https://www.facebook.com/sushiyagc"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon
+                icon={["fab", "facebook-square"]}
+                className="fa-2x slide-up mb-4 cursor-pointer text-red-800"
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/sushiyagardencity/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon
+                icon={["fab", "instagram"]}
+                className="fa-2x slide-up mb-4 cursor-pointer text-red-800"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div className="mx-10 font-abel">
+          949 Franklin Avenue,<br></br> Garden City, NY 11530<br></br>
+          (516) 873-8818
+        </div>
+      </div>
     </div>
   );
 };

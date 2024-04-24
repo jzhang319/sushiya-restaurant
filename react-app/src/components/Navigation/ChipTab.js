@@ -2,12 +2,12 @@ import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 
 const tabs = [
+  { name: "About-Us", path: "/about-us" },
   { name: "Our Menu", path: "/menu" },
   {
     name: "Order Now",
     path: "https://direct.chownow.com/order/6593/locations/8738",
   },
-  { name: "About-Us", path: "/about-us" },
 ];
 
 const ChipTabs = ({ className }) => {
@@ -29,7 +29,7 @@ const Chip = ({ text, path }) => {
         href={path}
         target="_blank"
         rel="noopener noreferrer"
-        className={`relative w-24 rounded-md px-2.5 py-0.5 text-center text-sm text-red-700 transition-colors hover:bg-slate-700 hover:text-slate-200`}
+        className={`relative w-24 rounded-md px-2.5 py-0.5 text-center text-sm text-red-800 transition-colors hover:bg-red-800 hover:text-slate-200`}
         // style={{ color: "#9e1613" }}
       >
         <span className="relative z-10">{text}</span>
@@ -45,8 +45,8 @@ const Chip = ({ text, path }) => {
       <NavLink
         exact
         to={path}
-        activeClassName="text-white bg-gradient-to-r from-yellow-700 via-red-500 to-yellow-600"
-        className={`relative w-24 rounded-md px-2.5 py-0.5 text-center text-sm text-red-700 transition-colors hover:bg-slate-700 hover:text-slate-200`}
+        activeClassName="text-black border-2 border-red-800"
+        className={`relative w-24 rounded-md px-2.5 py-0.5 text-center text-sm text-red-800 transition-colors hover:bg-red-800 hover:text-slate-200`}
         // style={{ color: "#9e1613" }}
       >
         <span className="relative z-10">{text}</span>
