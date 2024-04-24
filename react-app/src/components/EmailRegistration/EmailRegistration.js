@@ -39,7 +39,7 @@ function EmailRegistration() {
       style={{
         backgroundImage: `url(${image3})`,
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        // backgroundPosition: "center",
       }}
       className="flex h-screen w-full items-center justify-center bg-contain"
     >
@@ -48,7 +48,7 @@ function EmailRegistration() {
           {isRegistered ? (
             <p className="mt-3 text-center text-blue-500">{message}</p>
           ) : (
-            <div className="mt-50 flex items-center space-x-2 sm:space-x-4">
+            <div className="flex items-center space-x-2 sm:space-x-4">
               <input
                 className="h-15 w-50 cursor-pointer rounded border-2 border-gray-500 bg-white p-4 font-abel sm:w-80"
                 id="email"
