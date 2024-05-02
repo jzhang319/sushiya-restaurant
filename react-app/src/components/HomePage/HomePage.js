@@ -1,21 +1,21 @@
 import React from "react";
-import { useState } from "react";
+// import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./HomePage.css";
 import image2 from "./front-page-2.jpg";
-import image1 from "./front-page-1.jpg";
+// import image1 from "./front-page-1.jpg";
 import image0 from "./front-page-0.jpg";
 import EmailRegistration from "../EmailRegistration/EmailRegistration";
 
-const containerStyle = {
-  width: "50%",
-  height: "200px",
-};
+// const containerStyle = {
+//   width: "50%",
+//   height: "200px",
+// };
 
-const center = {
-  lat: 40.727093,
-  lng: -73.634296,
-};
+// const center = {
+//   lat: 40.727093,
+//   lng: -73.634296,
+// };
 
 function HomePage() {
   return (
