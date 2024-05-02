@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
@@ -199,7 +199,7 @@ const MenuPage = () => {
                 {hoveredCategory === uppercasedCategory &&
                   uniqueSubcategories.length > 1 && (
                     <div
-                      className="dropdown absolute left-0 z-10 mt-0 hidden transform rounded bg-white py-2 shadow-md transition-opacity duration-200 ease-in-out group-hover:block"
+                      className="dropdown absolute left-0 z-10 mt-0 hidden transform rounded bg-white py-1 shadow-md transition-opacity duration-200 ease-in-out group-hover:block"
                       onMouseLeave={() => setHoveredCategory(null)}
                     >
                       {uniqueSubcategories.map((subCategory, index) => (
