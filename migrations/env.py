@@ -7,8 +7,6 @@ from flask import current_app
 
 from alembic import context
 
-from sqlalchemy import MetaData
-
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
@@ -45,8 +43,7 @@ target_db = current_app.extensions['migrate'].db
 def get_metadata():
     if hasattr(target_db, 'metadatas'):
         return target_db.metadatas[None]
-    metadata = MetaData(schema="sushiya_schema")
-    return metadata
+    return target_db.metadata
 
 
 def run_migrations_offline():
