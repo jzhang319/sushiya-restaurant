@@ -9,7 +9,9 @@ item_routes = Blueprint('items', __name__)
 @item_routes.route('/')
 def get_menu():
     file_path = './menu.csv'
+    print(f"Loading file: {file_path}")
     if os.path.isfile(file_path):
+        print("CSV file loaded successfully")
         df = pd.read_csv(file_path)
         # print(df.columns)
         # df.columns = df.columns.str.strip()

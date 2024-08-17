@@ -4,9 +4,9 @@ services:
       context: .
       dockerfile: ./app/Dockerfile
     ports:
-      - "5000:5000"  # Expose port 5000
+      - "5000:5000"
     volumes:
-      - ./app:/app
+      - ./app:/sushiya-restaurant/app
     environment:
       FLASK_DEBUG: 1
       FLASK_ENV: development
