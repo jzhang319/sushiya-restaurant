@@ -1,24 +1,23 @@
-version: "3.9"
 services:
-  server:
+  localhost:
     build:
       context: .
       dockerfile: ./app/Dockerfile
     ports:
-      - "5000:5000"
+      - "5000:5000"  # Expose port 5000
     volumes:
       - ./app:/app
     environment:
+      FLASK_DEBUG: 1
       FLASK_ENV: development
+      FLASK_APP: "app"
+      DATABASE_URL: "sqlite:///dev.db"
 
-  web:
-    build: ./react-app
+  react-app:
+    build:
+      context: ./react-app
+      dockerfile: Dockerfile
     ports:
-      - "8080:8080"
+      - "3000:3000"
     volumes:
-      - .:/code
-    environment:
-      NODE_ENV: development
-
-  redis:
-    image: "redis:alpine"
+      - ./react-app:/react-app
