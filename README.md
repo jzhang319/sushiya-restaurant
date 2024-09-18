@@ -5,7 +5,7 @@ A japanese restaurant application where users can view the menu and order food.
 
 
 ## Getting started
-1. Clone this repository (only this branch)
+1. Clone this repository (main branch)
 
 2. Install dependencies
 
