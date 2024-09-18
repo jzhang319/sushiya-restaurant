@@ -6,6 +6,16 @@ A japanese restaurant application where users can view the menu and order food.
 ![Screenshot 2024-09-18 at 5 38 48 PM](https://github.com/user-attachments/assets/29e15135-ac22-4413-b0d3-b20947fdcbc8)
 
 
+## Screenshots
+
+### Landing Page
+![Screenshot 2024-09-18 at 5 42 10 PM](https://github.com/user-attachments/assets/f6620c58-a075-4879-891f-67d36c9a20b2)
+
+### About Us Page
+![Screenshot 2024-09-18 at 5 42 29 PM](https://github.com/user-attachments/assets/f91b49c6-3b4b-4b47-b5f4-843821efdec6)
+
+
+
 ## Getting started
 1. Clone this repository (main branch)
 
