@@ -1,6 +1,8 @@
 # Sushiya Restaurant
 
 A japanese restaurant application where users can view the menu and order food.
+
+## SCHEMA for the Database
 ![Screenshot 2024-09-18 at 5 38 48 PM](https://github.com/user-attachments/assets/29e15135-ac22-4413-b0d3-b20947fdcbc8)
 
 
