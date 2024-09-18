@@ -1,6 +1,8 @@
-# Flask React Project
+# Sushiya Restaurant
 
-This is the starter for the Flask React project.
+A japanese restaurant application where users can view the menu and order food.
+![Screenshot 2024-09-18 at 5 38 48 PM](https://github.com/user-attachments/assets/29e15135-ac22-4413-b0d3-b20947fdcbc8)
+
 
 ## Getting started
 1. Clone this repository (only this branch)
